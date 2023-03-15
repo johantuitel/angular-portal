@@ -1,0 +1,37 @@
+.storybook-icon-example {
+  margin-right: 4rem !important;
+  margin-bottom: 10rem !important;
+  margin-left: 4rem !important;
+
+  &::after {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    display: block;
+    width: 6rem;
+    height: auto;
+    color: $color-deep-blue;
+    content: attr(type);
+    font-family: $font-default;
+    font-size: $font-size-extra-small;
+    font-style: normal;
+    font-weight: $font-weight-regular;
+    line-height: 1.5;
+    text-align: center;
+    transform: translateX(-50%);
+    word-wrap: break-spaces;
+  }
+
+  i.app-icon {
+    transform: scale(1) translateY(0);
+    transform-origin: center center;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    i.app-icon {
+      transform: scale(2.5) translateY(-35%);
+    }
+  }
+}

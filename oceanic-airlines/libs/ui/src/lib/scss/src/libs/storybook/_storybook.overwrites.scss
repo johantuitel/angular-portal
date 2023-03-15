@@ -1,0 +1,458 @@
+.sb-show-main.sb-main-padded {
+  padding: $size-8 !important;
+}
+
+#docs-root {
+  display: block;
+  position: relative;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 1;
+
+  &::before {
+    content: 'Oceanic Airlines Design System';
+    color: $font-color-deep-blue !important;
+    font-family: $font-default-bold !important;
+    font-style: normal !important;
+    font-weight: $font-weight-regular !important;
+    font-size: $font-size-small !important;
+    background-color: $color-white;
+    line-height: 1.1 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: $size-6;
+    width: 100%;
+    z-index: 10;
+    border-width: 1px !important;
+    border-bottom: 1px solid !important;
+    border-image-slice: 1 !important;
+    border-image-source: linear-gradient(to right, $color-warm-coral, $color-fresh-blue, $color-deep-blue) !important;
+  }
+
+  .sbdocs-wrapper {
+    position: relative !important;
+    padding: $size-24 $size-4 $size-16 $size-4 !important;
+  }
+
+  .sbdocs-content {
+    max-width: 1600px !important;
+  }
+
+  .sbdocs-title {
+    color: $font-color-warm-coral !important;
+    font-family: $font-header !important;
+    font-style: normal !important;
+    font-weight: $font-weight-regular !important;
+    font-size: $font-size-h3 !important;
+    line-height: 1.1 !important;
+    margin: 0 0 $size-4 0 !important;
+    padding: 0 0 $size-4 0 !important;
+  }
+
+  .sbdocs-h2 {
+    color: $font-color-deep-blue !important;
+    font-family: $font-header-bold !important;
+    font-style: normal !important;
+    font-weight: $font-weight-regular !important;
+    font-size: $font-size-h6 !important;
+    line-height: 1.1 !important;
+    margin: $size-16 0 $size-8 0 !important;
+    padding: 0 0 0 0 !important;
+    border: none !important;
+  }
+
+  .sbdocs-h3 {
+    color: $font-color-warm-coral !important;
+    font-family: $font-default !important;
+    font-style: normal !important;
+    font-weight: $font-weight-regular !important;
+    font-size: $font-size-regular !important;
+    line-height: 1.1 !important;
+    margin: 0 0 $size-2 0 !important;
+    padding: 0 0 0 0 !important;
+    border: none !important;
+    text-transform: lowercase;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  .os-viewport-native-scrollbars-invisible {
+    div {
+      margin-left: 0 !important;
+
+      button {
+        margin-left: 0 !important;
+        padding: $size-2;
+        font-size: $size-4;
+        height: $size-8;
+        width: $size-8;
+
+        &:hover {
+          color: $color-deep-blue;
+          background-color: $color-fresh-blue;
+        }
+      }
+
+      a {
+        margin-left: 0 !important;
+        padding: $size-2;
+        font-size: $size-4;
+        height: $size-8;
+        width: $size-8;
+
+        &:hover {
+          color: $color-deep-blue;
+          background-color: $color-fresh-blue;
+        }
+      }
+    }
+  }
+
+  .sbdocs-preview:nth-child(1) {
+    margin: 0 0 $size-40 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+
+    .css-vcinso {
+      box-shadow: none !important;
+    }
+
+    .docs-story {
+      border: none !important;
+
+      .innerZoomElementWrapper > * {
+        border: none !important;
+      }
+
+      .docblock-code-toggle {
+        border: none !important;
+      }
+    }
+
+    .docs-story > div:first-child:not(.storybook-color-example) {
+      padding: $size-8 0 $size-8 0 !important;
+      margin: 0 !important;
+    }
+  }
+
+  .sbdocs-preview:not(:nth-child(1)) {
+    margin: 0 0 $size-8 0 !important;
+    box-shadow: none !important;
+    border-width: 1px;
+    border: 1px solid !important;
+    border-image-slice: 1 !important;
+    border-image-source: linear-gradient(to right, $color-warm-coral, $color-fresh-blue) !important;
+
+    .docs-story {
+      border: none !important;
+
+      .innerZoomElementWrapper > * {
+        border: none !important;
+      }
+
+      .docblock-code-toggle {
+        border: none !important;
+      }
+    }
+
+    .docs-story > div:first-child:not(.storybook-color-example) {
+      padding: $size-8 $size-8 $size-8 $size-8 !important;
+      margin: 0 !important;
+    }
+  }
+
+  .docblock-argstable {
+    position: relative;
+    margin-top: $size-12 !important;
+    margin-bottom: $size-24 !important;
+    z-index: 2;
+
+    &::before {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -$size-12;
+      z-index: 2;
+      color: $font-color-white !important;
+      font-family: $font-header-bold !important;
+      font-style: normal !important;
+      font-weight: $font-weight-regular !important;
+      font-size: $font-size-h6 !important;
+      line-height: 1.1 !important;
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 100vw;
+      left: 50%;
+      top: -$size-24;
+      bottom: -$size-16;
+      background-color: $color-deep-blue;
+      background: $color-gradient-on-deep-blue-transparent, $color-deep-blue;
+      background-size: 100% 100%;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      z-index: -1;
+      transform: translateX(-50%);
+      border-bottom: $size-2 solid $color-warm-coral;
+    }
+  }
+
+  .docblock-argstable-head th {
+    padding: $size-1 $size-2 $size-1 0 !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+
+    > span {
+      display: flex;
+      align-items: center;
+      color: $color-fresh-blue;
+      font-family: $font-default-bold;
+      font-size: $font-size-tiny;
+      font-style: normal;
+      font-weight: $font-weight-light;
+      line-height: 1.1;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+      min-height: $size-8;
+      background-color: transparent !important;
+    }
+  }
+
+  .docblock-argstable-body {
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+
+  .docblock-argstable-body tr {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    line-height: 1.1 !important;
+    border-top: none !important;
+    border-bottom: none !important;
+
+    &[title] > td {
+      background-color: transparent !important;
+      border-top: none !important;
+      border-bottom: none !important;
+    }
+
+    &[title] > td > button {
+      color: transparent;
+    }
+
+    &[title] > td > span {
+      color: $color-warm-coral;
+      font-family: $font-default-bold;
+      font-size: $font-size-extra-small;
+      font-style: normal;
+      font-weight: normal !important;
+      line-height: 1.1;
+      text-transform: none;
+      letter-spacing: 0.5px !important;
+      margin: $size-1 0 $size-1 0;
+    }
+
+    &[title] > td > span > svg {
+      margin-top: -2px !important;
+      margin-left: -16px !important;
+      margin-right: $size-1 !important;
+
+      path {
+        fill: $color-warm-coral !important;
+      }
+    }
+  }
+}
+
+.docblock-argstable-body td {
+  padding: $size-1 $size-2 $size-1 0 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-top: 1px solid rgba($color-white, 0.2) !important;
+  border-bottom: none !important;
+  vertical-align: middle !important;
+  border-radius: 0 !important;
+
+  > span {
+    display: inline-flex;
+    align-items: center;
+    color: $font-color-white;
+    font-family: $font-default;
+    font-size: $font-size-regular;
+    font-style: normal;
+    font-weight: normal !important;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+    background-color: transparent !important;
+    border: none !important;
+  }
+
+  > div > span:first-of-type {
+    padding: $size-1 $size-2 $size-1 $size-2 !important;
+    color: $color-deep-blue !important;
+    font-family: $font-default !important;
+    font-size: $font-size-regular !important;
+    font-style: normal !important;
+    line-height: 1.1 !important;
+    border: none;
+    border-radius: $size-3 !important;
+    background: $color-fresh-blue !important;
+    border: 1px solid $color-fresh-blue !important;
+    text-transform: lowercase;
+  }
+
+  > div > div > span:first-of-type {
+    padding: $size-1 $size-1 $size-2 $size-1 0 !important;
+    color: $font-color-white !important;
+    font-family: $font-default !important;
+    font-size: $font-size-regular !important;
+    font-style: normal !important;
+    line-height: 1.1 !important;
+    border: none;
+    background: none !important;
+  }
+
+  > div > div > span:not(:first-of-type) {
+    padding: $size-1 $size-2 $size-1 $size-2 !important;
+    color: $color-fresh-blue !important;
+    font-family: $font-default !important;
+    font-size: $font-size-regular !important;
+    font-style: normal !important;
+    line-height: 1.1 !important;
+    border: none;
+    border-radius: $size-3 !important;
+    background: $color-deep-blue !important;
+    border: 1px solid $color-fresh-blue !important;
+    text-transform: lowercase;
+  }
+
+  span > select {
+    color: $font-color-white !important;
+    font-family: $font-default !important;
+    font-size: $font-size-regular !important;
+    font-style: normal !important;
+    line-height: 1.1 !important;
+    border-radius: $size-1 !important;
+    border: 1px solid $color-white !important;
+    background-color: transparent !important;
+    padding: $size-2 !important;
+
+    option {
+      font-family: $font-default !important;
+      font-size: $font-size-regular !important;
+      font-style: normal !important;
+      color: $font-color-deep-blue !important;
+      line-height: 1 !important;
+    }
+  }
+
+  label {
+    margin-bottom: 0 !important;
+
+    textarea {
+      font-family: $font-default !important;
+      font-size: $font-size-small !important;
+      color: $font-color-white !important;
+      font-style: normal !important;
+      line-height: 1.1 !important;
+      border-radius: $size-1 !important;
+      border: 1px solid $color-white !important;
+      background-color: transparent !important;
+      padding: $size-2 !important;
+      resize: none;
+    }
+
+    input[type="radio"] + span {
+      font-family: $font-default !important;
+      font-size: $font-size-small !important;
+      color: $font-color-white !important;
+      font-style: normal !important;
+      line-height: 1.1 !important;
+    }
+
+    input[type="checkbox"]:not(:checked) ~ span:first-of-type {
+      font-family: $font-default !important;
+      font-size: $font-size-small !important;
+      color: $font-color-deep-blue !important;
+      font-style: normal !important;
+      line-height: 1 !important;
+      padding: $size-1 $size-2 $size-1 $size-2 !important;
+    }
+
+    input[type="checkbox"]:checked ~ span:first-of-type {
+      color: $font-color-fresh-blue !important;
+      padding: $size-1 $size-2 $size-1 $size-2 !important;
+    }
+
+    input[type="checkbox"]:not(:checked) ~ span:last-of-type {
+      font-family: $font-default !important;
+      font-size: $font-size-small !important;
+      color: $font-color-white !important;
+      font-style: normal !important;
+      line-height: 1 !important;
+      padding: $size-1 $size-2 $size-1 $size-2 !important;
+    }
+
+    input[type="checkbox"]:checked ~ span:last-of-type {
+      font-family: $font-default !important;
+      font-size: $font-size-small !important;
+      color: $font-color-white !important;
+      font-style: normal !important;
+      line-height: 1 !important;
+      padding: $size-1 $size-2 $size-1 $size-2 !important;
+    }
+  }
+}
+
+.docblock-code-toggle {
+  display: block !important;
+  color: $color-deep-blue !important;
+  font-family: $font-default-bold !important;
+  font-size: $font-size-tiny !important;
+  font-style: normal !important;
+  font-weight: $font-weight-light !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  padding: $size-2 !important;
+  border-color: $color-fresh-blue !important;
+  background-color: $color-white !important;
+  border-top-left-radius: $size-1 !important;
+  border-top-right-radius: $size-1 !important;
+  text-align: center !important;
+  width: $size-24 !important;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &:hover {
+    color: $color-deep-blue !important;
+    background-color: $color-fresh-blue !important;
+  }
+
+  &.docblock-code-toggle--expanded {
+    background-color: $color-fresh-blue !important;
+  }
+}
+
+#docs-root {
+  .app-cookie-notice {
+    position: static;
+  }
+}
+
+pre.prismjs {
+  background: darken($color-deep-blue, 15) !important;
+}

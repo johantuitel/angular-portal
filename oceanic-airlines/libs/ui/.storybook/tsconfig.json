@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "node"
+    ],
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": [
+    "../**/*.spec.ts",
+    "jest.config.ts"
+  ],
+  "include": [
+    "../src/**/*",
+    "*.js"
+  ],
+  "files": [
+    "./typings.d.ts"
+  ]
+}

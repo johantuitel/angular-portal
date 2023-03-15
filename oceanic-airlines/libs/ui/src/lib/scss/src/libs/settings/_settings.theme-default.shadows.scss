@@ -1,0 +1,49 @@
+/* shadow configuration as seen on https://materializecss.com/shadow.html */
+
+$shadow-depth-0: 0 0 0 0 rgba(0, 0, 0, 0);
+$shadow-depth-1:
+  0 0.4px 0.4px rgba(0, 0, 0, 0.05),
+  0 1px 1px rgba(0, 0, 0, 0.036),
+  0 1.9px 1.9px rgba(0, 0, 0, 0.03),
+  0 3.4px 3.4px rgba(0, 0, 0, 0.025),
+  0 6.3px 6.3px rgba(0, 0, 0, 0.02),
+  0 15px 15px rgba(0, 0, 0, 0.014);
+$shadow-depth-2:
+  0 0.7px 0.7px rgba(0, 0, 0, 0.05),
+  0 1.7px 1.7px rgba(0, 0, 0, 0.036),
+  0 3.1px 3.1px rgba(0, 0, 0, 0.03),
+  0 5.6px 5.6px rgba(0, 0, 0, 0.025),
+  0 10.4px 10.4px rgba(0, 0, 0, 0.02),
+  0 25px 25px rgba(0, 0, 0, 0.014);
+$shadow-depth-3:
+  0 0.7px 0.7px rgba(0, 0, 0, 0.017),
+  0 1.7px 1.7px rgba(0, 0, 0, 0.024),
+  0 3.1px 3.1px rgba(0, 0, 0, 0.03),
+  0 5.6px 5.6px rgba(0, 0, 0, 0.036),
+  0 10.4px 10.4px rgba(0, 0, 0, 0.043),
+  0 25px 25px rgba(0, 0, 0, 0.06);
+$shadow-depth-4:
+  0 1px 1px rgba(0, 0, 0, 0.014),
+  0 2.3px 2.3px rgba(0, 0, 0, 0.02),
+  0 4.4px 4.4px rgba(0, 0, 0, 0.025),
+  0 7.8px 7.8px rgba(0, 0, 0, 0.03),
+  0 14.6px 14.6px rgba(0, 0, 0, 0.036),
+  0 35px 35px rgba(0, 0, 0, 0.05);
+$shadow-depth-5:
+  0 1.2px 1.2px rgba(0, 0, 0, 0.014),
+  0 3px 3px rgba(0, 0, 0, 0.02),
+  0 5.6px 5.6px rgba(0, 0, 0, 0.025),
+  0 10.1px 10.1px rgba(0, 0, 0, 0.03),
+  0 18.8px 18.8px rgba(0, 0, 0, 0.036),
+  0 45px 45px rgba(0, 0, 0, 0.05);
+$shadow-depth-6:
+  0 0.9px 0.9px rgba(0, 0, 0, 0.011),
+  0 1.9px 1.9px rgba(0, 0, 0, 0.016),
+  0 3.2px 3.2px rgba(0, 0, 0, 0.019),
+  0 4.8px 4.8px rgba(0, 0, 0, 0.022),
+  0 6.9px 6.9px rgba(0, 0, 0, 0.025),
+  0 9.7px 9.7px rgba(0, 0, 0, 0.028),
+  0 13.8px 13.8px rgba(0, 0, 0, 0.031),
+  0 20.1px 20.1px rgba(0, 0, 0, 0.034),
+  0 30.9px 30.9px rgba(0, 0, 0, 0.039),
+  0 55px 55px rgba(0, 0, 0, 0.05);
