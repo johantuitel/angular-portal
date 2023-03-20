@@ -1,13 +1,16 @@
+import {IIcon} from './icon';
 import {Injectable} from '@angular/core';
-import {Icon} from './icon';
-
+import { regularIcons } from './regular.icons';
 
 @Injectable({providedIn: 'root'})
 export class IconsRegistryService {
 
   private readonly registry: Map<string, string> = new Map();
 
-  registerIcons(icons: Array<Icon>): void {
+  constructor() {
+    this.registerIcons([...regularIcons]);
+  }
+  registerIcons(icons: Array<IIcon>): void {
     icons.forEach(icon => this.registry.set(icon.name, icon.data));
   }
 

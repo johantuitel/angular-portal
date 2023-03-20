@@ -1,12 +1,37 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
+import { BookingLayoutComponent } from './booking-layout/booking-layout.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 import { NxWelcomeComponent } from './nx-welcome.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
-  imports: [BrowserModule],
+  declarations: [AppComponent,BookingLayoutComponent, NxWelcomeComponent],
+  imports: [BrowserModule,
+    RouterModule.forRoot(
+      [
+          {
+              path: '',
+              pathMatch: 'full',
+              redirectTo: 'booking',
+          },
+          {
+              path: 'booking',
+              component: BookingLayoutComponent,
+              loadChildren: () =>
+                  import('@oceanic-airlines/booking/src/lib/shells/shell-booking').then(
+                      module => module.ShellBookingModule,
+                  ),
+          },
+      ],
+      {
+          paramsInheritanceStrategy: 'always',
+          scrollPositionRestoration: 'enabled',
+          scrollOffset: [0, 0],
+          anchorScrolling: 'enabled',
+      },
+  ),
+],
   providers: [],
   bootstrap: [AppComponent],
 })

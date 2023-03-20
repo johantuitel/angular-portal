@@ -1,0 +1,256 @@
+@import '../../../scss/src/ui.styles.scss';
+
+:host {
+  position: relative;
+  display: inline-block;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+i.app-icon {
+  position: relative;
+  display: block;
+  width: $size-6;
+  height: $size-6;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  outline: 0;
+  outline-offset: 0;
+  pointer-events: none;
+  text-align: center;
+  transform: translateY(-52%);
+
+  ::ng-deep svg {
+    max-width: $size-6;
+    max-height: $size-6;
+
+    path {
+      transition: fill 0.15s $ease-in-quad;
+    }
+  }
+
+  &.size-extra-small {
+    width: $size-4;
+    height: $size-4;
+    transform: translateY(-60%);
+
+    ::ng-deep svg {
+      max-width: $size-4;
+      max-height: $size-4;
+    }
+  }
+
+  &.size-small {
+    width: $size-5;
+    height: $size-5;
+    transform: translateY(-50%);
+
+    ::ng-deep svg {
+      max-width: $size-5;
+      max-height: $size-5;
+    }
+
+    // fix for misaligned icon
+    &[data-icon="power"] {
+      transform: translateY(-53%);
+    }
+  }
+
+  &.size-regular {
+    width: $size-6;
+    height: $size-6;
+    transform: translateY(-50%);
+
+    ::ng-deep svg {
+      max-width: $size-6;
+      max-height: $size-6;
+    }
+
+    // fix for misaligned icon
+    &[data-icon="power"] {
+      transform: translateY(-53%);
+    }
+  }
+
+  &.size-medium {
+    width: $size-7;
+    height: $size-7;
+    transform: translateY(-50%);
+
+    ::ng-deep svg {
+      max-width: $size-7;
+      max-height: $size-7;
+    }
+
+    // fix for misaligned icon
+    &[data-icon="power"] {
+      transform: translateY(-53%);
+    }
+  }
+
+  &.size-large {
+    width: $size-8;
+    height: $size-8;
+    transform: translateY(-54%);
+
+    ::ng-deep svg {
+      max-width: $size-8;
+      max-height: $size-8;
+    }
+  }
+
+  &.size-extra-large {
+    width: $size-9;
+    height: $size-9;
+    transform: translateY(-54%);
+
+    ::ng-deep svg {
+      max-width: $size-9;
+      max-height: $size-9;
+    }
+  }
+
+  &.size-huge {
+    width: $size-16;
+    height: $size-16;
+    transform: translateY(-54%);
+
+    ::ng-deep svg {
+      max-width: $size-16;
+      max-height: $size-16;
+    }
+  }
+
+  &.color-default {
+    ::ng-deep svg {
+      circle {
+        fill: $font-color-text;
+      }
+      path {
+        fill: $font-color-text;
+      }
+    }
+  }
+
+  &.color-deep-blue {
+    ::ng-deep svg {
+      circle {
+        fill: $font-color-deep-blue;
+      }
+      path {
+        fill: $font-color-deep-blue;
+      }
+    }
+  }
+
+  &.color-warm-coral {
+    ::ng-deep svg {
+      circle {
+        fill: $color-warm-coral;
+      }
+      path {
+        fill: $color-warm-coral;
+      }
+    }
+  }
+
+  &.color-fresh-blue {
+    ::ng-deep svg {
+      circle {
+        fill: $font-color-fresh-blue;
+      }
+      path {
+        fill: $font-color-fresh-blue;
+      }
+    }
+  }
+
+  &.color-ghost {
+    ::ng-deep svg {
+      circle {
+        fill: $font-color-text;
+      }
+      path {
+        fill: $font-color-text;
+      }
+    }
+  }
+
+  &.color-white-ghost {
+    ::ng-deep svg {
+      circle {
+        fill: $font-color-white;
+      }
+      path {
+        fill: $font-color-white;
+      }
+    }
+  }
+
+  &.color-error {
+    ::ng-deep svg {
+      path {
+        fill: $font-color-error;
+      }
+    }
+  }
+
+  &.color-info {
+    ::ng-deep svg {
+      path {
+        fill: $font-color-info;
+      }
+    }
+  }
+
+  &.color-success {
+    ::ng-deep svg {
+      path {
+        fill: $font-color-success;
+      }
+    }
+  }
+
+  &.color-warning {
+    ::ng-deep svg {
+      path {
+        fill: $font-color-warning;
+      }
+    }
+  }
+
+  &.color-white {
+    ::ng-deep svg {
+      path {
+        fill: $font-color-white;
+      }
+    }
+  }
+
+  &.color-grey {
+    ::ng-deep svg {
+      path {
+        fill: $color-icon-grey;
+      }
+    }
+  }
+
+  &.color-grey-dark {
+    ::ng-deep svg {
+      path {
+        fill: $color-icon-grey-dark;
+      }
+    }
+  }
+
+  &.has-car-damage {
+    ::ng-deep svg {
+      transform: rotate(-160deg);
+    }
+  }
+}

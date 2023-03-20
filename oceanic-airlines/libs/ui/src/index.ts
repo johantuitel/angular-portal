@@ -1,2 +1,3 @@
-export * from './lib/ui.module';
+import '@angular/localize/init';
 
+export * from './lib/ui.module';

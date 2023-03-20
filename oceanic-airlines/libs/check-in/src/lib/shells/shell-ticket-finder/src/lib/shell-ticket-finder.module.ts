@@ -1,7 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule,
+    RouterModule.forChild([
+    {
+      path: '',
+      pathMatch: 'full',
+      redirectTo: 'passenger-info',
+    },
+    {
+      path: 'passenger-info',
+      loadChildren: () =>
+        import('@oceanic-airlines/check-in/src/lib/features/feature-ticket-finder').then((module) => module.FeatureTicketFinderModule),
+    }
+  ]),
+],
 })
 export class ShellTicketFinderModule {}
