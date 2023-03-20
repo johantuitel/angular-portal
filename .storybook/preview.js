@@ -1,5 +1,7 @@
-import { setCompodocJson } from "@storybook/addon-docs/angular";
+import '@angular/localize/init';
+
 import docJson from "../documentation.json";
+import { setCompodocJson } from "@storybook/addon-docs/angular";
 setCompodocJson(docJson);
 
 export const parameters = {

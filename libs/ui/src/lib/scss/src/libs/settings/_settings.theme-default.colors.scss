@@ -1,0 +1,147 @@
+
+$color-transparent: rgba(255, 255, 255, 0);
+
+$color-white: #fff;
+$color-black: #1f1f1f;
+
+$color-grey: rgba(227, 227, 227, 1);
+$color-grey-background: #f0f0f0;
+$color-grey-dark: darken($color-grey, 20);
+
+$font-color-warm-coral: #55a9a4;
+
+$color-placeholder: rgba(170, 170, 170, 1);
+$color-placeholder-hover: rgba(170, 170, 170, 0.4);
+$color-placeholder-focus: rgba(170, 170, 170, 0);
+
+$color-deep-blue: #143d7d;//#1e236e;
+$color-deep-blue-active: darken($color-deep-blue, 5);
+$color-deep-blue-hover: darken($color-deep-blue, 10);
+$color-deep-blue-focus: darken($color-deep-blue, 15);
+
+$color-deep-blue-inverted-active: lighten($color-deep-blue, 60);
+$color-deep-blue-inverted-hover: lighten($color-deep-blue, 65);
+$color-deep-blue-inverted-focus: lighten($color-deep-blue, 70);
+
+$color-light-blue: #88bbe1;
+$color-light-blue-active: darken($color-light-blue, 5);
+$color-light-blue-hover: darken($color-light-blue, 10);
+$color-light-blue-focus: darken($color-light-blue, 15);
+
+$color-light-blue-inverted-active: lighten($color-light-blue, 60);
+$color-light-blue-inverted-hover: lighten($color-light-blue, 65);
+$color-light-blue-inverted-focus: lighten($color-light-blue, 70);
+
+$color-fresh-blue: #68d4e6;
+$color-fresh-blue-active: darken($color-fresh-blue, 5);
+$color-fresh-blue-hover: darken($color-fresh-blue, 10);
+$color-fresh-blue-focus: darken($color-fresh-blue, 15);
+
+$color-fresh-blue-inverted-active: lighten($color-fresh-blue, 60);
+$color-fresh-blue-inverted-hover: lighten($color-fresh-blue, 65);
+$color-fresh-blue-inverted-focus: lighten($color-fresh-blue, 70);
+
+$color-warm-coral: #55a9a4;
+$color-warm-coral-active: darken($color-warm-coral, 5);
+$color-warm-coral-hover: darken($color-warm-coral, 10);
+$color-warm-coral-focus: darken($color-warm-coral, 15);
+
+$color-warm-coral-inverted-active: lighten($color-warm-coral, 60);
+$color-warm-coral-inverted-hover: lighten($color-warm-coral, 65);
+$color-warm-coral-inverted-focus: lighten($color-warm-coral, 70);
+
+$color-deep-yellow: #FCC300;
+$color-deep-yellow-active: darken($color-deep-yellow, 5);
+$color-deep-yellow-hover: darken($color-deep-yellow, 10);
+$color-deep-yellow-focus: darken($color-deep-yellow, 15);
+
+$color-deep-yellow-inverted-active: lighten($color-deep-yellow, 60);
+$color-deep-yellow-inverted-hover: lighten($color-deep-yellow, 65);
+$color-deep-yellow-inverted-focus: lighten($color-deep-yellow, 70);
+
+$color-light-yellow: #F9F871;
+$color-light-yellow-active: darken($color-light-yellow, 5);
+$color-light-yellow-hover: darken($color-light-yellow, 10);
+$color-light-yellow-focus: darken($color-light-yellow, 15);
+
+$color-light-yellow-inverted-active: lighten($color-light-yellow, 60);
+$color-light-yellow-inverted-hover: lighten($color-light-yellow, 65);
+$color-light-yellow-inverted-focus: lighten($color-light-yellow, 70);
+
+$color-deep-purple: #7F3589;// light #c27bcc
+$color-deep-purple-active: darken($color-deep-purple, 5);
+$color-deep-purple-hover: darken($color-deep-purple, 10);
+$color-deep-purple-focus: darken($color-deep-purple, 15);
+
+$color-deep-purple-inverted-active: lighten($color-deep-purple, 60);
+$color-deep-purple-inverted-hover: lighten($color-deep-purple, 65);
+$color-deep-purple-inverted-focus: lighten($color-deep-purple, 70);
+
+$color-light-purple: #c27bcc;
+$color-light-purple-active: darken($color-light-purple, 5);
+$color-light-purple-hover: darken($color-light-purple, 10);
+$color-light-purple-focus: darken($color-light-purple, 15);
+
+$color-light-purple-inverted-active: lighten($color-light-purple, 60);
+$color-light-purple-inverted-hover: lighten($color-light-purple, 65);
+$color-light-purple-inverted-focus: lighten($color-light-purple, 70);
+
+$color-deep-red: #E91E5A;
+$color-deep-red-active: darken($color-deep-red, 5);
+$color-deep-red-hover: darken($color-deep-red, 10);
+$color-deep-red-focus: darken($color-deep-red, 15);
+
+$color-deep-red-inverted-active: lighten($color-deep-red, 60);
+$color-deep-red-inverted-hover: lighten($color-deep-red, 65);
+$color-deep-red-inverted-focus: lighten($color-deep-red, 70);
+
+$color-light-red: #FF6680;
+$color-light-red-active: darken($color-light-red, 5);
+$color-light-red-hover: darken($color-light-red, 10);
+$color-light-red-focus: darken($color-light-red, 15);
+
+$color-light-red-inverted-active: lighten($color-light-red, 60);
+$color-light-red-inverted-hover: lighten($color-light-red, 65);
+$color-light-red-inverted-focus: lighten($color-light-red, 70);
+
+$color-disabled-background: #d8dce1;
+
+$color-error: #e53935;
+$color-error-background: lighten($color-error, 40);
+$color-success: #4caf50;
+$color-success-background: lighten($color-success, 45);
+$color-warning: #ef7d00;
+$color-warning-background: lighten($color-warning, 50);
+$color-info: $color-deep-blue;
+$color-info-background: lighten($color-deep-blue, 50);
+
+$color-app-background: $color-white;
+
+//                     linear-gradient(-170deg, rgba(104, 212, 230, 0) 50%, rgba(104, 212, 230, 0.6) 100%),
+//                     linear-gradient(170deg, rgba(255, 109, 106, 0) 50%, rgba(255, 109, 106, 0.8) 100%)
+$color-gradient-solid: linear-gradient(-170deg, rgba($color-fresh-blue, 0) 60%, $color-fresh-blue, 125%),
+                       linear-gradient(170deg, rgba($color-warm-coral, 0) 60%, $color-warm-coral, 125%);
+$color-gradient-transparent: linear-gradient(-170deg, rgba($color-fresh-blue, 0) 60%, rgba($color-fresh-blue, 0.8) 100%),
+                             linear-gradient(170deg, rgba($color-warm-coral, 0) 60%, rgba($color-warm-coral, 0.8) 100%);
+$color-gradient-on-warm-coral-transparent: linear-gradient(-170deg, rgba($color-fresh-blue, 0) 50%, rgba($color-fresh-blue, 0.6) 100%),
+                                           linear-gradient(170deg, rgba($color-deep-blue, 0) 50%, rgba($color-deep-blue, 0.8) 100%);
+$color-gradient-on-deep-blue-transparent: linear-gradient(-170deg, rgba($color-fresh-blue, 0) 50%, rgba($color-fresh-blue, 0.6) 100%),
+                                          linear-gradient(170deg, rgba($color-warm-coral, 0) 50%, rgba($color-warm-coral, 0.8) 100%);
+$color-gradient-on-fresh-blue-transparent: linear-gradient(-170deg, rgba($color-warm-coral, 0) 50%, rgba($color-warm-coral, 0.6) 100%),
+                                           linear-gradient(170deg, rgba($color-deep-blue, 0) 50%, rgba($color-deep-blue, 0.8) 100%);
+$color-gradient-on-light-blue-transparent: linear-gradient(-170deg, rgba($color-light-blue, 0) 50%, rgba($color-light-blue, 0.6) 100%),
+                                            linear-gradient(170deg, rgba($color-deep-blue, 0) 50%, rgba($color-deep-blue, 0.8) 100%);
+$color-gradient-on-deep-yellow-transparent: linear-gradient(-170deg, rgba($color-deep-yellow, 0) 50%, rgba($color-deep-yellow, 0.6) 100%),
+                                            linear-gradient(170deg, rgba($color-deep-blue, 0) 50%, rgba($color-deep-blue, 0.8) 100%);
+$color-gradient-on-light-yellow-transparent: linear-gradient(-170deg, rgba($color-light-yellow, 0) 50%, rgba($color-light-yellow, 0.6) 100%),
+                                             linear-gradient(170deg, rgba($color-warm-coral, 0) 50%, rgba($color-warm-coral, 0.8) 100%);
+$color-gradient-on-deep-purple-transparent: linear-gradient(-170deg, rgba($color-deep-purple, 0) 50%, rgba($color-deep-purple, 0.6) 100%),
+                                             linear-gradient(170deg, rgba($color-warm-coral, 0) 50%, rgba($color-warm-coral, 0.8) 100%);
+$color-gradient-on-light-purple-transparent: linear-gradient(-170deg, rgba($color-light-purple, 0) 50%, rgba($color-light-purple, 0.6) 100%),
+                                             linear-gradient(170deg, rgba($color-light-blue, 0) 50%, rgba($color-light-blue, 0.8) 100%);
+$color-gradient-on-deep-red-transparent: linear-gradient(-170deg, rgba($color-deep-red, 0) 50%, rgba($color-deep-red, 0.6) 100%),
+                                         linear-gradient(170deg, rgba($color-deep-yellow, 0) 50%, rgba($color-deep-yellow, 0.8) 100%);
+$color-gradient-on-light-red-transparent: linear-gradient(-170deg, rgba($color-light-red, 0) 50%, rgba($color-light-red, 0.6) 100%),
+                                          linear-gradient(170deg, rgba($color-light-blue, 0) 50%, rgba($color-light-blue, 0.8) 100%);
+//$color-gradient-header
+

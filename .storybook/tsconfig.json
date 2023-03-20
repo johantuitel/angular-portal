@@ -7,12 +7,12 @@
     "allowSyntheticDefaultImports": true
   },
   "exclude": [
-    "../src/test.ts",
-    "../src/**/*.spec.ts",
-    "../projects/**/*.spec.ts"
+    "../apps/**",
+    "../libs/booking",
+    "../libs/check-in",
+    "../libs/flight-tracking",
   ],
   "include": [
-    "../apps/**/*",
     "../libs/**/*",
     "../stories/**/*"
   ],
