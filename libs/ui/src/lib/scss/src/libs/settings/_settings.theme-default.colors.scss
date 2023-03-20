@@ -8,6 +8,12 @@ $color-grey: rgba(227, 227, 227, 1);
 $color-grey-background: #f0f0f0;
 $color-grey-dark: darken($color-grey, 20);
 
+$color-moonstone: #729EA1;
+$color-sage: #B5BD89;
+$color-tan: #DFBE99;
+$color-light-coral: #EC9192;
+$color-blush: #DB5375;
+
 $font-color-warm-coral: #55a9a4;
 
 $color-placeholder: rgba(170, 170, 170, 1);
@@ -117,8 +123,6 @@ $color-info-background: lighten($color-deep-blue, 50);
 
 $color-app-background: $color-white;
 
-//                     linear-gradient(-170deg, rgba(104, 212, 230, 0) 50%, rgba(104, 212, 230, 0.6) 100%),
-//                     linear-gradient(170deg, rgba(255, 109, 106, 0) 50%, rgba(255, 109, 106, 0.8) 100%)
 $color-gradient-solid: linear-gradient(-170deg, rgba($color-fresh-blue, 0) 60%, $color-fresh-blue, 125%),
                        linear-gradient(170deg, rgba($color-warm-coral, 0) 60%, $color-warm-coral, 125%);
 $color-gradient-transparent: linear-gradient(-170deg, rgba($color-fresh-blue, 0) 60%, rgba($color-fresh-blue, 0.8) 100%),
@@ -143,5 +147,4 @@ $color-gradient-on-deep-red-transparent: linear-gradient(-170deg, rgba($color-de
                                          linear-gradient(170deg, rgba($color-deep-yellow, 0) 50%, rgba($color-deep-yellow, 0.8) 100%);
 $color-gradient-on-light-red-transparent: linear-gradient(-170deg, rgba($color-light-red, 0) 50%, rgba($color-light-red, 0.6) 100%),
                                           linear-gradient(170deg, rgba($color-light-blue, 0) 50%, rgba($color-light-blue, 0.8) 100%);
-//$color-gradient-header
 

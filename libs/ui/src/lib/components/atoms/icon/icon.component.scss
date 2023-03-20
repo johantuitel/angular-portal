@@ -137,65 +137,88 @@ i.app-icon {
     }
   }
 
-  &.color-deep-blue {
+  &.color-moonstone {
     ::ng-deep svg {
       circle {
-        fill: $font-color-deep-blue;
+        fill: $color-moonstone;
       }
       path {
-        fill: $font-color-deep-blue;
+        fill: $color-moonstone;
       }
     }
   }
 
-  &.color-warm-coral {
+  &.color-tan {
     ::ng-deep svg {
       circle {
-        fill: $color-warm-coral;
+        fill: $color-tan;
       }
       path {
-        fill: $color-warm-coral;
+        fill: $color-tan;
       }
     }
   }
 
-  &.color-fresh-blue {
+  &.color-sage {
     ::ng-deep svg {
       circle {
-        fill: $font-color-fresh-blue;
+        fill: $color-sage;
       }
       path {
-        fill: $font-color-fresh-blue;
+        fill: $color-sage;
       }
     }
   }
 
-  &.color-ghost {
+  &.color-light-coral {
     ::ng-deep svg {
       circle {
-        fill: $font-color-text;
+        fill: $color-light-coral;
       }
       path {
-        fill: $font-color-text;
+        fill: $color-light-coral;
       }
     }
   }
 
-  &.color-white-ghost {
+  &.color-blush {
     ::ng-deep svg {
       circle {
-        fill: $font-color-white;
+        fill: $color-blush;
       }
       path {
-        fill: $font-color-white;
+        fill: $color-blush;
       }
     }
   }
+
+  &.color-white {
+    ::ng-deep svg {
+      circle {
+        fill: $color-white;
+      }
+      path {
+        fill: $color-white;
+      }
+    }
+  }
+
+  &.color-black {
+    ::ng-deep svg {
+      circle {
+        fill: $color-black;
+      }
+      path {
+        fill: $color-black;
+      }
+    }
+  }
+
 
   &.color-error {
     ::ng-deep svg {
       path {
-        fill: $font-color-error;
+        fill: $color-error;
       }
     }
   }
@@ -203,7 +226,7 @@ i.app-icon {
   &.color-info {
     ::ng-deep svg {
       path {
-        fill: $font-color-info;
+        fill: $color-info;
       }
     }
   }
@@ -211,7 +234,7 @@ i.app-icon {
   &.color-success {
     ::ng-deep svg {
       path {
-        fill: $font-color-success;
+        fill: $color-success;
       }
     }
   }
@@ -219,7 +242,7 @@ i.app-icon {
   &.color-warning {
     ::ng-deep svg {
       path {
-        fill: $font-color-warning;
+        fill: $color-warning;
       }
     }
   }
@@ -227,7 +250,7 @@ i.app-icon {
   &.color-white {
     ::ng-deep svg {
       path {
-        fill: $font-color-white;
+        fill: $color-white;
       }
     }
   }

@@ -1,4 +1,6 @@
 
+@import './settings.theme-default.colors';
+
 $font-default: 'Roboto', sans-serif;
 $font-default-bold: $font-default;
 $font-header: 'Roboto', sans-serif;
@@ -7,10 +9,14 @@ $font-header-bold: $font-header;
 $font-color-text: #404040;
 $font-color-sub-text: lighten($font-color-text, 40);
 $font-color-menu: #7f7f7f;
-$font-color-deep-blue: #1e236e;
-$font-color-warm-coral: #55a9a4;
 $font-color-white: #fff;
 $font-color-grey: lighten($font-color-white, 20);
+
+$font-color-moonstone: $color-moonstone;
+$font-color-sage: $color-sage;
+$font-color-tan: $color-tan;
+$font-color-light-coral: $color-light-coral;
+$font-color-blush: $color-blush;
 
 $color-icon-grey: darken($font-color-grey, 10);
 $color-icon-grey-dark: darken($font-color-grey, 30);
