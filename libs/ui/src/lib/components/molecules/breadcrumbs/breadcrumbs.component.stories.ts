@@ -1,10 +1,18 @@
-import { Meta, Story } from '@storybook/angular';
+import { Meta, Story, moduleMetadata } from '@storybook/angular';
 
+import { AtomsModule } from './../../atoms/atoms.module';
 import { BreadcrumbsComponent } from './breadcrumbs.component';
 
 export default {
   title: 'Molecules/Breadcrumbs',
   component: BreadcrumbsComponent,
+  decorators: [
+    moduleMetadata({
+        imports: [
+            AtomsModule,
+        ],
+    }),
+],
 } as Meta<BreadcrumbsComponent>;
 
 const Template: Story<BreadcrumbsComponent> = (args: BreadcrumbsComponent) => ({
