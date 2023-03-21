@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/angular/types-6-0';
 
-import IconComponent from './icon.component';
+import { IconComponent } from './icon.component';
 
 export default {
   title: 'Atoms/Icon',

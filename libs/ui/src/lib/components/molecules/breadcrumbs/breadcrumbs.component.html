@@ -1,0 +1,23 @@
+<ng-container *ngIf="breadcrumbs">
+  <nav class="app-breadcrumbs" aria-label="breadcrumbs" *ngIf="breadcrumbs.length >= 2">
+    <ul>
+      <li
+        class="app-breadcrumb app-fx-appear-from-bottom" *ngFor="let crumb of breadcrumbs; trackBy: trackByIndex; let i = index">
+        <ui-icon [color]="color"></ui-icon>
+        <!-- <ui-icon *ngIf="i !== 0"
+                  type="angle-right"
+                  [color]="color"
+                  size="extra-small"
+                  style="padding-right: 0.5rem">
+        </ui-icon> -->
+        <a *ngIf="i !== breadcrumbs.length - 1"
+          (click)="navigate(crumb.url)"
+          class="app-breadcrumb_link {{color}}">{{ crumb.label }}</a>
+        <span
+          *ngIf="i === breadcrumbs.length - 1"
+          class="app-breadcrumb_current-page"
+          aria-current="page">{{ crumb.label }}</span>
+      </li>
+    </ul>
+  </nav>
+</ng-container>

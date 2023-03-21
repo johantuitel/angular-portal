@@ -1,6 +1,6 @@
 
 export type IconNames =
-  'oceanic-airlines';
+  'oceanic-airlines' | 'angle-right';
 
 export interface IIcon {
   name: IconNames;

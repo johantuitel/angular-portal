@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, ElementRef, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { IconNames, IconsRegistryService } from '../../../assets/src/libs';
 
 import { ColorType } from './../../particles/color.type';
-import { IconsRegistryService } from '../../../assets/src/libs';
 import { SizeType } from './../../particles/size.type';
 
 @Component({
@@ -10,7 +10,7 @@ import { SizeType } from './../../particles/size.type';
   styleUrls: ['./icon.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class IconComponent implements OnChanges {
+export class IconComponent implements OnChanges {
 
   /**
    * Define the fillcolor for the icon @see ColorType
@@ -30,7 +30,7 @@ export default class IconComponent implements OnChanges {
   /**
    * The name of the icon to be displayed
    */
-  @Input() type = '';
+  @Input() type: IconNames;
 
   constructor(private readonly element: ElementRef,
               private readonly iconsRegistry: IconsRegistryService) { }

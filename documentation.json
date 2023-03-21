@@ -2,6 +2,47 @@
     "pipes": [],
     "interfaces": [
         {
+            "name": "Breadcrumb",
+            "id": "interface-Breadcrumb-ac42f040c4325b08402a3094c8de224912dd2ccd9573a4369c0054e00434b355cf3f20bc6e08dc6f71be23f4ed5a245ad2e0c0661dbe12f3bc8462156ccd1868",
+            "file": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumb.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import {Params} from '@angular/router';\r\n\r\nexport interface Breadcrumb {\r\n  label: string;\r\n  params?: Params;\r\n  url: string;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "params",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Params",
+                    "optional": true,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "url",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
             "name": "Chainable",
             "id": "interface-Chainable-cb612385d81b07be0aad52bfcb00cbe7bc4da71bb724b45a152d9ab4e7d4b2760a0b20ca8bca793febb910c5eecfd0756929a822af47a6ff4c538299ea673b8c",
             "file": "apps/admin-portal-e2e/src/support/commands.ts",
@@ -300,12 +341,12 @@
         },
         {
             "name": "IIcon",
-            "id": "interface-IIcon-09aacbb23634685cb8aebedbe188d169b9d0d05756e12b6ee86d5a8d4e89175ef200910b66a24427e3395aa74bc07c67bf3a83ca9c8d28ea3dcc484730b5141d",
+            "id": "interface-IIcon-a38fe48ed9e2cdd29bdfe772a94a91219e40a2ae3fbf2b44e94c00d9e440217b6c0fe8b3f2a32447d1a52e8a85e1fc5346fd647850187b216a46b55a2b5ab66b",
             "file": "libs/ui/src/lib/assets/src/libs/icons/icon.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export type IconNames =\r\n  'oceanic-airlines';\r\n\r\nexport interface IIcon {\r\n  name: IconNames;\r\n  data: string;\r\n}\r\n",
+            "sourceCode": "export type IconNames =\r\n  'oceanic-airlines' | 'angle-right';\r\n\r\nexport interface IIcon {\r\n  name: IconNames;\r\n  data: string;\r\n}\r\n",
             "properties": [
                 {
                     "name": "data",
@@ -752,6 +793,133 @@
             "templateData": "<main class=\"oceanic-main-layout\">\r\n    <!-- header -->\r\n    <section>\r\n        <router-outlet></router-outlet>\r\n    </section>\r\n    <!-- footer -->\r\n</main>\r\n"
         },
         {
+            "name": "BreadcrumbsComponent",
+            "id": "component-BreadcrumbsComponent-225b61703b2462779ba30f133272a070c2a5d71786412b95e92f8e32941183b05458e4ea28d6d4417e5d89f8c2e91b8a462d44b26db0726d3b3bb23c40db4bde",
+            "file": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ui-breadcrumbs",
+            "styleUrls": [
+                "./breadcrumbs.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./breadcrumbs.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "breadcrumbs",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "Breadcrumb[]",
+                    "decorators": []
+                },
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine the fillcolor for the icon @see ColorType\n",
+                    "description": "<p>Define the fillcolor for the icon @see ColorType</p>\n",
+                    "line": 17,
+                    "type": "ColorType",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "navigateClicked",
+                    "defaultValue": "new EventEmitter<string>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "EventEmitter<string>"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "navigate",
+                    "args": [
+                        {
+                            "name": "path",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 25,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "path",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "trackByIndex",
+                    "args": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';\r\n\r\nimport {Breadcrumb} from './breadcrumb';\r\nimport { ColorType } from '../../particles/color.type';\r\n\r\n@Component({\r\n  selector: 'ui-breadcrumbs',\r\n  templateUrl: './breadcrumbs.component.html',\r\n  styleUrls: ['./breadcrumbs.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class BreadcrumbsComponent {\r\n\r\n  /**\r\n   * Define the fillcolor for the icon @see ColorType\r\n   */\r\n  @Input() color: ColorType;\r\n  @Input() breadcrumbs: Breadcrumb[] = [];\r\n  @Output() navigateClicked: EventEmitter<string> = new EventEmitter<string>();\r\n\r\n  trackByIndex(index: number): number {\r\n    return index;\r\n  }\r\n\r\n  navigate(path: string): void {\r\n    this.navigateClicked.emit(path);\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  display: block;\r\n  width: 100%;\r\n}\r\n\r\n.app-breadcrumbs {\r\n  position: relative;\r\n  display: block;\r\n  width: 100%;\r\n  padding: $size-1 0 $size-1 0;\r\n  margin: 0;\r\n  overflow-x: auto;\r\n  overflow-y: hidden;\r\n\r\n  ul {\r\n    display: flex;\r\n    flex-wrap: nowrap;\r\n    align-items: baseline;\r\n    padding: 0;\r\n    margin: 0;\r\n    list-style-type: none;\r\n  }\r\n\r\n  li {\r\n    position: relative;\r\n    white-space: nowrap;\r\n\r\n    &:nth-child(1) {\r\n      animation-delay: 0.3s;\r\n    }\r\n\r\n    &:nth-child(2) {\r\n      animation-delay: 0.6s;\r\n    }\r\n\r\n    &:nth-child(3) {\r\n      animation-delay: 0.9s;\r\n    }\r\n\r\n    &:nth-child(4) {\r\n      animation-delay: 1.2s;\r\n    }\r\n\r\n    &:nth-child(5) {\r\n      animation-delay: 1.5s;\r\n    }\r\n  }\r\n\r\n  .app-breadcrumb_link {\r\n    position: relative;\r\n    display: inline-block;\r\n    padding: 0;\r\n    margin: 0 $size-2 0 0;\r\n    border-radius: $size-1;\r\n    box-shadow: none;\r\n    color: $font-color-blush;\r\n    cursor: pointer;\r\n    font-family: $font-default-bold;\r\n    font-size: $font-size-regular;\r\n    font-style: normal;\r\n    font-weight: $font-weight-bold;\r\n    line-height: 1;\r\n    outline: 0;\r\n    outline-offset: 0;\r\n    text-decoration: none;\r\n    transition: color .15s $ease-in-quad, box-shadow .15s $ease-in-quad;\r\n    user-select: auto;\r\n    vertical-align: baseline;\r\n    white-space: nowrap;\r\n    word-break: normal;\r\n    word-spacing: normal;\r\n    word-wrap: normal;\r\n\r\n    &.moonstone {\r\n      color: $color-moonstone;\r\n    }\r\n    &.tan {\r\n      color: $color-tan;\r\n    }\r\n    &.sage {\r\n      color: $color-sage;\r\n    }\r\n    &.light-coral {\r\n      color: $color-light-coral;\r\n    }\r\n    &.blush {\r\n      color: $color-blush;\r\n    }\r\n    &.white {\r\n      color: $color-white;\r\n    }\r\n    &.black {\r\n      color: $color-black;\r\n    }\r\n\r\n    &::after {\r\n      position: absolute;\r\n      top: auto;\r\n      right: auto;\r\n      bottom: -0.25rem;\r\n      left: 0;\r\n      width: 100%;\r\n      height: $size-1px;\r\n      background-color: $color-warm-coral;\r\n      content: '';\r\n      transform: scaleX(0);\r\n      transform-origin: bottom left;\r\n      transform-style: preserve-3d;\r\n      transition: transform .15s $ease-in-quad;\r\n    }\r\n\r\n    &:hover {\r\n      color: $font-color-warm-coral;\r\n\r\n      &::after {\r\n        transform: scaleX(1);\r\n      }\r\n    }\r\n\r\n    &:focus {\r\n      box-shadow: $ring-focus;\r\n      color: $font-color-warm-coral;\r\n\r\n      &::after {\r\n        transform: scaleX(0);\r\n      }\r\n    }\r\n\r\n    &:active {\r\n      color: $font-color-warm-coral;\r\n\r\n      &::after {\r\n        transform: scaleX(1);\r\n      }\r\n    }\r\n  }\r\n\r\n  .app-breadcrumb_current-page[aria-current] {\r\n    position: relative;\r\n    display: inline-block;\r\n    padding: 0;\r\n    margin: 0;\r\n    color: $color-white;\r\n    font-family: $font-default-bold;\r\n    font-size: $font-size-regular;\r\n    font-style: normal;\r\n    font-weight: $font-weight-bold;\r\n    line-height: 1;\r\n    text-decoration: none;\r\n    user-select: auto;\r\n    vertical-align: baseline;\r\n    white-space: nowrap;\r\n    word-break: normal;\r\n    word-spacing: normal;\r\n    word-wrap: normal;\r\n  }\r\n}\r\n\r\n",
+                    "styleUrl": "./breadcrumbs.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<ng-container *ngIf=\"breadcrumbs\">\r\n  <nav class=\"app-breadcrumbs\" aria-label=\"breadcrumbs\" *ngIf=\"breadcrumbs.length >= 2\">\r\n    <ul>\r\n      <li\r\n        class=\"app-breadcrumb app-fx-appear-from-bottom\" *ngFor=\"let crumb of breadcrumbs; trackBy: trackByIndex; let i = index\">\r\n        <ui-icon [color]=\"color\"></ui-icon>\r\n        <!-- <ui-icon *ngIf=\"i !== 0\"\r\n                  type=\"angle-right\"\r\n                  [color]=\"color\"\r\n                  size=\"extra-small\"\r\n                  style=\"padding-right: 0.5rem\">\r\n        </ui-icon> -->\r\n        <a *ngIf=\"i !== breadcrumbs.length - 1\"\r\n          (click)=\"navigate(crumb.url)\"\r\n          class=\"app-breadcrumb_link {{color}}\">{{ crumb.label }}</a>\r\n        <span\r\n          *ngIf=\"i === breadcrumbs.length - 1\"\r\n          class=\"app-breadcrumb_current-page\"\r\n          aria-current=\"page\">{{ crumb.label }}</span>\r\n      </li>\r\n    </ul>\r\n  </nav>\r\n</ng-container>\r\n"
+        },
+        {
             "name": "ButtonComponent",
             "id": "component-ButtonComponent-4ef205c97a334c309aa4001c8ab4a6d9571dcae18d0e85aaf0d367467ab5d3a9f13ab3573726f1fcb409bc9b49894dadfb80b1bbe1b6ba7041455ad9d4922004",
             "file": "stories/button.component.ts",
@@ -1032,7 +1200,7 @@
         },
         {
             "name": "IconComponent",
-            "id": "component-IconComponent-eea144a1035ccea26b6b6aff8cf8b35c2ea3d445aed2692502d3c33636357a9810bdce42629fb1fc0494bdbb0e50b1b709ecae016147c80d315caf49cacca254",
+            "id": "component-IconComponent-7779e6e688e85e3e35dbc28260689bc0a62e816473c4f7c5bfaf57b1de6e4f464d60516d581ac6543edf4132647edb84640d8fa95c57d4b21c1e76d20db85104",
             "file": "libs/ui/src/lib/components/atoms/icon/icon.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -1083,13 +1251,12 @@
                 },
                 {
                     "name": "type",
-                    "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe name of the icon to be displayed\n",
                     "description": "<p>The name of the icon to be displayed</p>\n",
                     "line": 33,
-                    "type": "string",
+                    "type": "IconNames",
                     "decorators": []
                 }
             ],
@@ -1132,11 +1299,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component, ElementRef, Input, OnChanges, SimpleChanges } from '@angular/core';\n\nimport { ColorType } from './../../particles/color.type';\nimport { IconsRegistryService } from '../../../assets/src/libs';\nimport { SizeType } from './../../particles/size.type';\n\n@Component({\n  selector: 'ui-icon',\n  templateUrl: './icon.component.html',\n  styleUrls: ['./icon.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport default class IconComponent implements OnChanges {\n\n  /**\n   * Define the fillcolor for the icon @see ColorType\n   */\n  @Input() color: ColorType;\n\n  /**\n   * Add custom css styling\n   */\n  @Input() css!: string;\n\n  /**\n   * Determine the size for the icon @see SizeType, default is regular\n   */\n  @Input() size: SizeType = 'regular';\n\n  /**\n   * The name of the icon to be displayed\n   */\n  @Input() type = '';\n\n  constructor(private readonly element: ElementRef,\n              private readonly iconsRegistry: IconsRegistryService) { }\n\n  ngOnChanges(changes: SimpleChanges): void {\n    const { type } = changes;\n\n    if (type) {\n      const i: HTMLElement | null = this.element.nativeElement.querySelector('i');\n\n      if (i) {\n        const svg = this.iconsRegistry.getIcon(type.currentValue) ?? '';\n\n        this.element.nativeElement.querySelector('i').innerHTML = svg;\n      }\n    }\n  }\n\n\n}\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, ElementRef, Input, OnChanges, SimpleChanges } from '@angular/core';\nimport { IconNames, IconsRegistryService } from '../../../assets/src/libs';\n\nimport { ColorType } from './../../particles/color.type';\nimport { SizeType } from './../../particles/size.type';\n\n@Component({\n  selector: 'ui-icon',\n  templateUrl: './icon.component.html',\n  styleUrls: ['./icon.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class IconComponent implements OnChanges {\n\n  /**\n   * Define the fillcolor for the icon @see ColorType\n   */\n  @Input() color: ColorType;\n\n  /**\n   * Add custom css styling\n   */\n  @Input() css!: string;\n\n  /**\n   * Determine the size for the icon @see SizeType, default is regular\n   */\n  @Input() size: SizeType = 'regular';\n\n  /**\n   * The name of the icon to be displayed\n   */\n  @Input() type: IconNames;\n\n  constructor(private readonly element: ElementRef,\n              private readonly iconsRegistry: IconsRegistryService) { }\n\n  ngOnChanges(changes: SimpleChanges): void {\n    const { type } = changes;\n\n    if (type) {\n      const i: HTMLElement | null = this.element.nativeElement.querySelector('i');\n\n      if (i) {\n        const svg = this.iconsRegistry.getIcon(type.currentValue) ?? '';\n\n        this.element.nativeElement.querySelector('i').innerHTML = svg;\n      }\n    }\n  }\n\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: relative;\r\n  display: inline-block;\r\n  height: 0;\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 0;\r\n  line-height: 0;\r\n  vertical-align: middle;\r\n}\r\n\r\ni.app-icon {\r\n  position: relative;\r\n  display: block;\r\n  width: $size-6;\r\n  height: $size-6;\r\n  padding: 0;\r\n  font-size: 0;\r\n  line-height: 0;\r\n  outline: 0;\r\n  outline-offset: 0;\r\n  pointer-events: none;\r\n  text-align: center;\r\n  transform: translateY(-52%);\r\n\r\n  ::ng-deep svg {\r\n    max-width: $size-6;\r\n    max-height: $size-6;\r\n\r\n    path {\r\n      transition: fill 0.15s $ease-in-quad;\r\n    }\r\n  }\r\n\r\n  &.size-extra-small {\r\n    width: $size-4;\r\n    height: $size-4;\r\n    transform: translateY(-60%);\r\n\r\n    ::ng-deep svg {\r\n      max-width: $size-4;\r\n      max-height: $size-4;\r\n    }\r\n  }\r\n\r\n  &.size-small {\r\n    width: $size-5;\r\n    height: $size-5;\r\n    transform: translateY(-50%);\r\n\r\n    ::ng-deep svg {\r\n      max-width: $size-5;\r\n      max-height: $size-5;\r\n    }\r\n\r\n    // fix for misaligned icon\r\n    &[data-icon=\"power\"] {\r\n      transform: translateY(-53%);\r\n    }\r\n  }\r\n\r\n  &.size-regular {\r\n    width: $size-6;\r\n    height: $size-6;\r\n    transform: translateY(-50%);\r\n\r\n    ::ng-deep svg {\r\n      max-width: $size-6;\r\n      max-height: $size-6;\r\n    }\r\n\r\n    // fix for misaligned icon\r\n    &[data-icon=\"power\"] {\r\n      transform: translateY(-53%);\r\n    }\r\n  }\r\n\r\n  &.size-medium {\r\n    width: $size-7;\r\n    height: $size-7;\r\n    transform: translateY(-50%);\r\n\r\n    ::ng-deep svg {\r\n      max-width: $size-7;\r\n      max-height: $size-7;\r\n    }\r\n\r\n    // fix for misaligned icon\r\n    &[data-icon=\"power\"] {\r\n      transform: translateY(-53%);\r\n    }\r\n  }\r\n\r\n  &.size-large {\r\n    width: $size-8;\r\n    height: $size-8;\r\n    transform: translateY(-54%);\r\n\r\n    ::ng-deep svg {\r\n      max-width: $size-8;\r\n      max-height: $size-8;\r\n    }\r\n  }\r\n\r\n  &.size-extra-large {\r\n    width: $size-9;\r\n    height: $size-9;\r\n    transform: translateY(-54%);\r\n\r\n    ::ng-deep svg {\r\n      max-width: $size-9;\r\n      max-height: $size-9;\r\n    }\r\n  }\r\n\r\n  &.size-huge {\r\n    width: $size-16;\r\n    height: $size-16;\r\n    transform: translateY(-54%);\r\n\r\n    ::ng-deep svg {\r\n      max-width: $size-16;\r\n      max-height: $size-16;\r\n    }\r\n  }\r\n\r\n  &.color-default {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $color-text;\r\n      }\r\n      path {\r\n        fill: $color-text;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-moonstone {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $color-moonstone;\r\n      }\r\n      path {\r\n        fill: $color-moonstone;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-tan {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $color-tan;\r\n      }\r\n      path {\r\n        fill: $color-tan;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-sage {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $color-sage;\r\n      }\r\n      path {\r\n        fill: $color-sage;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-light-coral {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $color-light-coral;\r\n      }\r\n      path {\r\n        fill: $color-light-coral;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-blush {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $color-blush;\r\n      }\r\n      path {\r\n        fill: $color-blush;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-white {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $color-white;\r\n      }\r\n      path {\r\n        fill: $color-white;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-black {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $color-black;\r\n      }\r\n      path {\r\n        fill: $color-black;\r\n      }\r\n    }\r\n  }\r\n\r\n\r\n  &.color-error {\r\n    ::ng-deep svg {\r\n      path {\r\n        fill: $color-error;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-info {\r\n    ::ng-deep svg {\r\n      path {\r\n        fill: $color-info;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-success {\r\n    ::ng-deep svg {\r\n      path {\r\n        fill: $color-success;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-warning {\r\n    ::ng-deep svg {\r\n      path {\r\n        fill: $color-warning;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-white {\r\n    ::ng-deep svg {\r\n      path {\r\n        fill: $color-white;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-grey {\r\n    ::ng-deep svg {\r\n      path {\r\n        fill: $color-icon-grey;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-grey-dark {\r\n    ::ng-deep svg {\r\n      path {\r\n        fill: $color-icon-grey-dark;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.has-car-damage {\r\n    ::ng-deep svg {\r\n      transform: rotate(-160deg);\r\n    }\r\n  }\r\n}\r\n",
+                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: relative;\r\n  display: inline-block;\r\n  height: 0;\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 0;\r\n  line-height: 0;\r\n  vertical-align: middle;\r\n}\r\n\r\ni.app-icon {\r\n  position: relative;\r\n  display: block;\r\n  width: $size-6;\r\n  height: $size-6;\r\n  padding: 0;\r\n  font-size: 0;\r\n  line-height: 0;\r\n  outline: 0;\r\n  outline-offset: 0;\r\n  pointer-events: none;\r\n  text-align: center;\r\n  transform: translateY(-52%);\r\n\r\n  ::ng-deep svg {\r\n    max-width: $size-6;\r\n    max-height: $size-6;\r\n\r\n    path {\r\n      transition: fill 0.15s $ease-in-quad;\r\n    }\r\n  }\r\n\r\n  &.size-extra-small {\r\n    width: $size-4;\r\n    height: $size-4;\r\n    transform: translateY(-60%);\r\n\r\n    ::ng-deep svg {\r\n      max-width: $size-4;\r\n      max-height: $size-4;\r\n    }\r\n  }\r\n\r\n  &.size-small {\r\n    width: $size-5;\r\n    height: $size-5;\r\n    transform: translateY(-50%);\r\n\r\n    ::ng-deep svg {\r\n      max-width: $size-5;\r\n      max-height: $size-5;\r\n    }\r\n\r\n    // fix for misaligned icon\r\n    &[data-icon=\"power\"] {\r\n      transform: translateY(-53%);\r\n    }\r\n  }\r\n\r\n  &.size-regular {\r\n    width: $size-6;\r\n    height: $size-6;\r\n    transform: translateY(-50%);\r\n\r\n    ::ng-deep svg {\r\n      max-width: $size-6;\r\n      max-height: $size-6;\r\n    }\r\n\r\n    // fix for misaligned icon\r\n    &[data-icon=\"power\"] {\r\n      transform: translateY(-53%);\r\n    }\r\n  }\r\n\r\n  &.size-medium {\r\n    width: $size-7;\r\n    height: $size-7;\r\n    transform: translateY(-50%);\r\n\r\n    ::ng-deep svg {\r\n      max-width: $size-7;\r\n      max-height: $size-7;\r\n    }\r\n\r\n    // fix for misaligned icon\r\n    &[data-icon=\"power\"] {\r\n      transform: translateY(-53%);\r\n    }\r\n  }\r\n\r\n  &.size-large {\r\n    width: $size-8;\r\n    height: $size-8;\r\n    transform: translateY(-54%);\r\n\r\n    ::ng-deep svg {\r\n      max-width: $size-8;\r\n      max-height: $size-8;\r\n    }\r\n  }\r\n\r\n  &.size-extra-large {\r\n    width: $size-9;\r\n    height: $size-9;\r\n    transform: translateY(-54%);\r\n\r\n    ::ng-deep svg {\r\n      max-width: $size-9;\r\n      max-height: $size-9;\r\n    }\r\n  }\r\n\r\n  &.size-huge {\r\n    width: $size-16;\r\n    height: $size-16;\r\n    transform: translateY(-54%);\r\n\r\n    ::ng-deep svg {\r\n      max-width: $size-16;\r\n      max-height: $size-16;\r\n    }\r\n  }\r\n\r\n  &.color-default {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $font-color-text;\r\n      }\r\n      path {\r\n        fill: $font-color-text;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-moonstone {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $color-moonstone;\r\n      }\r\n      path {\r\n        fill: $color-moonstone;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-tan {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $color-tan;\r\n      }\r\n      path {\r\n        fill: $color-tan;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-sage {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $color-sage;\r\n      }\r\n      path {\r\n        fill: $color-sage;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-light-coral {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $color-light-coral;\r\n      }\r\n      path {\r\n        fill: $color-light-coral;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-blush {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $color-blush;\r\n      }\r\n      path {\r\n        fill: $color-blush;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-white {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $color-white;\r\n      }\r\n      path {\r\n        fill: $color-white;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-black {\r\n    ::ng-deep svg {\r\n      circle {\r\n        fill: $color-black;\r\n      }\r\n      path {\r\n        fill: $color-black;\r\n      }\r\n    }\r\n  }\r\n\r\n\r\n  &.color-error {\r\n    ::ng-deep svg {\r\n      path {\r\n        fill: $color-error;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-info {\r\n    ::ng-deep svg {\r\n      path {\r\n        fill: $color-info;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-success {\r\n    ::ng-deep svg {\r\n      path {\r\n        fill: $color-success;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-warning {\r\n    ::ng-deep svg {\r\n      path {\r\n        fill: $color-warning;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-white {\r\n    ::ng-deep svg {\r\n      path {\r\n        fill: $color-white;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-grey {\r\n    ::ng-deep svg {\r\n      path {\r\n        fill: $color-icon-grey;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.color-grey-dark {\r\n    ::ng-deep svg {\r\n      path {\r\n        fill: $color-icon-grey-dark;\r\n      }\r\n    }\r\n  }\r\n\r\n  &.has-car-damage {\r\n    ::ng-deep svg {\r\n      transform: rotate(-160deg);\r\n    }\r\n  }\r\n}\r\n",
                     "styleUrl": "./icon.component.scss"
                 }
             ],
@@ -1692,13 +1859,13 @@
         },
         {
             "name": "AtomsModule",
-            "id": "module-AtomsModule-de9da1ae2a4f02ffdd33f2f7782060710ee07d1d8f255f4a383eb4101d45d299dad68b0c91ae615b18f7dee403b4e3d909e7a800bd49d59dbacbcbdae5c6a05d",
+            "id": "module-AtomsModule-a1f16ac07795f2ee4da601e2880b2c487a6da7290a6d18615bc688b894c2599cc1d146a8eddc465b1baf8855c0e06ccbfbce458e3936e65ffae3813360f2a873",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/ui/src/lib/components/atoms/atoms.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport IconComponent from './icon/icon.component';\r\nimport { NgModule } from '@angular/core';\r\n\r\n@NgModule({\r\n  declarations: [IconComponent],\r\n  imports: [CommonModule],\r\n  exports: [IconComponent],\r\n})\r\nexport class AtomsModule {}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { IconComponent } from './icon/icon.component';\r\nimport { NgModule } from '@angular/core';\r\n\r\n@NgModule({\r\n  declarations: [IconComponent],\r\n  imports: [CommonModule],\r\n  exports: [IconComponent],\r\n})\r\nexport class AtomsModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -2206,13 +2373,13 @@
         },
         {
             "name": "MoleculesModule",
-            "id": "module-MoleculesModule-b6d590776099a8e303e88d1197e7a83dfff88228bf071f94435be2058c8367aa4e693aaaa0af1e58483876eb9aa080cb9e0cb0e00cb49bb52bca824397b53623",
+            "id": "module-MoleculesModule-c704578971c196e332625bd6b23fdb54f3c69fc9b2443ea3359bcde32aaeb5322ff7c515ec735aeb39b4e316ca0598ae9f51347d3e96ee9748e459cd307593e4",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/ui/src/lib/components/molecules/molecules.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { NgModule } from '@angular/core';\r\n\r\n@NgModule({\r\n  imports: [CommonModule],\r\n  exports: [],\r\n  declarations: [],\r\n})\r\nexport class MoleculesModule {}\r\n",
+            "sourceCode": "import { AtomsModule } from './../atoms/atoms.module';\r\nimport { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';\r\nimport { CommonModule } from '@angular/common';\r\nimport { NgModule } from '@angular/core';\r\n\r\n@NgModule({\r\n  declarations: [BreadcrumbsComponent],\r\n  imports: [CommonModule, AtomsModule],\r\n  exports: [BreadcrumbsComponent],\r\n})\r\nexport class MoleculesModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -2220,15 +2387,27 @@
                 },
                 {
                     "type": "declarations",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "BreadcrumbsComponent"
+                        }
+                    ]
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "AtomsModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "BreadcrumbsComponent"
+                        }
+                    ]
                 },
                 {
                     "type": "bootstrap",
@@ -2674,13 +2853,13 @@
         },
         {
             "name": "UiModule",
-            "id": "module-UiModule-2027a76d2f68940ec10e058bc79b30772572ee238266c1c3895f9fb128218e018ad8200e80f5531df127aa994d5d5d13563113d8446b5b8423c1fab68d8d41f0",
+            "id": "module-UiModule-210f6c2d9c06264eceddd45ac1e60167e5075f2fd297ecda971d038a852994089864de2dfc90637148bf2d59eac2c1363113683de196ea0246c034590cede7b7",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/ui/src/lib/ui.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { ComponentsModule } from './components/components.module';\nimport { IconsModule } from './assets/src/libs/icons/icons.module';\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  imports: [CommonModule, IconsModule, ComponentsModule],\n  exports: [IconsModule, ComponentsModule],\n})\nexport class UiModule {\n  constructor() {\n    console.log('>>>>> create ui module');\n  }\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { ComponentsModule } from './components/components.module';\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  imports: [CommonModule, ComponentsModule],\n  exports: [ComponentsModule],\n})\nexport class UiModule {\n}\n",
             "children": [
                 {
                     "type": "providers",
@@ -2692,19 +2871,11 @@
                 },
                 {
                     "type": "imports",
-                    "elements": [
-                        {
-                            "name": "IconsModule"
-                        }
-                    ]
+                    "elements": []
                 },
                 {
                     "type": "exports",
-                    "elements": [
-                        {
-                            "name": "IconsModule"
-                        }
-                    ]
+                    "elements": []
                 },
                 {
                     "type": "bootstrap",
@@ -2738,6 +2909,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "story.bind({})"
+            },
+            {
+                "name": "breadcrumbs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "getGreeting",
@@ -2798,6 +2979,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "`\r\n<h6 class=\"storybook-color-header\">Default colors</h6>\r\n<div class=\"storybook-color-example bg-color-white\" color=\"$color-white\"></div>\r\n<div class=\"storybook-color-example bg-color-black\" color=\"$color-black\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Blue</h6>\r\n<div class=\"storybook-color-example bg-color-deep-blue\" color=\"$color-deep-blue\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-active\" color=\"$color-deep-blue-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-hover\" color=\"$color-deep-blue-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-focus\" color=\"$color-deep-blue-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Fresh Blue</h6>\r\n<div class=\"storybook-color-example bg-color-fresh-blue\" color=\"$color-fresh-blue\"></div>\r\n<div class=\"storybook-color-example bg-color-fresh-blue-active\" color=\"$color-fresh-blue-active\"></div>\r\n<div class=\"storybook-color-example bg-color-fresh-blue-hover\" color=\"$color-fresh-blue-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-fresh-blue-focus\" color=\"$color-fresh-blue-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Warm Coral</h6>\r\n<div class=\"storybook-color-example bg-color-warm-coral\" color=\"$color-warm-coral\"></div>\r\n<div class=\"storybook-color-example bg-color-warm-coral-active\" color=\"$color-warm-coral-active\"></div>\r\n<div class=\"storybook-color-example bg-color-warm-coral-hover\" color=\"$color-warm-coral-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-warm-coral-focus\" color=\"$color-warm-coral-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Light Blue</h6>\r\n<div class=\"storybook-color-example bg-color-light-blue\" color=\"$color-light-blue\"></div>\r\n<div class=\"storybook-color-example bg-color-light-blue-active\" color=\"$color-light-blue-active\"></div>\r\n<div class=\"storybook-color-example bg-color-light-blue-hover\" color=\"$color-light-blue-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-light-blue-focus\" color=\"$color-light-blue-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Yellow</h6>\r\n<div class=\"storybook-color-example bg-color-deep-yellow\" color=\"$color-deep-yellow\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-yellow-active\" color=\"$color-deep-yellow-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-yellow-hover\" color=\"$color-deep-yellow-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-yellow-focus\" color=\"$color-deep-yellow-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Purple</h6>\r\n<div class=\"storybook-color-example bg-color-deep-purple\" color=\"$color-deep-purple\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-purple-active\" color=\"$color-deep-purple-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-purple-hover\" color=\"$color-deep-purple-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-purple-focus\" color=\"$color-deep-purple-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Red</h6>\r\n<div class=\"storybook-color-example bg-color-deep-red\" color=\"$color-deep-red\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-red-active\" color=\"$color-deep-red-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-red-hover\" color=\"$color-deep-red-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-red-focus\" color=\"$color-deep-red-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Error</h6>\r\n<div class=\"storybook-color-example bg-color-error\" color=\"$color-error\"></div>\r\n<div class=\"storybook-color-example bg-color-error-background\" color=\"$color-error-background\"></div>\r\n<h6 class=\"storybook-color-header\">Success</h6>\r\n<div class=\"storybook-color-example bg-color-success\" color=\"$color-success\"></div>\r\n<div class=\"storybook-color-example bg-color-success-background\" color=\"$color-success-background\"></div>\r\n<h6 class=\"storybook-color-header\">Warning</h6>\r\n<div class=\"storybook-color-example bg-color-warning\" color=\"$color-warning\"></div>\r\n<div class=\"storybook-color-example bg-color-warning-background\" color=\"$color-warning-background\"></div>\r\n<h6 class=\"storybook-color-header\">Info</h6>\r\n<div class=\"storybook-color-example bg-color-info\" color=\"$color-info\"></div>\r\n<div class=\"storybook-color-example bg-color-info-background\" color=\"$color-info-background\"></div>\r\n`"
+            },
+            {
+                "name": "iconAngleRight",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/assets/src/libs/icons/regular.icons.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "IIcon",
+                "defaultValue": "{\r\n  name: 'angle-right',\r\n  data: '<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 512\"><path d=\"M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z\"/></svg>'\r\n}"
             },
             {
                 "name": "iconOceanicAirlines",
@@ -2887,7 +3078,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "IIcon[]",
-                "defaultValue": "[\r\n  iconOceanicAirlines,\r\n]"
+                "defaultValue": "[\r\n  iconOceanicAirlines,\r\n  iconAngleRight,\r\n]"
             },
             {
                 "name": "Secondary",
@@ -2958,6 +3149,16 @@
                 "deprecationMessage": "",
                 "type": "Story<IconComponent>",
                 "defaultValue": "(args: IconComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<BreadcrumbsComponent>",
+                "defaultValue": "(args: BreadcrumbsComponent) => ({\r\n  props: args\r\n})"
             }
         ],
         "functions": [
@@ -3036,12 +3237,12 @@
                 "name": "IconNames",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "",
+                "rawtype": "\"oceanic-airlines\" | \"angle-right\"",
                 "file": "libs/ui/src/lib/assets/src/libs/icons/icon.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 195
+                "kind": 186
             },
             {
                 "name": "SizeType",
@@ -3099,6 +3300,28 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "args => ({\r\n  template: htmlTemplate,\r\n  props: args\r\n})"
+                }
+            ],
+            "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.stories.ts": [
+                {
+                    "name": "breadcrumbs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<BreadcrumbsComponent>",
+                    "defaultValue": "(args: BreadcrumbsComponent) => ({\r\n  props: args\r\n})"
                 }
             ],
             "apps/admin-portal-e2e/src/support/app.po.ts": [
@@ -3163,6 +3386,16 @@
             ],
             "libs/ui/src/lib/assets/src/libs/icons/regular.icons.ts": [
                 {
+                    "name": "iconAngleRight",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/assets/src/libs/icons/regular.icons.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "IIcon",
+                    "defaultValue": "{\r\n  name: 'angle-right',\r\n  data: '<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 512\"><path d=\"M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z\"/></svg>'\r\n}"
+                },
+                {
                     "name": "iconOceanicAirlines",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -3180,7 +3413,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "IIcon[]",
-                    "defaultValue": "[\r\n  iconOceanicAirlines,\r\n]"
+                    "defaultValue": "[\r\n  iconOceanicAirlines,\r\n  iconAngleRight,\r\n]"
                 }
             ],
             "stories/Button.stories.ts": [
@@ -3406,12 +3639,12 @@
                     "name": "IconNames",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "",
+                    "rawtype": "\"oceanic-airlines\" | \"angle-right\"",
                     "file": "libs/ui/src/lib/assets/src/libs/icons/icon.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 195
+                    "kind": 186
                 }
             ],
             "libs/ui/src/lib/components/particles/size.type.ts": [
@@ -3679,6 +3912,16 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "iconAngleRight",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/assets/src/libs/icons/regular.icons.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "iconOceanicAirlines",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -3722,6 +3965,44 @@
                 "coveragePercent": 57,
                 "coverageCount": "4/7",
                 "status": "good"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumb.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Breadcrumb",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "breadcrumbs",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BreadcrumbsComponent",
+                "coveragePercent": 16,
+                "coverageCount": "1/6",
+                "status": "low"
             },
             {
                 "filePath": "libs/ui/src/lib/storybook/storybook.code-example.ts",
