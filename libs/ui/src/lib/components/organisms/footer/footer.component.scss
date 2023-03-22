@@ -1,0 +1,38 @@
+@import '../../../scss/src/ui.styles.scss';
+
+:host {
+  display: block;
+  height: $size-16;
+  width: $size-full;
+
+  &.moonstone {
+    background-color: $color-moonstone;
+  }
+  &.sage {
+    background-color: $color-sage;
+  }
+  &.tan {
+    background-color: $color-tan;
+  }
+  &.light-coral {
+    background-color: $color-light-coral;
+  }
+  &.blush {
+    background-color: $color-blush;
+  }
+  &.white {
+    background-color: $color-white;
+  }
+  &.black {
+    background-color: $color-black;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  width: inherit;
+  align-items: center;
+  justify-content: flex-start;
+}

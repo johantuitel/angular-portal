@@ -20,3 +20,6 @@ const Template: Story<FooterComponent> = (args: FooterComponent) => ({
 })
 
 export const footer = Template.bind({});
+footer.args = {
+  backgroundColor: 'white'
+}
