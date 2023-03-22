@@ -1126,6 +1126,47 @@
             "templateData": "<main class=\"oceanic-main-layout\">\r\n    <!-- header -->\r\n    <section>\r\n        <router-outlet></router-outlet>\r\n    </section>\r\n    <!-- footer -->\r\n</main>\r\n"
         },
         {
+            "name": "FooterComponent",
+            "id": "component-FooterComponent-6bf967f39e89f2706b7e06cbf0d44294f36294a4fb76f657ab8f6258a3a638ed422268d5a21f02bfeef611286b931235b5ad665e085d3661df9de59e83b9499c",
+            "file": "libs/ui/src/lib/components/organisms/footer/footer.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ui-footer",
+            "styleUrls": [
+                "./footer.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./footer.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'ui-footer',\n  templateUrl: './footer.component.html',\n  styleUrls: ['./footer.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class FooterComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./footer.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<p>footer works!</p>\n"
+        },
+        {
             "name": "HeaderComponent",
             "id": "component-HeaderComponent-a557eec14f72c438a8033301f4d6ce023e0a1844a3b06ec2b38794a612acc31735ae78a5ee10071b230c8c20d699eb914554e69d07ade54adb371da8efb464cc",
             "file": "stories/header.component.ts",
@@ -1197,6 +1238,121 @@
                 }
             ],
             "stylesData": ""
+        },
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-02321e68714f6aea6b469968056f97af3a7e0aada696eb643fbcf92cc3dc8d60328fbffc523ba795e4f034714a16df53bb24c5733ebefcee56e2031a50e82b31-1",
+            "file": "libs/ui/src/lib/components/organisms/header/header.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ui-header",
+            "styleUrls": [
+                "./header.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./header.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine the background-color for the header @see ColorType\n",
+                    "description": "<p>Define the background-color for the header @see ColorType</p>\n",
+                    "line": 19,
+                    "type": "ColorType",
+                    "decorators": []
+                },
+                {
+                    "name": "logo",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhich logo to use in the header @see IconNames\n",
+                    "description": "<p>Which logo to use in the header @see IconNames</p>\n",
+                    "line": 24,
+                    "type": "IconNames",
+                    "decorators": []
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhich logo to use in the header @see IconNames\n",
+                    "description": "<p>Which logo to use in the header @see IconNames</p>\n",
+                    "line": 29,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "hostStyle",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 14,
+                    "decorators": [
+                        {
+                            "name": "HostBinding",
+                            "stringifiedArguments": "'style'"
+                        }
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 31,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [
+                {
+                    "name": "style",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, HostBinding, Input, OnInit } from '@angular/core';\n\nimport { ColorType } from '../../particles/color.type';\nimport { IconNames } from './../../../assets/src/libs/icons/icon';\n\n@Component({\n  selector: 'ui-header',\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class HeaderComponent implements OnInit{\n\n  @HostBinding('style') hostStyle: string;\n\n  /**\n   * Define the background-color for the header @see ColorType\n   */\n  @Input() backgroundColor: ColorType;\n\n  /**\n   * Which logo to use in the header @see IconNames\n   */\n  @Input() logo: IconNames;\n\n  /**\n   * Which logo to use in the header @see IconNames\n   */\n  @Input() title = '';\n\n  ngOnInit(): void {\n    this.hostStyle = `background-color: $color-${this.backgroundColor}`;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  display: block;\r\n  height: $size-16;\r\n  width: $size-full;\r\n}\r\n",
+                    "styleUrl": "./header.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "implements": [
+                "OnInit"
+            ],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "HeaderComponent-1",
+            "templateData": "<div id=\"header\" class=\"{{ backgroundColor }}\">\n  <h4 *ngIf=\"title\">{{title}}</h4>\n</div>\n"
         },
         {
             "name": "IconComponent",
@@ -2921,6 +3077,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "footer",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/organisms/footer/footer.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "getGreeting",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -2969,6 +3135,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "() => cy.get('h1')"
+            },
+            {
+                "name": "header",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/organisms/header/header.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "htmlTemplate",
@@ -3144,21 +3320,41 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<IconComponent>",
-                "defaultValue": "(args: IconComponent) => ({\r\n  props: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<BreadcrumbsComponent>",
                 "defaultValue": "(args: BreadcrumbsComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/organisms/footer/footer.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<FooterComponent>",
+                "defaultValue": "(args: FooterComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/organisms/header/header.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<HeaderComponent>",
+                "defaultValue": "(args: HeaderComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<IconComponent>",
+                "defaultValue": "(args: IconComponent) => ({\r\n  props: args\r\n})"
             }
         ],
         "functions": [
@@ -3324,6 +3520,28 @@
                     "defaultValue": "(args: BreadcrumbsComponent) => ({\r\n  props: args\r\n})"
                 }
             ],
+            "libs/ui/src/lib/components/organisms/footer/footer.component.stories.ts": [
+                {
+                    "name": "footer",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/organisms/footer/footer.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/organisms/footer/footer.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<FooterComponent>",
+                    "defaultValue": "(args: FooterComponent) => ({\r\n  props: args\r\n})"
+                }
+            ],
             "apps/admin-portal-e2e/src/support/app.po.ts": [
                 {
                     "name": "getGreeting",
@@ -3382,6 +3600,28 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "() => cy.get('h1')"
+                }
+            ],
+            "libs/ui/src/lib/components/organisms/header/header.component.stories.ts": [
+                {
+                    "name": "header",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/organisms/header/header.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/organisms/header/header.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<HeaderComponent>",
+                    "defaultValue": "(args: HeaderComponent) => ({\r\n  props: args\r\n})"
                 }
             ],
             "libs/ui/src/lib/assets/src/libs/icons/regular.icons.ts": [
@@ -3664,7 +3904,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 2,
+        "count": 3,
         "status": "low",
         "files": [
             {
@@ -4003,6 +4243,64 @@
                 "coveragePercent": 16,
                 "coverageCount": "1/6",
                 "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/organisms/footer/footer.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "footer",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/organisms/footer/footer.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/organisms/footer/footer.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FooterComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/organisms/header/header.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "header",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/organisms/header/header.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/organisms/header/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 42,
+                "coverageCount": "3/7",
+                "status": "medium"
             },
             {
                 "filePath": "libs/ui/src/lib/storybook/storybook.code-example.ts",

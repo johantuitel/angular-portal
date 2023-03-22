@@ -1,0 +1,20 @@
+@import '../../../scss/src/ui.styles.scss';
+
+:host {
+  display: block;
+  height: $size-16;
+  width: $size-full;
+
+  &.moonstone {
+    background-color: $color-moonstone;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  height: inherit;
+  width: inherit;
+  align-items: center;
+  justify-content: flex-start;
+}
