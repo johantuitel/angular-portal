@@ -1,11 +1,12 @@
 {
-    "version": 2,
-    "projects": {
-        "admin-portal": "apps/admin-portal",
-        "client-portal": "apps/client-portal",
-        "booking-app": "apps/booking-app",
-        "check-in-app": "apps/check-in-app",
-        "flight-tracking": "apps/flight-tracking-app",
-       "ui": "libs/ui"
-    }
+  "version": 2,
+  "projects": {
+    "admin-portal": "apps/admin-portal",
+    "client-portal": "apps/client-portal",
+    "booking-app": "apps/booking-app",
+    "check-in-app": "apps/check-in-app",
+    "flight-tracking": "apps/flight-tracking-app",
+    "shared": "libs/shared",
+    "ui": "libs/ui"
+  }
 }

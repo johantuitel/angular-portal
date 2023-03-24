@@ -372,6 +372,38 @@
             "methods": []
         },
         {
+            "name": "ILink",
+            "id": "interface-ILink-2b69a4e2de8669b3c8cd8754626a9ff7a9239d1939c3fd117a5508641bc1e6c80a61cce991c2a080c5c1bbb97144af8c79ae8b85e39ee29b0cbacab83de83a4a",
+            "file": "libs/ui/src/lib/components/atoms/link/link.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface ILink {\r\n  label: string,\r\n  value: string,\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
             "name": "User",
             "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
             "file": "stories/User.ts",
@@ -753,7 +785,7 @@
         },
         {
             "name": "BookingLayoutComponent",
-            "id": "component-BookingLayoutComponent-33cde9815d53bde3fdf158627475617431f0eb0133d4ab92e516fffe189df00720d9790576a221e67b5b933f0a074db792b0aacb2543ae3321c8c83613c235db",
+            "id": "component-BookingLayoutComponent-bf3e0df91ed8f60d94e673b416598745aff578a956d45e965cd5590f05fa4e62c4b069592562c80bfb29c007795d8ab6b1aba3ea9221c6d804e5450a95eef3f4",
             "file": "apps/booking-app/src/app/booking-layout/booking-layout.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -772,8 +804,48 @@
             "viewProviders": [],
             "inputsClass": [],
             "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "bookingPages",
+                    "defaultValue": "[\r\n    {label: 'Passenger Info', value: 'booking/passenger-info'},\r\n    {label: 'Seat Listing', value: 'booking/seat-listing'}\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Immutable<Array<ILink>>",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "navigateTo",
+                    "args": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -781,7 +853,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'oceanic-airlines-booking-layout',\r\n  templateUrl: './booking-layout.component.html',\r\n  styleUrls: ['./booking-layout.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush\r\n})\r\nexport class BookingLayoutComponent {}\r\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\r\n\r\nimport { ILink } from '../../../../../libs/ui/src/lib/components/atoms/link/link';\r\nimport { Immutable } from '@oceanic-airlines/shared';\r\nimport { Router } from '@angular/router';\r\n\r\n@Component({\r\n  selector: 'oceanic-airlines-booking-layout',\r\n  templateUrl: './booking-layout.component.html',\r\n  styleUrls: ['./booking-layout.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush\r\n})\r\nexport class BookingLayoutComponent {\r\n\r\n  bookingPages: Immutable<Array<ILink>> = [\r\n    {label: 'Passenger Info', value: 'booking/passenger-info'},\r\n    {label: 'Seat Listing', value: 'booking/seat-listing'}\r\n  ]\r\n  constructor(private router: Router) {}\r\n\r\n  navigateTo(url: string): void {\r\n    this.router.navigateByUrl(url);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -790,7 +862,33 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<main class=\"oceanic-main-layout\">\r\n    <ui-header logo=\"oceanic-airlines\" title=\"oceanic-airlines\" backgroundColor=\"light-coral\"></ui-header>\r\n    <section>\r\n        <router-outlet></router-outlet>\r\n    </section>\r\n    <ui-footer></ui-footer>\r\n</main>\r\n"
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 18,
+                "jsdoctags": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<main class=\"oceanic-main-layout\">\r\n    <ui-header logo=\"oceanic-airlines\" title=\"oceanic-airlines\" backgroundColor=\"light-coral\"></ui-header>\r\n    <ui-navigation [links]=\"bookingPages\" navigationColor=\"blush\" backgroundColor=\"light-coral\" (navigate)=\"navigateTo($event)\"></ui-navigation>\r\n    <section>\r\n        <router-outlet></router-outlet>\r\n    </section>\r\n    <ui-footer></ui-footer>\r\n</main>\r\n"
         },
         {
             "name": "BreadcrumbsComponent",
@@ -1728,7 +1826,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  display: block;\r\n  width: 100%;\r\n}\r\n\r\n.ui-link {\r\n  position: relative;\r\n  display: inline-block;\r\n  padding: 0;\r\n  margin: 0 $size-2 0 0;\r\n  border-radius: $size-1;\r\n  box-shadow: none;\r\n  color: $color-blush;\r\n  cursor: pointer;\r\n  font-family: $font-default-bold;\r\n  font-size: $font-size-regular;\r\n  font-style: normal;\r\n  font-weight: $font-weight-bold;\r\n  line-height: 1;\r\n  outline: 0;\r\n  outline-offset: 0;\r\n  text-decoration: none;\r\n  transition: color .15s $ease-in-quad, box-shadow .15s $ease-in-quad;\r\n  user-select: auto;\r\n  vertical-align: baseline;\r\n  white-space: nowrap;\r\n  word-break: normal;\r\n  word-spacing: normal;\r\n  word-wrap: normal;\r\n\r\n  &.moonstone {\r\n    color: $color-moonstone;\r\n  }\r\n  &.tan {\r\n    color: $color-tan;\r\n  }\r\n  &.sage {\r\n    color: $color-sage;\r\n  }\r\n  &.light-coral {\r\n    color: $color-light-coral;\r\n\r\n    &:hover {\r\n      color: $color-blush;\r\n\r\n      &::after {\r\n        transform: scaleX(1);\r\n      }\r\n    }\r\n\r\n    &:focus {\r\n      box-shadow: $ring-focus;\r\n      color: $color-blush;\r\n\r\n      &::after {\r\n        transform: scaleX(0);\r\n      }\r\n    }\r\n\r\n    &:active {\r\n      color: $color-blush;\r\n\r\n      &::after {\r\n        transform: scaleX(1);\r\n      }\r\n    }\r\n  }\r\n  &.blush {\r\n    color: $color-blush;\r\n  }\r\n  &.white {\r\n    color: $color-white;\r\n  }\r\n  &.black {\r\n    color: $color-black;\r\n  }\r\n\r\n  &::after {\r\n    position: absolute;\r\n    top: auto;\r\n    right: auto;\r\n    bottom: -0.25rem;\r\n    left: 0;\r\n    width: 100%;\r\n    height: $size-1px;\r\n    background-color: $color-blush;\r\n    content: '';\r\n    transform: scaleX(0);\r\n    transform-origin: bottom left;\r\n    transform-style: preserve-3d;\r\n    transition: transform .15s $ease-in-quad;\r\n  }\r\n}\r\n",
+                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  display: block;\r\n}\r\n\r\n.ui-link {\r\n  position: relative;\r\n  display: inline-block;\r\n  padding: 0;\r\n  margin: 0 $size-2 0 0;\r\n  border-radius: $size-1;\r\n  box-shadow: none;\r\n  color: $color-blush;\r\n  cursor: pointer;\r\n  font-family: $font-default-bold;\r\n  font-size: $font-size-regular;\r\n  font-style: normal;\r\n  font-weight: $font-weight-bold;\r\n  line-height: 1;\r\n  outline: 0;\r\n  outline-offset: 0;\r\n  text-decoration: none;\r\n  transition: color .15s $ease-in-quad, box-shadow .15s $ease-in-quad;\r\n  user-select: auto;\r\n  vertical-align: baseline;\r\n  white-space: nowrap;\r\n  word-break: normal;\r\n  word-spacing: normal;\r\n  word-wrap: normal;\r\n\r\n  &.moonstone {\r\n    color: $color-moonstone;\r\n  }\r\n  &.tan {\r\n    color: $color-tan;\r\n  }\r\n  &.sage {\r\n    color: $color-sage;\r\n  }\r\n  &.light-coral {\r\n    color: $color-light-coral;\r\n\r\n    &:hover {\r\n      color: $color-blush;\r\n\r\n      &::after {\r\n        transform: scaleX(1);\r\n      }\r\n    }\r\n\r\n    &:focus {\r\n      box-shadow: $ring-focus;\r\n      color: $color-blush;\r\n\r\n      &::after {\r\n        transform: scaleX(0);\r\n      }\r\n    }\r\n\r\n    &:active {\r\n      color: $color-blush;\r\n\r\n      &::after {\r\n        transform: scaleX(1);\r\n      }\r\n    }\r\n  }\r\n  &.blush {\r\n    color: $color-blush;\r\n  }\r\n  &.white {\r\n    color: $color-white;\r\n  }\r\n  &.black {\r\n    color: $color-black;\r\n  }\r\n\r\n  &::after {\r\n    position: absolute;\r\n    top: auto;\r\n    right: auto;\r\n    bottom: -0.25rem;\r\n    left: 0;\r\n    width: 100%;\r\n    height: $size-1px;\r\n    background-color: $color-blush;\r\n    content: '';\r\n    transform: scaleX(0);\r\n    transform-origin: bottom left;\r\n    transform-style: preserve-3d;\r\n    transition: transform .15s $ease-in-quad;\r\n  }\r\n}\r\n",
                     "styleUrl": "./link.component.scss"
                 }
             ],
@@ -1737,7 +1835,7 @@
         },
         {
             "name": "NavigationComponent",
-            "id": "component-NavigationComponent-48323d5be98378041f5903de94e57244aedac1441df611677d1bc87aae010a635135fd4065c84e1d61752e774c4e2f22492a799674eb4fd2d0ba16e23e0e81c8",
+            "id": "component-NavigationComponent-87ec45a408a55a16bcdba99a345bb7207cd6dcdb03faa66fb1b751ba35c96f5a80bf1eb540ccfe1ce333841607494747f6248095ba461dfe0eabbcb6dd261a05",
             "file": "libs/ui/src/lib/components/molecules/navigation/navigation.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1753,10 +1851,108 @@
                 "./navigation.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "defaultValue": "'black'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine the background color of the navigation @see ColorType\n",
+                    "description": "<p>Define the background color of the navigation @see ColorType</p>\n",
+                    "line": 22,
+                    "type": "ColorType",
+                    "decorators": []
+                },
+                {
+                    "name": "links",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "Immutable<Array<ILink>>",
+                    "decorators": []
+                },
+                {
+                    "name": "navigationColor",
+                    "defaultValue": "'white'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine the color for the links @see ColorType\n",
+                    "description": "<p>Define the color for the links @see ColorType</p>\n",
+                    "line": 17,
+                    "type": "ColorType",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "navigate",
+                    "defaultValue": "new EventEmitter<string>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "EventEmitter<string>"
+                }
+            ],
             "propertiesClass": [],
-            "methodsClass": [],
+            "methodsClass": [
+                {
+                    "name": "navigateTo",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 32,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "trackByIndex",
+                    "args": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 28,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -1764,16 +1960,16 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'ui-navigation',\n  templateUrl: './navigation.component.html',\n  styleUrls: ['./navigation.component.scss']\n})\nexport class NavigationComponent {\n\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\nimport { ColorType } from '../../particles/color.type';\nimport { ILink } from './../../atoms/link/link';\nimport { Immutable } from '@oceanic-airlines/shared'\n;\n\n@Component({\n  selector: 'ui-navigation',\n  templateUrl: './navigation.component.html',\n  styleUrls: ['./navigation.component.scss'],\n})\nexport class NavigationComponent {\n  /**\n   * Define the color for the links @see ColorType\n   */\n  @Input() navigationColor: ColorType = 'white';\n\n  /**\n   * Define the background color of the navigation @see ColorType\n   */\n  @Input() backgroundColor: ColorType = 'black';\n\n  @Input() links: Immutable<Array<ILink>> = [];\n\n  @Output() readonly navigate: EventEmitter<string> = new EventEmitter<string>();\n\n  trackByIndex(index: number): number {\n    return index;\n  }\n\n  navigateTo(event: string): void {\n    this.navigate.emit(event);\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: relative;\r\n  display: inline-block;\r\n  height: 0;\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 0;\r\n  line-height: 0;\r\n  vertical-align: middle;\r\n}\r\n",
+                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: relative;\r\n  height: 0;\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 0;\r\n  line-height: 0;\r\n  vertical-align: middle;\r\n}\r\n\r\n.navigation {\r\n  display: flex;\r\n  flex-direction: row;\r\n  width: $size-full;\r\n  justify-content: flex-start;\r\n  align-items: center;\r\n}\r\n",
                     "styleUrl": "./navigation.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<nav role=\"navigation\"><ui-link label=\"page one\" color=\"sage\"></ui-link><ui-link label=\"page two\" color=\"sage\"></ui-link></nav>\n"
+            "templateData": "<nav role=\"navigation\" class=\"navigation\"><ui-link *ngFor=\"let link of links; trackBy: trackByIndex\" [label]=\"link.label\" [value]=\"link.value\" [color]=\"navigationColor\" (clickEmitter)=\"navigateTo($event)\"></ui-link></nav>\n"
         },
         {
             "name": "NxWelcomeComponent",
@@ -2031,6 +2227,88 @@
                 }
             ],
             "stylesData": ""
+        },
+        {
+            "name": "PassengerInfoComponent",
+            "id": "component-PassengerInfoComponent-f210a2b567413b51f688e83bf277fe580e1e1ca81f3b78304d92ba878619c5ed7c10780abeab370582c82dce85b5f9eea555ec5ee359cbd24eb6f7b7e7ad2842",
+            "file": "libs/booking/src/lib/features/feature-passenger-info/src/lib/passenger-info/passenger-info.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "oceanic-airlines-passenger-info",
+            "styleUrls": [
+                "./passenger-info.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./passenger-info.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'oceanic-airlines-passenger-info',\n  templateUrl: './passenger-info.component.html',\n  styleUrls: ['./passenger-info.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class PassengerInfoComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./passenger-info.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<p>passenger-info works!</p>\n"
+        },
+        {
+            "name": "SeatListingComponent",
+            "id": "component-SeatListingComponent-133627a9cb3056e530ba3ffe81667c9d9d46f3ba7e6d9bfee0dca7107282b49548fabca5c58c55cc3aa64e562950b3dbd0b676dc9cf869d308defd9de491eb0d",
+            "file": "libs/booking/src/lib/features/feature-seat-listing/src/lib/seat-listing/seat-listing.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "oceanic-airlines-seat-listing",
+            "styleUrls": [
+                "./seat-listing.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./seat-listing.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'oceanic-airlines-seat-listing',\n  templateUrl: './seat-listing.component.html',\n  styleUrls: ['./seat-listing.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class SeatListingComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./seat-listing.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<p>seat-listing works!</p>\n"
         },
         {
             "name": "TextComponent",
@@ -2716,13 +2994,13 @@
         },
         {
             "name": "FeaturePassengerInfoModule",
-            "id": "module-FeaturePassengerInfoModule-df01a1734e93fcb4521c0435aafd1ef86a4ac8a33ab79740dadf8725f00d3638c1785f713826238bdddd3ab68b5ed4ee151cd2c15495d8732868bb4d19fb8daa",
+            "id": "module-FeaturePassengerInfoModule-0032d5e1639d263f0a17d6459f1a5b060e0490facdd276526268b471970c9dd7aa7ccb383d4cf9ca66b3795ea964b57deb4b64abcaae4cbd9cbe80c986041a07",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/booking/src/lib/features/feature-passenger-info/src/lib/feature-passenger-info.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  imports: [CommonModule],\n})\nexport class FeaturePassengerInfoModule {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { PassengerInfoComponent } from './passenger-info/passenger-info.component';\nimport { RouterModule } from '@angular/router';\nimport { SharedModule } from '@oceanic-airlines/shared';\nimport { UiModule } from '@oceanic-airlines/ui';\n\n@NgModule({\n  imports: [CommonModule, UiModule, SharedModule,\n    RouterModule.forChild([\n    {\n        path: '',\n        pathMatch: 'full',\n        component: PassengerInfoComponent,\n    },\n  ]),\n  ],\n  declarations: [\n    PassengerInfoComponent\n  ],\n})\nexport class FeaturePassengerInfoModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -2730,11 +3008,22 @@
                 },
                 {
                     "type": "declarations",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "PassengerInfoComponent"
+                        }
+                    ]
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "SharedModule"
+                        },
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -2752,13 +3041,13 @@
         },
         {
             "name": "FeatureSeatListingModule",
-            "id": "module-FeatureSeatListingModule-5020381c09c8c17f0b4633a41f0d1c8747ae8a378eca8ee834dbf021f651fbb956b8285b4ba9db24bf20bd3bf7635955897c0f7a106a756831607b36dd1fc693",
+            "id": "module-FeatureSeatListingModule-2341ff0065be89e58fc90b4dddac253073dd983b43083076d7f862d192709a3de6f888e5585b5c5e3e2855a634d4b60cb07e24b5ddf3a17ea8b4c91dedf9bfd6",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/booking/src/lib/features/feature-seat-listing/src/lib/feature-seat-listing.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  imports: [CommonModule],\n})\nexport class FeatureSeatListingModule {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\nimport { SeatListingComponent } from './seat-listing/seat-listing.component';\nimport { SharedModule } from '@oceanic-airlines/shared';\nimport { UiModule } from '@oceanic-airlines/ui';\n\n@NgModule({\n  imports: [CommonModule, UiModule, SharedModule,\n    RouterModule.forChild([\n    {\n        path: '',\n        pathMatch: 'full',\n        component: SeatListingComponent,\n    },\n  ]),\n  ],\n  declarations: [\n    SeatListingComponent\n  ],\n})\nexport class FeatureSeatListingModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -2766,11 +3055,22 @@
                 },
                 {
                     "type": "declarations",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "SeatListingComponent"
+                        }
+                    ]
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "SharedModule"
+                        },
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -3072,6 +3372,42 @@
             ]
         },
         {
+            "name": "SharedModule",
+            "id": "module-SharedModule-c6838a83c6a8a7308e3637d0e019647ab60ef88b94ee2596435a9fed47f9afbaec6cb456dd8cf87802f62c57506593b21f7278b1d02313c1c1d8915750d06431",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "libs/shared/src/lib/shared.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@NgModule({\n  imports: [CommonModule],\n})\nexport class SharedModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
             "name": "ShellBookingModule",
             "id": "module-ShellBookingModule-cfd16b62b3bcd56feaf86b0b7e6c22a642a7ba5e38058b67d29fcde9533a8cd2086074fb533497e38bbbe07c5d07dcf4f9e5212d5b180b6c36441305163a4cff",
             "description": "",
@@ -3253,13 +3589,13 @@
         },
         {
             "name": "ShellPassengerInfoModule",
-            "id": "module-ShellPassengerInfoModule-b09203054e5af6eb0b35b6fd82ba92e73b25b3ee72c6d8bcdb38a670dc56a4de31ec2e5f9d12775c553d3d582eb2764fcc6d80ec3482c51c9bbaca164de6f126",
+            "id": "module-ShellPassengerInfoModule-269d40842a39626823df14bff4bba9bb58a7754cd54732547d0e817ca7fbec2849b2647e4abab39e37a8794edb875c57b7887299282de81c18f5d65ca62f2524",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/booking/src/lib/shells/shell-passenger-info/src/lib/shell-passenger-info.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n      RouterModule.forChild([\n      {\n        path: '',\n        pathMatch: 'full',\n        redirectTo: 'passenger-info',\n      },\n      {\n        path: 'passenger-info',\n        pathMatch: 'full',\n        loadChildren: () =>\n          import('@oceanic-airlines/booking/src/lib/features/feature-passenger-info').then((module) => module.FeaturePassengerInfoModule),\n      }\n    ]),\n  ],\n})\nexport class ShellPassengerInfoModule {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n      RouterModule.forChild([\n      {\n        path: '',\n        pathMatch: 'full',\n        loadChildren: () =>\n          import('@oceanic-airlines/booking/src/lib/features/feature-passenger-info').then((module) => module.FeaturePassengerInfoModule),\n      }\n    ]),\n  ],\n})\nexport class ShellPassengerInfoModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -3289,13 +3625,13 @@
         },
         {
             "name": "ShellSeatListingModule",
-            "id": "module-ShellSeatListingModule-4099aaf0cbfcdff8b2a7bc8315cda78e0bcaf2797d290968c9614003ce077d1125508870bebcf1e025d41d778ab260597c4f8d5ce949a0b64db082c3ec2702a5",
+            "id": "module-ShellSeatListingModule-4d59669b97fad1fe9daa2bc611862c25923f4acdc77c5d5d924144c8ca0434f009f21e09115bc9a842c1103db05306dbac3609a3f5a094f46442b3060ac4a405",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/booking/src/lib/shells/shell-seat-listing/src/lib/shell-seat-listing.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n    RouterModule.forChild([\n    {\n      path: '',\n      pathMatch: 'full',\n      redirectTo: 'seat-listing',\n    },\n    {\n      path: 'seat-listing',\n      loadChildren: () =>\n        import('@oceanic-airlines/booking/src/lib/features/feature-seat-listing').then((module) => module.FeatureSeatListingModule),\n    }\n  ]),\n],\n})\nexport class ShellSeatListingModule {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n    RouterModule.forChild([\n    {\n      path: '',\n      pathMatch: 'full',\n      loadChildren: () =>\n        import('@oceanic-airlines/booking/src/lib/features/feature-seat-listing').then((module) => module.FeatureSeatListingModule),\n    }\n  ]),\n],\n})\nexport class ShellSeatListingModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -3708,21 +4044,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Header>",
-                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Button>",
                 "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Header>",
+                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -3738,51 +4074,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<IconComponent>",
-                "defaultValue": "(args: IconComponent) => ({\r\n  props: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/ui/src/lib/components/atoms/button/button.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/ui/src/lib/components/atoms/link/link.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<LinkComponent>",
-                "defaultValue": "(args: LinkComponent) => ({\r\n  props: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<BreadcrumbsComponent>",
                 "defaultValue": "(args: BreadcrumbsComponent) => ({\r\n  props: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/ui/src/lib/components/atoms/text/text.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<TextComponent>",
-                "defaultValue": "(args: TextComponent) => ({\r\n  props: args\r\n})"
             },
             {
                 "name": "Template",
@@ -3813,6 +4109,46 @@
                 "deprecationMessage": "",
                 "type": "Story<HeaderComponent>",
                 "defaultValue": "(args: HeaderComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/link/link.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<LinkComponent>",
+                "defaultValue": "(args: LinkComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<IconComponent>",
+                "defaultValue": "(args: IconComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/text/text.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<TextComponent>",
+                "defaultValue": "(args: TextComponent) => ({\r\n  props: args\r\n})"
             },
             {
                 "name": "text",
@@ -3918,6 +4254,17 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 186
+            },
+            {
+                "name": "Immutable",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "",
+                "file": "libs/shared/src/lib/immutable.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 194
             },
             {
                 "name": "SizeType",
@@ -4467,6 +4814,19 @@
                     "kind": 186
                 }
             ],
+            "libs/shared/src/lib/immutable.ts": [
+                {
+                    "name": "Immutable",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "",
+                    "file": "libs/shared/src/lib/immutable.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 194
+                }
+            ],
             "libs/ui/src/lib/components/particles/size.type.ts": [
                 {
                     "name": "SizeType",
@@ -4568,7 +4928,7 @@
                 "linktype": "component",
                 "name": "BookingLayoutComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/1",
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -4710,6 +5070,24 @@
                 "status": "low"
             },
             {
+                "filePath": "libs/booking/src/lib/features/feature-passenger-info/src/lib/passenger-info/passenger-info.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PassengerInfoComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/booking/src/lib/features/feature-seat-listing/src/lib/seat-listing/seat-listing.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SeatListingComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "libs/ui/src/lib/assets/src/libs/icons/icon.ts",
                 "type": "interface",
                 "linktype": "interface",
@@ -4845,6 +5223,15 @@
                 "status": "medium"
             },
             {
+                "filePath": "libs/ui/src/lib/components/atoms/link/link.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ILink",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
                 "filePath": "libs/ui/src/lib/components/atoms/text/text.component.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -4936,9 +5323,9 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "NavigationComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
+                "coveragePercent": 28,
+                "coverageCount": "2/7",
+                "status": "medium"
             },
             {
                 "filePath": "libs/ui/src/lib/components/organisms/footer/footer.component.stories.ts",

@@ -8,10 +8,6 @@ import { RouterModule } from '@angular/router';
     {
       path: '',
       pathMatch: 'full',
-      redirectTo: 'passenger-info',
-    },
-    {
-      path: 'passenger-info',
       loadChildren: () =>
         import('@oceanic-airlines/check-in/src/lib/features/feature-ticket-finder').then((module) => module.FeatureTicketFinderModule),
     }

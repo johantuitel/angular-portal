@@ -20,8 +20,8 @@ import { UiModule } from './../../../../libs/ui/src/lib/ui.module';
                     path: 'check-in',
                     component: CheckInLayoutComponent,
                     loadChildren: () =>
-                        import('@oceanic-airlines/booking/src/lib/shells/shell-booking').then(
-                            module => module.ShellBookingModule,
+                        import('@oceanic-airlines/check-in/src/lib/shells/shell-check-in').then(
+                            module => module.ShellCheckInModule,
                         ),
                 },
             ],

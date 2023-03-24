@@ -9,7 +9,7 @@
     "checkin": "nx run check-in-app:serve --port 6020",
     "flight-tracking": "nx run flight-tracking-app:serve --port 6030",
     "docs:json": "compodoc -p ./tsconfig.base.json -e json -d .",
-    "storybook": "npm run docs:json && start-storybook -p 6006",
+    "storybook": "npm run docs:json && start-storybook -p 6001",
     "build-storybook": "npm run docs:json && build-storybook"
   },
   "private": true,

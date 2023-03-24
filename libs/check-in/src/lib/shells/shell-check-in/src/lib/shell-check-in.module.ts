@@ -23,4 +23,4 @@ import { RouterModule } from '@angular/router';
       ])
     ],
 })
-export class CheckInSrcLibShellsShellCheckInModule {}
+export class ShellCheckInModule {}

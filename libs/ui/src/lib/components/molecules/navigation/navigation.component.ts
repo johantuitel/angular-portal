@@ -1,6 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { ColorType } from '../../particles/color.type';
+import { ILink } from './../../atoms/link/link';
+import { Immutable } from '@oceanic-airlines/shared'
+;
 
 @Component({
   selector: 'ui-navigation',
@@ -18,7 +21,13 @@ export class NavigationComponent {
    */
   @Input() backgroundColor: ColorType = 'black';
 
+  @Input() links: Immutable<Array<ILink>> = [];
+
   @Output() readonly navigate: EventEmitter<string> = new EventEmitter<string>();
+
+  trackByIndex(index: number): number {
+    return index;
+  }
 
   navigateTo(event: string): void {
     this.navigate.emit(event);

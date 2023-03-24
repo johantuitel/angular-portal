@@ -64,7 +64,10 @@
       ],
       "@oceanic-airlines/flight-tracking/src/lib/shells/shell-flight-tracking": [
         "libs/flight-tracking/src/lib/shells/shell-flight-tracking/src/index.ts"
-      ]
+      ],
+      "@oceanic-airlines/shared": ["libs/shared/src/index.ts"],
+      "@oceanic-airlines/ui": ["libs/ui/src/index.ts"]
+
     }
   },
   "exclude": ["node_modules", "tmp"]

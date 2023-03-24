@@ -16,7 +16,7 @@ import { RouterModule } from '@angular/router';
             import('@oceanic-airlines/flight-tracking/src/lib/shells/shell-flight-search').then((module) => module.ShellFlightSearchModule),
         },
         {
-          path: 'seat-listing',
+          path: 'flight-details',
           loadChildren: () =>
             import('@oceanic-airlines/flight-tracking/src/lib/shells/shell-flight-details').then((module) => module.ShellFlightDetailsModule),
         },
