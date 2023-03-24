@@ -1736,6 +1736,46 @@
             "templateData": "<a (click)=\"link(value)\"\n   class=\"ui-link {{color}}\">{{ label }}</a>\n"
         },
         {
+            "name": "NavigationComponent",
+            "id": "component-NavigationComponent-48323d5be98378041f5903de94e57244aedac1441df611677d1bc87aae010a635135fd4065c84e1d61752e774c4e2f22492a799674eb4fd2d0ba16e23e0e81c8",
+            "file": "libs/ui/src/lib/components/molecules/navigation/navigation.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ui-navigation",
+            "styleUrls": [
+                "./navigation.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./navigation.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'ui-navigation',\n  templateUrl: './navigation.component.html',\n  styleUrls: ['./navigation.component.scss']\n})\nexport class NavigationComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: relative;\r\n  display: inline-block;\r\n  height: 0;\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 0;\r\n  line-height: 0;\r\n  vertical-align: middle;\r\n}\r\n",
+                    "styleUrl": "./navigation.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<nav role=\"navigation\"><ui-link label=\"page one\" color=\"sage\"></ui-link><ui-link label=\"page two\" color=\"sage\"></ui-link></nav>\n"
+        },
+        {
             "name": "NxWelcomeComponent",
             "id": "component-NxWelcomeComponent-a72c1031b89057bbe84765ad613382e1c35d233a0ecbc9863a0426e82f6a42d2249c801e89db82e2ccf6f8465281c8925d68e5e6ce5f9350fa4a3b727a4fb14a",
             "file": "apps/admin-portal/src/app/nx-welcome.component.ts",
@@ -2856,13 +2896,13 @@
         },
         {
             "name": "MoleculesModule",
-            "id": "module-MoleculesModule-c704578971c196e332625bd6b23fdb54f3c69fc9b2443ea3359bcde32aaeb5322ff7c515ec735aeb39b4e316ca0598ae9f51347d3e96ee9748e459cd307593e4",
+            "id": "module-MoleculesModule-f7ec6950e1a68879067abd7b3042e27d90112ee39cc9ff7e7f6430654402181eab44a5ee663b298546337e8f0dc3fd6caf61226149cce9c1281438c8bc304793",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/ui/src/lib/components/molecules/molecules.module.ts",
             "methods": [],
-            "sourceCode": "import { AtomsModule } from './../atoms/atoms.module';\r\nimport { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';\r\nimport { CommonModule } from '@angular/common';\r\nimport { NgModule } from '@angular/core';\r\n\r\n@NgModule({\r\n  declarations: [BreadcrumbsComponent],\r\n  imports: [CommonModule, AtomsModule],\r\n  exports: [BreadcrumbsComponent],\r\n})\r\nexport class MoleculesModule {}\r\n",
+            "sourceCode": "import { AtomsModule } from './../atoms/atoms.module';\r\nimport { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';\r\nimport { CommonModule } from '@angular/common';\r\nimport { NgModule } from '@angular/core';\nimport { NavigationComponent } from './navigation/navigation.component';\r\n\r\n@NgModule({\r\n  declarations: [BreadcrumbsComponent, NavigationComponent],\r\n  imports: [CommonModule, AtomsModule],\r\n  exports: [BreadcrumbsComponent, NavigationComponent],\r\n})\r\nexport class MoleculesModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -2873,6 +2913,9 @@
                     "elements": [
                         {
                             "name": "BreadcrumbsComponent"
+                        },
+                        {
+                            "name": "NavigationComponent"
                         }
                     ]
                 },
@@ -2889,6 +2932,9 @@
                     "elements": [
                         {
                             "name": "BreadcrumbsComponent"
+                        },
+                        {
+                            "name": "NavigationComponent"
                         }
                     ]
                 },
@@ -3599,6 +3645,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "navigation",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/molecules/navigation/navigation.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -3652,21 +3708,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "stories/Header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Header>",
                 "defaultValue": "(args: Header) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -3712,6 +3768,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<BreadcrumbsComponent>",
+                "defaultValue": "(args: BreadcrumbsComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "libs/ui/src/lib/components/atoms/text/text.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -3722,11 +3788,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.stories.ts",
+                "file": "libs/ui/src/lib/components/molecules/navigation/navigation.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<BreadcrumbsComponent>",
-                "defaultValue": "(args: BreadcrumbsComponent) => ({\r\n  props: args\r\n})"
+                "type": "Story<NavigationComponent>",
+                "defaultValue": "(args: NavigationComponent) => ({\r\n  props: args\r\n})"
             },
             {
                 "name": "Template",
@@ -4249,6 +4315,28 @@
                     "deprecationMessage": "",
                     "type": "Story<Page>",
                     "defaultValue": "(args: Page) => ({\n  props: args,\n})"
+                }
+            ],
+            "libs/ui/src/lib/components/molecules/navigation/navigation.component.stories.ts": [
+                {
+                    "name": "navigation",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/molecules/navigation/navigation.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/molecules/navigation/navigation.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<NavigationComponent>",
+                    "defaultValue": "(args: NavigationComponent) => ({\r\n  props: args\r\n})"
                 }
             ],
             "libs/ui/src/lib/components/atoms/text/text.component.stories.ts": [
@@ -4821,6 +4909,35 @@
                 "name": "BreadcrumbsComponent",
                 "coveragePercent": 16,
                 "coverageCount": "1/6",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/molecules/navigation/navigation.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "navigation",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/molecules/navigation/navigation.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/molecules/navigation/navigation.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NavigationComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
