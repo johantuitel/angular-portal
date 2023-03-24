@@ -790,11 +790,11 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<main class=\"oceanic-main-layout\">\r\n    <!-- header -->\r\n    <section>\r\n        <router-outlet></router-outlet>\r\n    </section>\r\n    <!-- footer -->\r\n</main>\r\n"
+            "templateData": "<main class=\"oceanic-main-layout\">\r\n    <ui-header logo=\"oceanic-airlines\" title=\"oceanic-airlines\" backgroundColor=\"light-coral\"></ui-header>\r\n    <section>\r\n        <router-outlet></router-outlet>\r\n    </section>\r\n    <ui-footer></ui-footer>\r\n</main>\r\n"
         },
         {
             "name": "BreadcrumbsComponent",
-            "id": "component-BreadcrumbsComponent-225b61703b2462779ba30f133272a070c2a5d71786412b95e92f8e32941183b05458e4ea28d6d4417e5d89f8c2e91b8a462d44b26db0726d3b3bb23c40db4bde",
+            "id": "component-BreadcrumbsComponent-8d4c5b773af2adffff49a016c756fcca966f78eb5211719fdbbf6eaa7b2344850ab0d67a802dd08aa8eea8c3b17106e001d3a6bfd74fcfca96c6912d403dc271",
             "file": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -823,6 +823,7 @@
                 },
                 {
                     "name": "color",
+                    "defaultValue": "'black'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nDefine the fillcolor for the icon @see ColorType\n",
@@ -908,7 +909,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';\r\n\r\nimport {Breadcrumb} from './breadcrumb';\r\nimport { ColorType } from '../../particles/color.type';\r\n\r\n@Component({\r\n  selector: 'ui-breadcrumbs',\r\n  templateUrl: './breadcrumbs.component.html',\r\n  styleUrls: ['./breadcrumbs.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class BreadcrumbsComponent {\r\n\r\n  /**\r\n   * Define the fillcolor for the icon @see ColorType\r\n   */\r\n  @Input() color: ColorType;\r\n  @Input() breadcrumbs: Breadcrumb[] = [];\r\n  @Output() navigateClicked: EventEmitter<string> = new EventEmitter<string>();\r\n\r\n  trackByIndex(index: number): number {\r\n    return index;\r\n  }\r\n\r\n  navigate(path: string): void {\r\n    this.navigateClicked.emit(path);\r\n  }\r\n}\r\n",
+            "sourceCode": "import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';\r\n\r\nimport {Breadcrumb} from './breadcrumb';\r\nimport { ColorType } from '../../particles/color.type';\r\n\r\n@Component({\r\n  selector: 'ui-breadcrumbs',\r\n  templateUrl: './breadcrumbs.component.html',\r\n  styleUrls: ['./breadcrumbs.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class BreadcrumbsComponent {\r\n\r\n  /**\r\n   * Define the fillcolor for the icon @see ColorType\r\n   */\r\n  @Input() color: ColorType = 'black';\r\n  @Input() breadcrumbs: Breadcrumb[] = [];\r\n  @Output() navigateClicked: EventEmitter<string> = new EventEmitter<string>();\r\n\r\n  trackByIndex(index: number): number {\r\n    return index;\r\n  }\r\n\r\n  navigate(path: string): void {\r\n    this.navigateClicked.emit(path);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1125,7 +1126,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<main class=\"oceanic-main-layout\">\r\n    <!-- header -->\r\n    <section>\r\n        <router-outlet></router-outlet>\r\n    </section>\r\n    <!-- footer -->\r\n</main>\r\n"
+            "templateData": "<main class=\"oceanic-main-layout\">\r\n  <ui-header logo=\"oceanic-airlines\" title=\"oceanic-airlines\" backgroundColor=\"light-coral\"></ui-header>\r\n  <section>\r\n      <router-outlet></router-outlet>\r\n  </section>\r\n  <ui-footer></ui-footer>\r\n</main>\r\n"
         },
         {
             "name": "FlightTrackingLayoutComponent",
@@ -1166,11 +1167,11 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<main class=\"oceanic-main-layout\">\r\n    <!-- header -->\r\n    <section>\r\n        <router-outlet></router-outlet>\r\n    </section>\r\n    <!-- footer -->\r\n</main>\r\n"
+            "templateData": "<main class=\"oceanic-main-layout\">\r\n  <ui-header logo=\"oceanic-airlines\" title=\"oceanic-airlines\" backgroundColor=\"light-coral\"></ui-header>\r\n  <section>\r\n      <router-outlet></router-outlet>\r\n  </section>\r\n  <ui-footer></ui-footer>\r\n</main>\r\n"
         },
         {
             "name": "FooterComponent",
-            "id": "component-FooterComponent-5a9811e4e1677b18e4069f68bc73d5cf05a059b505adedff41946e949830f5c205ed83d95b9e56effc45306dfd6035e27908017a145a9890e816685d900b5c51",
+            "id": "component-FooterComponent-8ac3c73c971347f947f8b2806dee41998531193fa88acf31ca4fee2c0a5dc47610344ca6e7fa0a4d166391a9f63af37c7d157abc16b96103a7514d929fffb047",
             "file": "libs/ui/src/lib/components/organisms/footer/footer.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -1190,6 +1191,7 @@
             "inputsClass": [
                 {
                     "name": "backgroundColor",
+                    "defaultValue": "'black'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nDefine the background-color for the header @see ColorType\n",
@@ -1203,6 +1205,7 @@
             "propertiesClass": [
                 {
                     "name": "hostClass",
+                    "defaultValue": "'white'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
@@ -1234,6 +1237,7 @@
             "hostBindings": [
                 {
                     "name": "class",
+                    "defaultValue": "'white'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 12,
@@ -1245,11 +1249,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component, HostBinding, Input, OnInit } from '@angular/core';\n\nimport { ColorType } from '../../particles/color.type';\n\n@Component({\n  selector: 'ui-footer',\n  templateUrl: './footer.component.html',\n  styleUrls: ['./footer.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class FooterComponent  implements OnInit {\n  @HostBinding('class') hostClass: string;\n\n  /**\n   * Define the background-color for the header @see ColorType\n   */\n  @Input() backgroundColor: ColorType;\n\n  ngOnInit(): void {\n    this.hostClass = this.backgroundColor.toString();\n  }\n}\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, HostBinding, Input, OnInit } from '@angular/core';\n\nimport { ColorType } from '../../particles/color.type';\n\n@Component({\n  selector: 'ui-footer',\n  templateUrl: './footer.component.html',\n  styleUrls: ['./footer.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class FooterComponent  implements OnInit {\n  @HostBinding('class') hostClass = 'white';\n\n  /**\n   * Define the background-color for the header @see ColorType\n   */\n  @Input() backgroundColor: ColorType = 'black'\n\n  ngOnInit(): void {\n    this.hostClass = this.backgroundColor.toString();\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  display: block;\r\n  height: $size-16;\r\n  width: $size-full;\r\n\r\n  &.moonstone {\r\n    background-color: $color-moonstone;\r\n  }\r\n  &.sage {\r\n    background-color: $color-sage;\r\n  }\r\n  &.tan {\r\n    background-color: $color-tan;\r\n  }\r\n  &.light-coral {\r\n    background-color: $color-light-coral;\r\n  }\r\n  &.blush {\r\n    background-color: $color-blush;\r\n  }\r\n  &.white {\r\n    background-color: $color-white;\r\n  }\r\n  &.black {\r\n    background-color: $color-black;\r\n  }\r\n}\r\n\r\n.footer {\r\n  display: flex;\r\n  flex-direction: column;\r\n  height: inherit;\r\n  width: inherit;\r\n  align-items: center;\r\n  justify-content: flex-start;\r\n}\r\n",
+                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  display: block;\r\n  height: $size-16;\r\n  width: $size-full;\r\n  bottom: 0;\r\n  position: absolute;\r\n\r\n  &.moonstone {\r\n    background-color: $color-moonstone;\r\n  }\r\n  &.sage {\r\n    background-color: $color-sage;\r\n  }\r\n  &.tan {\r\n    background-color: $color-tan;\r\n  }\r\n  &.light-coral {\r\n    background-color: $color-light-coral;\r\n  }\r\n  &.blush {\r\n    background-color: $color-blush;\r\n  }\r\n  &.white {\r\n    background-color: $color-white;\r\n  }\r\n  &.black {\r\n    background-color: $color-black;\r\n  }\r\n}\r\n\r\n.footer {\r\n  display: flex;\r\n  flex-direction: column;\r\n  height: inherit;\r\n  width: inherit;\r\n  align-items: center;\r\n  justify-content: flex-start;\r\n}\r\n",
                     "styleUrl": "./footer.component.scss"
                 }
             ],
@@ -1257,7 +1261,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div id=\"footer\" class=\"footer\">\n<div>logos</div>\n  <label style=\"font-size: 1rem; font-family: monospace; color: #729EA1\">Copyright. All rights reserved</label>\n</div>\n"
+            "templateData": "<div id=\"footer\" class=\"footer\">\n<div>logos</div>\n  <ui-text text=\"Copyright. All rights reserved\" color=\"sage\" size=\"extra-small\"></ui-text>\n</div>\n"
         },
         {
             "name": "HeaderComponent",
@@ -1334,7 +1338,7 @@
         },
         {
             "name": "HeaderComponent",
-            "id": "component-HeaderComponent-5135d3f3d997fb1c18ec1e82248345633b7f9f987dfbbd949765b19871d350f603241e2b2757920fa2db6364530dacc654036ca813adb5045d897a1190009fda-1",
+            "id": "component-HeaderComponent-bd76681b146242a9b22e453df1334ba1ed90b98aa5fac973a3da2b1678ef1294bd8c74cb20530671b4903fc2b8b6c0aae9b92daa79213b359ef3d133c9b2ffe2-1",
             "file": "libs/ui/src/lib/components/organisms/header/header.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -1354,6 +1358,7 @@
             "inputsClass": [
                 {
                     "name": "backgroundColor",
+                    "defaultValue": "'black'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nDefine the background-color for the header @see ColorType\n",
@@ -1364,6 +1369,7 @@
                 },
                 {
                     "name": "logo",
+                    "defaultValue": "'oceanic-airlines'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nWhich logo to use in the header @see IconNames\n",
@@ -1374,6 +1380,7 @@
                 },
                 {
                     "name": "logoColor",
+                    "defaultValue": "'black'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nDefine the logo-color @see ColorType\n",
@@ -1387,8 +1394,8 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "\n\nWhich logo to use in the header @see IconNames\n",
-                    "description": "<p>Which logo to use in the header @see IconNames</p>\n",
+                    "rawdescription": "\n\nThe Title in the header\n",
+                    "description": "<p>The Title in the header</p>\n",
                     "line": 39,
                     "type": "string",
                     "decorators": []
@@ -1398,6 +1405,7 @@
             "propertiesClass": [
                 {
                     "name": "hostClass",
+                    "defaultValue": "'white'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
@@ -1429,6 +1437,7 @@
             "hostBindings": [
                 {
                     "name": "class",
+                    "defaultValue": "'white'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 19,
@@ -1440,7 +1449,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\n  ChangeDetectionStrategy,\n  Component,\n  HostBinding,\n  Input,\n  OnInit,\n} from '@angular/core';\n\nimport { ColorType } from '../../particles/color.type';\nimport { IconNames } from './../../../assets/src/libs/icons/icon';\n\n@Component({\n  selector: 'ui-header',\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class HeaderComponent implements OnInit {\n  @HostBinding('class') hostClass: string;\n\n  /**\n   * Define the background-color for the header @see ColorType\n   */\n  @Input() backgroundColor: ColorType;\n\n  /**\n   * Which logo to use in the header @see IconNames\n   */\n  @Input() logo: IconNames;\n\n  /**\n   * Define the logo-color @see ColorType\n   */\n  @Input() logoColor: ColorType;\n\n  /**\n   * Which logo to use in the header @see IconNames\n   */\n  @Input() title = '';\n\n  ngOnInit(): void {\n    this.hostClass = this.backgroundColor.toString();\n  }\n}\n",
+            "sourceCode": "import {\n  ChangeDetectionStrategy,\n  Component,\n  HostBinding,\n  Input,\n  OnInit,\n} from '@angular/core';\n\nimport { ColorType } from '../../particles/color.type';\nimport { IconNames } from './../../../assets/src/libs/icons/icon';\n\n@Component({\n  selector: 'ui-header',\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class HeaderComponent implements OnInit {\n  @HostBinding('class') hostClass = 'white';\n\n  /**\n   * Define the background-color for the header @see ColorType\n   */\n  @Input() backgroundColor: ColorType = 'black'\n\n  /**\n   * Which logo to use in the header @see IconNames\n   */\n  @Input() logo: IconNames = 'oceanic-airlines'\n\n  /**\n   * Define the logo-color @see ColorType\n   */\n  @Input() logoColor: ColorType = 'black'\n\n  /**\n   * The Title in the header\n   */\n  @Input() title = '';\n\n  ngOnInit(): void {\n    this.hostClass = this.backgroundColor.toString();\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1455,11 +1464,11 @@
             "isDuplicate": true,
             "duplicateId": 1,
             "duplicateName": "HeaderComponent-1",
-            "templateData": "<div id=\"header\" class=\"header\">\n  <ui-icon\n  [type]=\"logo\"\n  [color]=\"logoColor\"\n  size=\"large\"\n  style=\"padding-left: 1rem; padding-right: 1rem;\">\n</ui-icon>\n  <label *ngIf=\"title\" style=\"font-size: 3rem; font-family: monospace; color: #729EA1\">{{title}}</label>\n</div>\n"
+            "templateData": "<div id=\"header\" class=\"header\">\n  <ui-icon\n  [type]=\"logo\"\n  [color]=\"logoColor\"\n  size=\"large\"\n  style=\"padding-left: 1rem; padding-right: 1rem;\">\n</ui-icon>\n  <ui-text *ngIf=\"title\" [text]=\"title\" color=\"sage\" size=\"extra-large\"></ui-text>\n</div>\n"
         },
         {
             "name": "IconComponent",
-            "id": "component-IconComponent-7779e6e688e85e3e35dbc28260689bc0a62e816473c4f7c5bfaf57b1de6e4f464d60516d581ac6543edf4132647edb84640d8fa95c57d4b21c1e76d20db85104",
+            "id": "component-IconComponent-e1f02f1209e92edbedefe0f199aeb08712f7040a0261a43a91ee5f1466b0571295a2b9fca517672d27efb5c6ee90f13d184f4a50230021b99d5b28f77003f281",
             "file": "libs/ui/src/lib/components/atoms/icon/icon.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -1479,6 +1488,7 @@
             "inputsClass": [
                 {
                     "name": "color",
+                    "defaultValue": "'black'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nDefine the fillcolor for the icon @see ColorType\n",
@@ -1510,6 +1520,7 @@
                 },
                 {
                     "name": "type",
+                    "defaultValue": "'oceanic-airlines'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe name of the icon to be displayed\n",
@@ -1558,7 +1569,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component, ElementRef, Input, OnChanges, SimpleChanges } from '@angular/core';\nimport { IconNames, IconsRegistryService } from '../../../assets/src/libs';\n\nimport { ColorType } from './../../particles/color.type';\nimport { SizeType } from './../../particles/size.type';\n\n@Component({\n  selector: 'ui-icon',\n  templateUrl: './icon.component.html',\n  styleUrls: ['./icon.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class IconComponent implements OnChanges {\n\n  /**\n   * Define the fillcolor for the icon @see ColorType\n   */\n  @Input() color: ColorType;\n\n  /**\n   * Add custom css styling\n   */\n  @Input() css!: string;\n\n  /**\n   * Determine the size for the icon @see SizeType, default is regular\n   */\n  @Input() size: SizeType = 'regular';\n\n  /**\n   * The name of the icon to be displayed\n   */\n  @Input() type: IconNames;\n\n  constructor(private readonly element: ElementRef,\n              private readonly iconsRegistry: IconsRegistryService) { }\n\n  ngOnChanges(changes: SimpleChanges): void {\n    const { type } = changes;\n\n    if (type) {\n      const i: HTMLElement | null = this.element.nativeElement.querySelector('i');\n\n      if (i) {\n        const svg = this.iconsRegistry.getIcon(type.currentValue) ?? '';\n\n        this.element.nativeElement.querySelector('i').innerHTML = svg;\n      }\n    }\n  }\n\n\n}\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, ElementRef, Input, OnChanges, SimpleChanges } from '@angular/core';\nimport { IconNames, IconsRegistryService } from '../../../assets/src/libs';\n\nimport { ColorType } from './../../particles/color.type';\nimport { SizeType } from './../../particles/size.type';\n\n@Component({\n  selector: 'ui-icon',\n  templateUrl: './icon.component.html',\n  styleUrls: ['./icon.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class IconComponent implements OnChanges {\n\n  /**\n   * Define the fillcolor for the icon @see ColorType\n   */\n  @Input() color: ColorType = 'black';\n\n  /**\n   * Add custom css styling\n   */\n  @Input() css!: string;\n\n  /**\n   * Determine the size for the icon @see SizeType, default is regular\n   */\n  @Input() size: SizeType = 'regular';\n\n  /**\n   * The name of the icon to be displayed\n   */\n  @Input() type: IconNames = 'oceanic-airlines';\n\n  constructor(private readonly element: ElementRef,\n              private readonly iconsRegistry: IconsRegistryService) { }\n\n  ngOnChanges(changes: SimpleChanges): void {\n    const { type } = changes;\n\n    if (type) {\n      const i: HTMLElement | null = this.element.nativeElement.querySelector('i');\n\n      if (i) {\n        const svg = this.iconsRegistry.getIcon(type.currentValue) ?? '';\n\n        this.element.nativeElement.querySelector('i').innerHTML = svg;\n      }\n    }\n  }\n\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1615,7 +1626,7 @@
         },
         {
             "name": "LinkComponent",
-            "id": "component-LinkComponent-72aa358a0e7f06e02b943575c0bfd0fb736b31f8f6a3d51dc6e411d5e6ec68e31f4559cca6f4a814a8c9f9187c68aade3c50ba788940d77928a9f74b33ec252b",
+            "id": "component-LinkComponent-d005d3844210e5889092f64babd843c9cb6bc98130cf0b62eda9bd96a8880f651ecbc140a09b352c0920d0e237479bd44ff5f8c1b3b48b9091ffc46e1543b2c0",
             "file": "libs/ui/src/lib/components/atoms/link/link.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -1635,6 +1646,7 @@
             "inputsClass": [
                 {
                     "name": "color",
+                    "defaultValue": "'black'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe theme of the link @see ColorType\n",
@@ -1712,11 +1724,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';\n\nimport { ColorType } from './../../particles/color.type';\n\n@Component({\n  selector: 'ui-link',\n  templateUrl: './link.component.html',\n  styleUrls: ['./link.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class LinkComponent {\n  /**\n   * The value to be emitted after the link is clicked.\n   */\n  @Input() value!: string;\n\n  /**\n   * Text of the link\n   */\n  @Input() label!: string;\n\n  /**\n   * The theme of the link @see ColorType\n   */\n  @Input() color: ColorType;\n\n  @Output() readonly clickEmitter: EventEmitter<string> = new EventEmitter<string>();\n\n  link(event: string): void {\n    this.clickEmitter.emit(event);\n  }\n}\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';\n\nimport { ColorType } from './../../particles/color.type';\n\n@Component({\n  selector: 'ui-link',\n  templateUrl: './link.component.html',\n  styleUrls: ['./link.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class LinkComponent {\n  /**\n   * The value to be emitted after the link is clicked.\n   */\n  @Input() value!: string;\n\n  /**\n   * Text of the link\n   */\n  @Input() label!: string;\n\n  /**\n   * The theme of the link @see ColorType\n   */\n  @Input() color: ColorType = 'black';\n\n  @Output() readonly clickEmitter: EventEmitter<string> = new EventEmitter<string>();\n\n  link(event: string): void {\n    this.clickEmitter.emit(event);\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  display: block;\r\n  width: 100%;\r\n}\r\n\r\n.ui-link {\r\n  position: relative;\r\n  display: inline-block;\r\n  padding: 0;\r\n  margin: 0 $size-2 0 0;\r\n  border-radius: $size-1;\r\n  box-shadow: none;\r\n  color: $color-blush;\r\n  cursor: pointer;\r\n  font-family: $font-default-bold;\r\n  font-size: $font-size-regular;\r\n  font-style: normal;\r\n  font-weight: $font-weight-bold;\r\n  line-height: 1;\r\n  outline: 0;\r\n  outline-offset: 0;\r\n  text-decoration: none;\r\n  transition: color .15s $ease-in-quad, box-shadow .15s $ease-in-quad;\r\n  user-select: auto;\r\n  vertical-align: baseline;\r\n  white-space: nowrap;\r\n  word-break: normal;\r\n  word-spacing: normal;\r\n  word-wrap: normal;\r\n\r\n  &.moonstone {\r\n    color: $color-moonstone;\r\n  }\r\n  &.tan {\r\n    color: $color-tan;\r\n  }\r\n  &.sage {\r\n    color: $color-sage;\r\n  }\r\n  &.light-coral {\r\n    color: $color-light-coral;\r\n  }\r\n  &.blush {\r\n    color: $color-blush;\r\n  }\r\n  &.white {\r\n    color: $color-white;\r\n  }\r\n  &.black {\r\n    color: $color-black;\r\n  }\r\n\r\n  &::after {\r\n    position: absolute;\r\n    top: auto;\r\n    right: auto;\r\n    bottom: -0.25rem;\r\n    left: 0;\r\n    width: 100%;\r\n    height: $size-1px;\r\n    background-color: $color-blush;\r\n    content: '';\r\n    transform: scaleX(0);\r\n    transform-origin: bottom left;\r\n    transform-style: preserve-3d;\r\n    transition: transform .15s $ease-in-quad;\r\n  }\r\n\r\n  &:hover {\r\n    color: $font-color-warm-coral;\r\n\r\n    &::after {\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n\r\n  &:focus {\r\n    box-shadow: $ring-focus;\r\n    color: $font-color-warm-coral;\r\n\r\n    &::after {\r\n      transform: scaleX(0);\r\n    }\r\n  }\r\n\r\n  &:active {\r\n    color: $font-color-warm-coral;\r\n\r\n    &::after {\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n}\r\n",
+                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  display: block;\r\n  width: 100%;\r\n}\r\n\r\n.ui-link {\r\n  position: relative;\r\n  display: inline-block;\r\n  padding: 0;\r\n  margin: 0 $size-2 0 0;\r\n  border-radius: $size-1;\r\n  box-shadow: none;\r\n  color: $color-blush;\r\n  cursor: pointer;\r\n  font-family: $font-default-bold;\r\n  font-size: $font-size-regular;\r\n  font-style: normal;\r\n  font-weight: $font-weight-bold;\r\n  line-height: 1;\r\n  outline: 0;\r\n  outline-offset: 0;\r\n  text-decoration: none;\r\n  transition: color .15s $ease-in-quad, box-shadow .15s $ease-in-quad;\r\n  user-select: auto;\r\n  vertical-align: baseline;\r\n  white-space: nowrap;\r\n  word-break: normal;\r\n  word-spacing: normal;\r\n  word-wrap: normal;\r\n\r\n  &.moonstone {\r\n    color: $color-moonstone;\r\n  }\r\n  &.tan {\r\n    color: $color-tan;\r\n  }\r\n  &.sage {\r\n    color: $color-sage;\r\n  }\r\n  &.light-coral {\r\n    color: $color-light-coral;\r\n\r\n    &:hover {\r\n      color: $color-blush;\r\n\r\n      &::after {\r\n        transform: scaleX(1);\r\n      }\r\n    }\r\n\r\n    &:focus {\r\n      box-shadow: $ring-focus;\r\n      color: $color-blush;\r\n\r\n      &::after {\r\n        transform: scaleX(0);\r\n      }\r\n    }\r\n\r\n    &:active {\r\n      color: $color-blush;\r\n\r\n      &::after {\r\n        transform: scaleX(1);\r\n      }\r\n    }\r\n  }\r\n  &.blush {\r\n    color: $color-blush;\r\n  }\r\n  &.white {\r\n    color: $color-white;\r\n  }\r\n  &.black {\r\n    color: $color-black;\r\n  }\r\n\r\n  &::after {\r\n    position: absolute;\r\n    top: auto;\r\n    right: auto;\r\n    bottom: -0.25rem;\r\n    left: 0;\r\n    width: 100%;\r\n    height: $size-1px;\r\n    background-color: $color-blush;\r\n    content: '';\r\n    transform: scaleX(0);\r\n    transform-origin: bottom left;\r\n    transform-style: preserve-3d;\r\n    transition: transform .15s $ease-in-quad;\r\n  }\r\n}\r\n",
                     "styleUrl": "./link.component.scss"
                 }
             ],
@@ -1979,6 +1991,81 @@
                 }
             ],
             "stylesData": ""
+        },
+        {
+            "name": "TextComponent",
+            "id": "component-TextComponent-ba774265f0dc5cfe7eb4d764dd510400bd9aea0d34f979b56ba9d9b292c0d8d872097cd88e2554660a340676dec2df070b22995b5fe241ffc547c5324c4f40da",
+            "file": "libs/ui/src/lib/components/atoms/text/text.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ui-text",
+            "styleUrls": [
+                "./text.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./text.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'black'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine the fillcolor for the icon @see ColorType\n",
+                    "description": "<p>Define the fillcolor for the icon @see ColorType</p>\n",
+                    "line": 22,
+                    "type": "ColorType",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'regular'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine the size of the text @see FontSize\n",
+                    "description": "<p>Define the size of the text @see FontSize</p>\n",
+                    "line": 27,
+                    "type": "FontSize",
+                    "decorators": []
+                },
+                {
+                    "name": "text",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nThe text to be displayed\n",
+                    "description": "<p>The text to be displayed</p>\n",
+                    "line": 17,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, Input } from '@angular/core';\n\nimport { ColorType } from '../../particles/color.type';\nimport { FontSize } from '../../particles/font.type';\n\n@Component({\n  selector: 'ui-text',\n  templateUrl: './text.component.html',\n  styleUrls: ['./text.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class TextComponent {\n\n  /**\n   * The text to be displayed\n   */\n  @Input() text = '';\n\n  /**\n   * Define the fillcolor for the icon @see ColorType\n   */\n  @Input() color: ColorType = 'black';\n\n  /**\n   * Define the size of the text @see FontSize\n   */\n  @Input() size: FontSize = 'regular';\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: relative;\r\n  display: inline-block;\r\n  height: 0;\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 0;\r\n  line-height: 0;\r\n  vertical-align: middle;\r\n}\r\n\r\n.ui-text {\r\n  font-family: $font-default;\r\n\r\n  &.moonstone {\r\n    color: $color-moonstone;\r\n  }\r\n  &.tan {\r\n    color: $color-tan;\r\n  }\r\n  &.sage {\r\n    color: $color-sage;\r\n  }\r\n  &.light-coral {\r\n    color: $color-light-coral;\r\n  }\r\n  &.blush {\r\n    color: $color-blush;\r\n  }\r\n  &.white {\r\n    color: $color-white;\r\n  }\r\n  &.black {\r\n    color: $color-black;\r\n  }\r\n\r\n  &.extra-small {\r\n    font-size: $size-4;\r\n  }\r\n\r\n  &.small {\r\n    font-size: $size-5;\r\n  }\r\n\r\n  &.regular {\r\n    font-size: $size-6;\r\n  }\r\n\r\n  &.medium {\r\n    font-size: $size-7;\r\n  }\r\n\r\n  &.large {\r\n    font-size: $size-8;\r\n  }\r\n\r\n  &.extra-large {\r\n    font-size: $size-9;\r\n  }\r\n}\r\n",
+                    "styleUrl": "./text.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<label class=\"ui-text {{color}} {{size}}\">{{text}}</label>\n"
         }
     ],
     "modules": [
@@ -2031,13 +2118,13 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-65ebe11400ce345b6a9105637a8f2ecf6b60facea48b0fa50a7a857c5740dbc6a3625b4a0938333e785abb87993feaadb3c7a943dd21774db1780197a7a8a2d5-1",
+            "id": "module-AppModule-65a38925aeed757f40986c1543bd3371311de6a1a519077aa2a920d420a76fa236311a41fa1fbd6dedf0b60d9ea1e7b41ee59f78f0d600178b4b9a3021790429-1",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "apps/booking-app/src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { AppComponent } from './app.component';\nimport { BookingLayoutComponent } from './booking-layout/booking-layout.component';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { NgModule } from '@angular/core';\nimport { NxWelcomeComponent } from './nx-welcome.component';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  declarations: [AppComponent,BookingLayoutComponent, NxWelcomeComponent],\n  imports: [BrowserModule,\n    RouterModule.forRoot(\n      [\n          {\n              path: '',\n              pathMatch: 'full',\n              redirectTo: 'booking',\n          },\n          {\n              path: 'booking',\n              component: BookingLayoutComponent,\n              loadChildren: () =>\n                  import('@oceanic-airlines/booking/src/lib/shells/shell-booking').then(\n                      module => module.ShellBookingModule,\n                  ),\n          },\n      ],\n      {\n          paramsInheritanceStrategy: 'always',\n          scrollPositionRestoration: 'enabled',\n          scrollOffset: [0, 0],\n          anchorScrolling: 'enabled',\n      },\n  ),\n],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "sourceCode": "import { AppComponent } from './app.component';\nimport { BookingLayoutComponent } from './booking-layout/booking-layout.component';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { NgModule } from '@angular/core';\nimport { NxWelcomeComponent } from './nx-welcome.component';\nimport { RouterModule } from '@angular/router';\nimport { UiModule } from './../../../../libs/ui/src/lib/ui.module';\n\n@NgModule({\n  declarations: [AppComponent,BookingLayoutComponent, NxWelcomeComponent],\n  imports: [BrowserModule, UiModule,\n    RouterModule.forRoot(\n      [\n          {\n              path: '',\n              pathMatch: 'full',\n              redirectTo: 'booking',\n          },\n          {\n              path: 'booking',\n              component: BookingLayoutComponent,\n              loadChildren: () =>\n                  import('@oceanic-airlines/booking/src/lib/shells/shell-booking').then(\n                      module => module.ShellBookingModule,\n                  ),\n          },\n      ],\n      {\n          paramsInheritanceStrategy: 'always',\n          scrollPositionRestoration: 'enabled',\n          scrollOffset: [0, 0],\n          anchorScrolling: 'enabled',\n      },\n  ),\n],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -2059,7 +2146,11 @@
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -2081,13 +2172,13 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-366c0cf6fb2c9746b69e16f30cd10785b5d0122a59a5791daa0e7a39bf35bc8356214d48ddbdbe903c7df7e312acdfdc4880f687efe84f99c67942876fa69575-2",
+            "id": "module-AppModule-2f0334247c8a1c88232653ddca26ecb739499a1bded9d8155a8c53317d8c94d72bde15c84fd9c523f2593eb3bba4aa7e46e4c91ce246abb9c37dc2da8a6a94d2-2",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "apps/check-in-app/src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { AppComponent } from './app.component';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { CheckInLayoutComponent } from './check-in-layout/check-in-layout.component';\nimport { NgModule } from '@angular/core';\nimport { NxWelcomeComponent } from './nx-welcome.component';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  declarations: [AppComponent, NxWelcomeComponent, CheckInLayoutComponent],\n  imports: [BrowserModule,\n          RouterModule.forRoot(\n            [\n                {\n                    path: '',\n                    pathMatch: 'full',\n                    redirectTo: 'check-in',\n                },\n                {\n                    path: 'check-in',\n                    component: CheckInLayoutComponent,\n                    loadChildren: () =>\n                        import('@oceanic-airlines/booking/src/lib/shells/shell-booking').then(\n                            module => module.ShellBookingModule,\n                        ),\n                },\n            ],\n            {\n                paramsInheritanceStrategy: 'always',\n                scrollPositionRestoration: 'enabled',\n                scrollOffset: [0, 0],\n                anchorScrolling: 'enabled',\n            },\n        ),\n],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "sourceCode": "import { AppComponent } from './app.component';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { CheckInLayoutComponent } from './check-in-layout/check-in-layout.component';\nimport { NgModule } from '@angular/core';\nimport { NxWelcomeComponent } from './nx-welcome.component';\nimport { RouterModule } from '@angular/router';\nimport { UiModule } from './../../../../libs/ui/src/lib/ui.module';\n\n@NgModule({\n  declarations: [AppComponent, NxWelcomeComponent, CheckInLayoutComponent],\n  imports: [BrowserModule, UiModule,\n          RouterModule.forRoot(\n            [\n                {\n                    path: '',\n                    pathMatch: 'full',\n                    redirectTo: 'check-in',\n                },\n                {\n                    path: 'check-in',\n                    component: CheckInLayoutComponent,\n                    loadChildren: () =>\n                        import('@oceanic-airlines/booking/src/lib/shells/shell-booking').then(\n                            module => module.ShellBookingModule,\n                        ),\n                },\n            ],\n            {\n                paramsInheritanceStrategy: 'always',\n                scrollPositionRestoration: 'enabled',\n                scrollOffset: [0, 0],\n                anchorScrolling: 'enabled',\n            },\n        ),\n],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -2109,7 +2200,11 @@
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -2178,13 +2273,13 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-f087c4fe1772f808d203f5d8744d9fbd25590030b9ed5e3a0d760b25c65f177976675d35de6d115ad2a2996c4616fca3a2e0bf4778208d34c8b147d86ef50380-4",
+            "id": "module-AppModule-a277feabb98786e0c26f9cda9bc3b2e4afc9a68fdaf9ff80c1da666773dd96329f23a9296f9c76036ab611e468dc2b152184e3685599d609a9bb46fa42435bb5-4",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "apps/flight-tracking-app/src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { AppComponent } from './app.component';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { FlightTrackingLayoutComponent } from './flight-tracking-layout/flight-tracking-layout.component';\nimport { NgModule } from '@angular/core';\nimport { NxWelcomeComponent } from './nx-welcome.component';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  declarations: [AppComponent, FlightTrackingLayoutComponent, NxWelcomeComponent],\n  imports: [BrowserModule,\n    RouterModule.forRoot(\n      [\n          {\n              path: '',\n              pathMatch: 'full',\n              redirectTo: 'flight-tracking',\n          },\n          {\n              path: 'flight-tracking',\n              component: FlightTrackingLayoutComponent,\n              loadChildren: () =>\n                  import('@oceanic-airlines/flight-tracking/src/lib/shells/shell-flight-tracking').then(\n                      module => module.ShellFlightTrackingModule,\n                  ),\n          },\n      ],\n      {\n          paramsInheritanceStrategy: 'always',\n          scrollPositionRestoration: 'enabled',\n          scrollOffset: [0, 0],\n          anchorScrolling: 'enabled',\n      },\n  ),\n],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "sourceCode": "import { AppComponent } from './app.component';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { FlightTrackingLayoutComponent } from './flight-tracking-layout/flight-tracking-layout.component';\nimport { NgModule } from '@angular/core';\nimport { NxWelcomeComponent } from './nx-welcome.component';\nimport { RouterModule } from '@angular/router';\nimport { UiModule } from './../../../../libs/ui/src/lib/ui.module';\n\n@NgModule({\n  declarations: [AppComponent, FlightTrackingLayoutComponent, NxWelcomeComponent],\n  imports: [BrowserModule, UiModule,\n    RouterModule.forRoot(\n      [\n          {\n              path: '',\n              pathMatch: 'full',\n              redirectTo: 'flight-tracking',\n          },\n          {\n              path: 'flight-tracking',\n              component: FlightTrackingLayoutComponent,\n              loadChildren: () =>\n                  import('@oceanic-airlines/flight-tracking/src/lib/shells/shell-flight-tracking').then(\n                      module => module.ShellFlightTrackingModule,\n                  ),\n          },\n      ],\n      {\n          paramsInheritanceStrategy: 'always',\n          scrollPositionRestoration: 'enabled',\n          scrollOffset: [0, 0],\n          anchorScrolling: 'enabled',\n      },\n  ),\n],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -2206,7 +2301,11 @@
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -2228,13 +2327,13 @@
         },
         {
             "name": "AtomsModule",
-            "id": "module-AtomsModule-680ee7aea9fed1a8ca23001b93f6db099030aac83703c84302ccbdd31e6b09d7049f7a0655693586990f86bbf46a2645a5c84e0e5359fa2b031f8bc6838b2c05",
+            "id": "module-AtomsModule-540f0bf8e97c715e0899d245dc813cfd67616845c6ff6e5602e30f81a4198ed83bc87545a8d7d41ab01ad37502622968f8fcbb5ed0888830e424acd11499fff1",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/ui/src/lib/components/atoms/atoms.module.ts",
             "methods": [],
-            "sourceCode": "import { ButtonComponent } from './button/button.component';\r\nimport { CommonModule } from '@angular/common';\r\nimport { IconComponent } from './icon/icon.component';\r\nimport { LinkComponent } from './link/link.component';\r\nimport { NgModule } from '@angular/core';\r\n\r\n@NgModule({\r\n  declarations: [IconComponent, LinkComponent, ButtonComponent],\r\n  imports: [CommonModule],\r\n  exports: [IconComponent, LinkComponent, ButtonComponent],\r\n})\r\nexport class AtomsModule {}\r\n",
+            "sourceCode": "import { ButtonComponent } from './button/button.component';\r\nimport { CommonModule } from '@angular/common';\r\nimport { IconComponent } from './icon/icon.component';\r\nimport { LinkComponent } from './link/link.component';\r\nimport { NgModule } from '@angular/core';\nimport { TextComponent } from './text/text.component';\r\n\r\n@NgModule({\r\n  declarations: [IconComponent, LinkComponent, ButtonComponent, TextComponent],\r\n  imports: [CommonModule],\r\n  exports: [IconComponent, LinkComponent, ButtonComponent, TextComponent],\r\n})\r\nexport class AtomsModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -2251,6 +2350,9 @@
                         },
                         {
                             "name": "LinkComponent"
+                        },
+                        {
+                            "name": "TextComponent"
                         }
                     ]
                 },
@@ -2266,6 +2368,9 @@
                         },
                         {
                             "name": "LinkComponent"
+                        },
+                        {
+                            "name": "TextComponent"
                         }
                     ]
                 },
@@ -3404,6 +3509,16 @@
                 "defaultValue": "`\r\n<h6 class=\"storybook-color-header\">Default colors</h6>\r\n<div class=\"storybook-color-example bg-color-white\" color=\"$color-white\"></div>\r\n<div class=\"storybook-color-example bg-color-black\" color=\"$color-black\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Blue</h6>\r\n<div class=\"storybook-color-example bg-color-deep-blue\" color=\"$color-deep-blue\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-active\" color=\"$color-deep-blue-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-hover\" color=\"$color-deep-blue-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-focus\" color=\"$color-deep-blue-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Fresh Blue</h6>\r\n<div class=\"storybook-color-example bg-color-fresh-blue\" color=\"$color-fresh-blue\"></div>\r\n<div class=\"storybook-color-example bg-color-fresh-blue-active\" color=\"$color-fresh-blue-active\"></div>\r\n<div class=\"storybook-color-example bg-color-fresh-blue-hover\" color=\"$color-fresh-blue-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-fresh-blue-focus\" color=\"$color-fresh-blue-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Warm Coral</h6>\r\n<div class=\"storybook-color-example bg-color-warm-coral\" color=\"$color-warm-coral\"></div>\r\n<div class=\"storybook-color-example bg-color-warm-coral-active\" color=\"$color-warm-coral-active\"></div>\r\n<div class=\"storybook-color-example bg-color-warm-coral-hover\" color=\"$color-warm-coral-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-warm-coral-focus\" color=\"$color-warm-coral-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Light Blue</h6>\r\n<div class=\"storybook-color-example bg-color-light-blue\" color=\"$color-light-blue\"></div>\r\n<div class=\"storybook-color-example bg-color-light-blue-active\" color=\"$color-light-blue-active\"></div>\r\n<div class=\"storybook-color-example bg-color-light-blue-hover\" color=\"$color-light-blue-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-light-blue-focus\" color=\"$color-light-blue-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Yellow</h6>\r\n<div class=\"storybook-color-example bg-color-deep-yellow\" color=\"$color-deep-yellow\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-yellow-active\" color=\"$color-deep-yellow-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-yellow-hover\" color=\"$color-deep-yellow-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-yellow-focus\" color=\"$color-deep-yellow-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Purple</h6>\r\n<div class=\"storybook-color-example bg-color-deep-purple\" color=\"$color-deep-purple\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-purple-active\" color=\"$color-deep-purple-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-purple-hover\" color=\"$color-deep-purple-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-purple-focus\" color=\"$color-deep-purple-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Red</h6>\r\n<div class=\"storybook-color-example bg-color-deep-red\" color=\"$color-deep-red\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-red-active\" color=\"$color-deep-red-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-red-hover\" color=\"$color-deep-red-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-red-focus\" color=\"$color-deep-red-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Error</h6>\r\n<div class=\"storybook-color-example bg-color-error\" color=\"$color-error\"></div>\r\n<div class=\"storybook-color-example bg-color-error-background\" color=\"$color-error-background\"></div>\r\n<h6 class=\"storybook-color-header\">Success</h6>\r\n<div class=\"storybook-color-example bg-color-success\" color=\"$color-success\"></div>\r\n<div class=\"storybook-color-example bg-color-success-background\" color=\"$color-success-background\"></div>\r\n<h6 class=\"storybook-color-header\">Warning</h6>\r\n<div class=\"storybook-color-example bg-color-warning\" color=\"$color-warning\"></div>\r\n<div class=\"storybook-color-example bg-color-warning-background\" color=\"$color-warning-background\"></div>\r\n<h6 class=\"storybook-color-header\">Info</h6>\r\n<div class=\"storybook-color-example bg-color-info\" color=\"$color-info\"></div>\r\n<div class=\"storybook-color-example bg-color-info-background\" color=\"$color-info-background\"></div>\r\n`"
             },
             {
+                "name": "icon",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "iconAngleRight",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -3478,16 +3593,6 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "logo",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3577,6 +3682,46 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<IconComponent>",
+                "defaultValue": "(args: IconComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/link/link.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<LinkComponent>",
+                "defaultValue": "(args: LinkComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/text/text.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<TextComponent>",
+                "defaultValue": "(args: TextComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -3604,34 +3749,14 @@
                 "defaultValue": "(args: HeaderComponent) => ({\r\n  props: args\r\n})"
             },
             {
-                "name": "Template",
+                "name": "text",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "libs/ui/src/lib/components/atoms/button/button.component.stories.ts",
+                "file": "libs/ui/src/lib/components/atoms/text/text.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<IconComponent>",
-                "defaultValue": "(args: IconComponent) => ({\r\n  props: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/ui/src/lib/components/atoms/link/link.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<LinkComponent>",
-                "defaultValue": "(args: LinkComponent) => ({\r\n  props: args\r\n})"
+                "type": "",
+                "defaultValue": "Template.bind({})"
             }
         ],
         "functions": [
@@ -3701,6 +3826,17 @@
                 "subtype": "typealias",
                 "rawtype": "\"moonstone\" | \"tan\" | \"sage\" | \"light-coral\" | \"blush\" | \"white\" | \"black\" | \"error\" | \"info\" | \"success\" | \"warning\"",
                 "file": "libs/ui/src/lib/components/particles/color.type.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 186
+            },
+            {
+                "name": "FontSize",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"extra-small\" | \"small\" | \"regular\" | \"medium\" | \"large\" | \"extra-large\"",
+                "file": "libs/ui/src/lib/components/particles/font.type.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -3923,6 +4059,28 @@
                     "defaultValue": "(args: HeaderComponent) => ({\r\n  props: args\r\n})"
                 }
             ],
+            "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts": [
+                {
+                    "name": "icon",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<IconComponent>",
+                    "defaultValue": "(args: IconComponent) => ({\r\n  props: args\r\n})"
+                }
+            ],
             "libs/ui/src/lib/assets/src/libs/icons/regular.icons.ts": [
                 {
                     "name": "iconAngleRight",
@@ -4093,26 +4251,26 @@
                     "defaultValue": "(args: Page) => ({\n  props: args,\n})"
                 }
             ],
-            "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts": [
-                {
-                    "name": "logo",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
+            "libs/ui/src/lib/components/atoms/text/text.component.stories.ts": [
                 {
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
+                    "file": "libs/ui/src/lib/components/atoms/text/text.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<IconComponent>",
-                    "defaultValue": "(args: IconComponent) => ({\r\n  props: args\r\n})"
+                    "type": "Story<TextComponent>",
+                    "defaultValue": "(args: TextComponent) => ({\r\n  props: args\r\n})"
+                },
+                {
+                    "name": "text",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/atoms/text/text.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
                 }
             ]
         },
@@ -4189,6 +4347,19 @@
                     "subtype": "typealias",
                     "rawtype": "\"moonstone\" | \"tan\" | \"sage\" | \"light-coral\" | \"blush\" | \"white\" | \"black\" | \"error\" | \"info\" | \"success\" | \"warning\"",
                     "file": "libs/ui/src/lib/components/particles/color.type.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 186
+                }
+            ],
+            "libs/ui/src/lib/components/particles/font.type.ts": [
+                {
+                    "name": "FontSize",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"extra-small\" | \"small\" | \"regular\" | \"medium\" | \"large\" | \"extra-large\"",
+                    "file": "libs/ui/src/lib/components/particles/font.type.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -4532,7 +4703,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "logo",
+                "name": "icon",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -4584,6 +4755,35 @@
                 "coveragePercent": 50,
                 "coverageCount": "3/6",
                 "status": "medium"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/atoms/text/text.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/atoms/text/text.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "text",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/atoms/text/text.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TextComponent",
+                "coveragePercent": 75,
+                "coverageCount": "3/4",
+                "status": "good"
             },
             {
                 "filePath": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumb.ts",
