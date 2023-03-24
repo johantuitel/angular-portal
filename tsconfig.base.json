@@ -15,6 +15,19 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@oceanic-airlines/adminportal": ["libs/adminportal/src/index.ts"],
+      "@oceanic-airlines/adminportal/src/lib/shells/shell-admin": [
+        "libs/adminportal/src/lib/shells/shell-admin/src/index.ts"
+      ],
+      "@oceanic-airlines/adminportal/src/lib/shells/shell-admin-booking": [
+        "libs/adminportal/src/lib/shells/shell-admin-booking/src/index.ts"
+      ],
+      "@oceanic-airlines/adminportal/src/lib/shells/shell-admin-checkin": [
+        "libs/adminportal/src/lib/shells/shell-admin-checkin/src/index.ts"
+      ],
+      "@oceanic-airlines/adminportal/src/lib/shells/shell-admin-dashboard": [
+        "libs/adminportal/src/lib/shells/shell-admin-dashboard/src/index.ts"
+      ],
       "@oceanic-airlines/booking": ["libs/booking/src/index.ts"],
       "@oceanic-airlines/booking/src/lib/features/feature-passenger-info": [
         "libs/booking/src/lib/features/feature-passenger-info/src/index.ts"
@@ -47,6 +60,16 @@
       "@oceanic-airlines/check-in/src/lib/shells/shell-ticket-finder": [
         "libs/check-in/src/lib/shells/shell-ticket-finder/src/index.ts"
       ],
+      "@oceanic-airlines/clientportal": ["libs/clientportal/src/index.ts"],
+      "@oceanic-airlines/clientportal/src/lib/shells/shell-client-checkin": [
+        "libs/clientportal/src/lib/shells/shell-client-checkin/src/index.ts"
+      ],
+      "@oceanic-airlines/clientportal/src/lib/shells/shell-client-dashboard": [
+        "libs/clientportal/src/lib/shells/shell-client-dashboard/src/index.ts"
+      ],
+      "@oceanic-airlines/clientportal/src/lib/shells/shell-client-flight-tracking": [
+        "libs/clientportal/src/lib/shells/shell-client-flight-tracking/src/index.ts"
+      ],
       "@oceanic-airlines/flight-tracking": [
         "libs/flight-tracking/src/index.ts"
       ],
@@ -67,7 +90,6 @@
       ],
       "@oceanic-airlines/shared": ["libs/shared/src/index.ts"],
       "@oceanic-airlines/ui": ["libs/ui/src/index.ts"]
-
     }
   },
   "exclude": ["node_modules", "tmp"]

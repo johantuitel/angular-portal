@@ -1,0 +1,7 @@
+<main class="oceanic-main-layout">
+    <ui-header logo="oceanic-airlines" title="oceanic-airlines admin" backgroundColor="light-coral"></ui-header>
+    <ui-navigation [links]="adminPages" navigationColor="blush" backgroundColor="light-coral" (navigate)="navigateTo($event)"></ui-navigation>
+    <section>
+        <router-outlet></router-outlet>
+    </section>
+</main>
