@@ -33,6 +33,11 @@ export class HeaderComponent implements OnInit {
    */
   @Input() logoColor: ColorType = 'black'
 
+    /**
+   * Define the title-color @see ColorType
+   */
+    @Input() titleColor: ColorType = 'black'
+
   /**
    * The Title in the header
    */
