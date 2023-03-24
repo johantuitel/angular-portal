@@ -4,10 +4,11 @@ import { CheckInLayoutComponent } from './check-in-layout/check-in-layout.compon
 import { NgModule } from '@angular/core';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
+import { UiModule } from './../../../../libs/ui/src/lib/ui.module';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent, CheckInLayoutComponent],
-  imports: [BrowserModule,
+  imports: [BrowserModule, UiModule,
           RouterModule.forRoot(
             [
                 {

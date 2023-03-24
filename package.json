@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "nx build",
+    "admin-portal": "nx run admin-portal:serve --port 4000",
+    "client-portal": "nx run client-portal:serve --port 5000",
+    "booking": "nx run booking-app:serve --port 6010",
+    "checkin": "nx run check-in-app:serve --port 6020",
+    "flight-tracking": "nx run flight-tracking-app:serve --port 6030",
     "docs:json": "compodoc -p ./tsconfig.base.json -e json -d .",
     "storybook": "npm run docs:json && start-storybook -p 6006",
     "build-storybook": "npm run docs:json && build-storybook"

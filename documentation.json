@@ -102,7 +102,7 @@
         {
             "name": "Chainable",
             "id": "interface-Chainable-cb612385d81b07be0aad52bfcb00cbe7bc4da71bb724b45a152d9ab4e7d4b2760a0b20ca8bca793febb910c5eecfd0756929a822af47a6ff4c538299ea673b8c-1",
-            "file": "apps/check-in-app-e2e/src/support/commands.ts",
+            "file": "apps/booking-app-e2e/src/support/commands.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
@@ -162,7 +162,7 @@
         {
             "name": "Chainable",
             "id": "interface-Chainable-cb612385d81b07be0aad52bfcb00cbe7bc4da71bb724b45a152d9ab4e7d4b2760a0b20ca8bca793febb910c5eecfd0756929a822af47a6ff4c538299ea673b8c-2",
-            "file": "apps/booking-app-e2e/src/support/commands.ts",
+            "file": "apps/check-in-app-e2e/src/support/commands.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
@@ -1044,6 +1044,49 @@
             }
         },
         {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-47b374854ef613f9603cefc66cbcd470ba63c3c114afb28a834a85ac1570e4d02bbc9d39f1c162799fef1650c863db08a46eb7d448f693337e54e80557271c6c-1",
+            "file": "libs/ui/src/lib/components/atoms/button/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ui-button",
+            "styleUrls": [
+                "./button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'ui-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "ButtonComponent-1",
+            "templateData": "<p>button works!</p>\n"
+        },
+        {
             "name": "CheckInLayoutComponent",
             "id": "component-CheckInLayoutComponent-ffd2643fa24affd8f1f668f0336ccd8f7e6651aab75cc82763bc797917f471f0fdf11ed309a553d6dcaeb89793491a851be6d76d32558d336bd5cb000a8e3e81",
             "file": "apps/check-in-app/src/app/check-in-layout/check-in-layout.component.ts",
@@ -1127,7 +1170,7 @@
         },
         {
             "name": "FooterComponent",
-            "id": "component-FooterComponent-6bf967f39e89f2706b7e06cbf0d44294f36294a4fb76f657ab8f6258a3a638ed422268d5a21f02bfeef611286b931235b5ad665e085d3661df9de59e83b9499c",
+            "id": "component-FooterComponent-5a9811e4e1677b18e4069f68bc73d5cf05a059b505adedff41946e949830f5c205ed83d95b9e56effc45306dfd6035e27908017a145a9890e816685d900b5c51",
             "file": "libs/ui/src/lib/components/organisms/footer/footer.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -1144,27 +1187,77 @@
                 "./footer.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine the background-color for the header @see ColorType\n",
+                    "description": "<p>Define the background-color for the header @see ColorType</p>\n",
+                    "line": 17,
+                    "type": "ColorType",
+                    "decorators": []
+                }
+            ],
             "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "hostClass",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12,
+                    "decorators": [
+                        {
+                            "name": "HostBinding",
+                            "stringifiedArguments": "'class'"
+                        }
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 19,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
-            "hostBindings": [],
+            "hostBindings": [
+                {
+                    "name": "class",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
             "hostListeners": [],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'ui-footer',\n  templateUrl: './footer.component.html',\n  styleUrls: ['./footer.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class FooterComponent {\n\n}\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, HostBinding, Input, OnInit } from '@angular/core';\n\nimport { ColorType } from '../../particles/color.type';\n\n@Component({\n  selector: 'ui-footer',\n  templateUrl: './footer.component.html',\n  styleUrls: ['./footer.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class FooterComponent  implements OnInit {\n  @HostBinding('class') hostClass: string;\n\n  /**\n   * Define the background-color for the header @see ColorType\n   */\n  @Input() backgroundColor: ColorType;\n\n  ngOnInit(): void {\n    this.hostClass = this.backgroundColor.toString();\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  display: block;\r\n  height: $size-16;\r\n  width: $size-full;\r\n\r\n  &.moonstone {\r\n    background-color: $color-moonstone;\r\n  }\r\n  &.sage {\r\n    background-color: $color-sage;\r\n  }\r\n  &.tan {\r\n    background-color: $color-tan;\r\n  }\r\n  &.light-coral {\r\n    background-color: $color-light-coral;\r\n  }\r\n  &.blush {\r\n    background-color: $color-blush;\r\n  }\r\n  &.white {\r\n    background-color: $color-white;\r\n  }\r\n  &.black {\r\n    background-color: $color-black;\r\n  }\r\n}\r\n\r\n.footer {\r\n  display: flex;\r\n  flex-direction: column;\r\n  height: inherit;\r\n  width: inherit;\r\n  align-items: center;\r\n  justify-content: flex-start;\r\n}\r\n",
                     "styleUrl": "./footer.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<p>footer works!</p>\n"
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div id=\"footer\" class=\"footer\">\n<div>logos</div>\n  <label style=\"font-size: 1rem; font-family: monospace; color: #729EA1\">Copyright. All rights reserved</label>\n</div>\n"
         },
         {
             "name": "HeaderComponent",
@@ -1351,7 +1444,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  display: block;\r\n  height: $size-16;\r\n  width: $size-full;\r\n\r\n  &.moonstone {\r\n    background-color: $color-moonstone;\r\n  }\r\n}\r\n\r\n.header {\r\n  display: flex;\r\n  flex-direction: row;\r\n  height: inherit;\r\n  width: inherit;\r\n  align-items: center;\r\n  justify-content: flex-start;\r\n}\r\n",
+                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  display: block;\r\n  height: $size-16;\r\n  width: $size-full;\r\n\r\n  &.moonstone {\r\n    background-color: $color-moonstone;\r\n  }\r\n  &.sage {\r\n    background-color: $color-sage;\r\n  }\r\n  &.tan {\r\n    background-color: $color-tan;\r\n  }\r\n  &.light-coral {\r\n    background-color: $color-light-coral;\r\n  }\r\n  &.blush {\r\n    background-color: $color-blush;\r\n  }\r\n  &.white {\r\n    background-color: $color-white;\r\n  }\r\n  &.black {\r\n    background-color: $color-black;\r\n  }\r\n}\r\n\r\n.header {\r\n  display: flex;\r\n  flex-direction: row;\r\n  height: inherit;\r\n  width: inherit;\r\n  align-items: center;\r\n  justify-content: flex-start;\r\n}\r\n",
                     "styleUrl": "./header.component.scss"
                 }
             ],
@@ -1519,6 +1612,116 @@
                 "OnChanges"
             ],
             "templateData": "<i\n  class=\"app-icon {{ css }} size-{{ size }} color-{{ color}}\"\n  role=\"img\"\n  focusable=\"false\"\n  aria-hidden=\"true\"\n  aria-label=\"icon\"\n  [attr.data-icon]=\"type\"\n  i18n-aria-label=\"{{ label }}\"\n  tabindex=\"-1\">\n</i>\n"
+        },
+        {
+            "name": "LinkComponent",
+            "id": "component-LinkComponent-72aa358a0e7f06e02b943575c0bfd0fb736b31f8f6a3d51dc6e411d5e6ec68e31f4559cca6f4a814a8c9f9187c68aade3c50ba788940d77928a9f74b33ec252b",
+            "file": "libs/ui/src/lib/components/atoms/link/link.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ui-link",
+            "styleUrls": [
+                "./link.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./link.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nThe theme of the link @see ColorType\n",
+                    "description": "<p>The theme of the link @see ColorType</p>\n",
+                    "line": 25,
+                    "type": "ColorType",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nText of the link\n",
+                    "description": "<p>Text of the link</p>\n",
+                    "line": 20,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nThe value to be emitted after the link is clicked.\n",
+                    "description": "<p>The value to be emitted after the link is clicked.</p>\n",
+                    "line": 15,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "clickEmitter",
+                    "defaultValue": "new EventEmitter<string>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 27,
+                    "type": "EventEmitter<string>"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "link",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 29,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';\n\nimport { ColorType } from './../../particles/color.type';\n\n@Component({\n  selector: 'ui-link',\n  templateUrl: './link.component.html',\n  styleUrls: ['./link.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class LinkComponent {\n  /**\n   * The value to be emitted after the link is clicked.\n   */\n  @Input() value!: string;\n\n  /**\n   * Text of the link\n   */\n  @Input() label!: string;\n\n  /**\n   * The theme of the link @see ColorType\n   */\n  @Input() color: ColorType;\n\n  @Output() readonly clickEmitter: EventEmitter<string> = new EventEmitter<string>();\n\n  link(event: string): void {\n    this.clickEmitter.emit(event);\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  display: block;\r\n  width: 100%;\r\n}\r\n\r\n.ui-link {\r\n  position: relative;\r\n  display: inline-block;\r\n  padding: 0;\r\n  margin: 0 $size-2 0 0;\r\n  border-radius: $size-1;\r\n  box-shadow: none;\r\n  color: $color-blush;\r\n  cursor: pointer;\r\n  font-family: $font-default-bold;\r\n  font-size: $font-size-regular;\r\n  font-style: normal;\r\n  font-weight: $font-weight-bold;\r\n  line-height: 1;\r\n  outline: 0;\r\n  outline-offset: 0;\r\n  text-decoration: none;\r\n  transition: color .15s $ease-in-quad, box-shadow .15s $ease-in-quad;\r\n  user-select: auto;\r\n  vertical-align: baseline;\r\n  white-space: nowrap;\r\n  word-break: normal;\r\n  word-spacing: normal;\r\n  word-wrap: normal;\r\n\r\n  &.moonstone {\r\n    color: $color-moonstone;\r\n  }\r\n  &.tan {\r\n    color: $color-tan;\r\n  }\r\n  &.sage {\r\n    color: $color-sage;\r\n  }\r\n  &.light-coral {\r\n    color: $color-light-coral;\r\n  }\r\n  &.blush {\r\n    color: $color-blush;\r\n  }\r\n  &.white {\r\n    color: $color-white;\r\n  }\r\n  &.black {\r\n    color: $color-black;\r\n  }\r\n\r\n  &::after {\r\n    position: absolute;\r\n    top: auto;\r\n    right: auto;\r\n    bottom: -0.25rem;\r\n    left: 0;\r\n    width: 100%;\r\n    height: $size-1px;\r\n    background-color: $color-blush;\r\n    content: '';\r\n    transform: scaleX(0);\r\n    transform-origin: bottom left;\r\n    transform-style: preserve-3d;\r\n    transition: transform .15s $ease-in-quad;\r\n  }\r\n\r\n  &:hover {\r\n    color: $font-color-warm-coral;\r\n\r\n    &::after {\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n\r\n  &:focus {\r\n    box-shadow: $ring-focus;\r\n    color: $font-color-warm-coral;\r\n\r\n    &::after {\r\n      transform: scaleX(0);\r\n    }\r\n  }\r\n\r\n  &:active {\r\n    color: $font-color-warm-coral;\r\n\r\n    &::after {\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n}\r\n",
+                    "styleUrl": "./link.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<a (click)=\"link(value)\"\n   class=\"ui-link {{color}}\">{{ label }}</a>\n"
         },
         {
             "name": "NxWelcomeComponent",
@@ -2025,13 +2228,13 @@
         },
         {
             "name": "AtomsModule",
-            "id": "module-AtomsModule-a1f16ac07795f2ee4da601e2880b2c487a6da7290a6d18615bc688b894c2599cc1d146a8eddc465b1baf8855c0e06ccbfbce458e3936e65ffae3813360f2a873",
+            "id": "module-AtomsModule-680ee7aea9fed1a8ca23001b93f6db099030aac83703c84302ccbdd31e6b09d7049f7a0655693586990f86bbf46a2645a5c84e0e5359fa2b031f8bc6838b2c05",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/ui/src/lib/components/atoms/atoms.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { IconComponent } from './icon/icon.component';\r\nimport { NgModule } from '@angular/core';\r\n\r\n@NgModule({\r\n  declarations: [IconComponent],\r\n  imports: [CommonModule],\r\n  exports: [IconComponent],\r\n})\r\nexport class AtomsModule {}\r\n",
+            "sourceCode": "import { ButtonComponent } from './button/button.component';\r\nimport { CommonModule } from '@angular/common';\r\nimport { IconComponent } from './icon/icon.component';\r\nimport { LinkComponent } from './link/link.component';\r\nimport { NgModule } from '@angular/core';\r\n\r\n@NgModule({\r\n  declarations: [IconComponent, LinkComponent, ButtonComponent],\r\n  imports: [CommonModule],\r\n  exports: [IconComponent, LinkComponent, ButtonComponent],\r\n})\r\nexport class AtomsModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -2041,7 +2244,13 @@
                     "type": "declarations",
                     "elements": [
                         {
+                            "name": "ButtonComponent"
+                        },
+                        {
                             "name": "IconComponent"
+                        },
+                        {
+                            "name": "LinkComponent"
                         }
                     ]
                 },
@@ -2054,6 +2263,9 @@
                     "elements": [
                         {
                             "name": "IconComponent"
+                        },
+                        {
+                            "name": "LinkComponent"
                         }
                     ]
                 },
@@ -2587,13 +2799,13 @@
         },
         {
             "name": "OrganismsModule",
-            "id": "module-OrganismsModule-b15aad49a221058d707cb6e3d3467278b44071368a17be49e8427cfae0a15bba75a384ebff659bafe546ba2cd5aab73cbacadb66110cf38d2dad577e51b19cbb",
+            "id": "module-OrganismsModule-c282604ff324679b7129f360f2cd6fead79e96609f982400f4886445537da6fad2a2ea0b91876168f0efc1ca1acd8ada246a37d9b5d17f33476ac0a6c3cc8b0d",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/ui/src/lib/components/organisms/organisms.module.ts",
             "methods": [],
-            "sourceCode": "import { AtomsModule } from './../atoms/atoms.module';\r\nimport { CommonModule } from '@angular/common';\r\nimport { HeaderComponent } from './header/header.component';\r\nimport { NgModule } from '@angular/core';\r\n\r\n@NgModule({\r\n  declarations: [HeaderComponent],\r\n  imports: [CommonModule, AtomsModule],\r\n  exports: [HeaderComponent],\r\n})\r\nexport class OrganismsModule {}\r\n",
+            "sourceCode": "import { AtomsModule } from './../atoms/atoms.module';\r\nimport { CommonModule } from '@angular/common';\r\nimport { FooterComponent } from './footer/footer.component';\r\nimport { HeaderComponent } from './header/header.component';\r\nimport { NgModule } from '@angular/core';\r\n\r\n@NgModule({\r\n  declarations: [HeaderComponent, FooterComponent],\r\n  imports: [CommonModule, AtomsModule],\r\n  exports: [HeaderComponent, FooterComponent],\r\n})\r\nexport class OrganismsModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -2602,6 +2814,9 @@
                 {
                     "type": "declarations",
                     "elements": [
+                        {
+                            "name": "FooterComponent"
+                        },
                         {
                             "name": "HeaderComponent"
                         }
@@ -2617,7 +2832,11 @@
                 },
                 {
                     "type": "exports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "FooterComponent"
+                        }
+                    ]
                 },
                 {
                     "type": "bootstrap",
@@ -3095,6 +3314,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "button",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "footer",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -3118,7 +3347,7 @@
                 "name": "getGreeting",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "apps/check-in-app-e2e/src/support/app.po.ts",
+                "file": "apps/booking-app-e2e/src/support/app.po.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3128,7 +3357,7 @@
                 "name": "getGreeting",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "apps/booking-app-e2e/src/support/app.po.ts",
+                "file": "apps/check-in-app-e2e/src/support/app.po.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3199,6 +3428,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "link",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/link/link.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3338,16 +3577,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<IconComponent>",
-                "defaultValue": "(args: IconComponent) => ({\r\n  props: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -3373,6 +3602,36 @@
                 "deprecationMessage": "",
                 "type": "Story<HeaderComponent>",
                 "defaultValue": "(args: HeaderComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<IconComponent>",
+                "defaultValue": "(args: IconComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/link/link.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<LinkComponent>",
+                "defaultValue": "(args: LinkComponent) => ({\r\n  props: args\r\n})"
             }
         ],
         "functions": [
@@ -3538,6 +3797,28 @@
                     "defaultValue": "(args: BreadcrumbsComponent) => ({\r\n  props: args\r\n})"
                 }
             ],
+            "libs/ui/src/lib/components/atoms/button/button.component.stories.ts": [
+                {
+                    "name": "button",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/atoms/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/atoms/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ButtonComponent>",
+                    "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args\r\n})"
+                }
+            ],
             "libs/ui/src/lib/components/organisms/footer/footer.component.stories.ts": [
                 {
                     "name": "footer",
@@ -3572,24 +3853,24 @@
                     "defaultValue": "() => cy.get('h1')"
                 }
             ],
-            "apps/check-in-app-e2e/src/support/app.po.ts": [
-                {
-                    "name": "getGreeting",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "apps/check-in-app-e2e/src/support/app.po.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "() => cy.get('h1')"
-                }
-            ],
             "apps/booking-app-e2e/src/support/app.po.ts": [
                 {
                     "name": "getGreeting",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "apps/booking-app-e2e/src/support/app.po.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "() => cy.get('h1')"
+                }
+            ],
+            "apps/check-in-app-e2e/src/support/app.po.ts": [
+                {
+                    "name": "getGreeting",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/check-in-app-e2e/src/support/app.po.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -3724,6 +4005,28 @@
                     "deprecationMessage": "",
                     "type": "Story<Button>",
                     "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                }
+            ],
+            "libs/ui/src/lib/components/atoms/link/link.component.stories.ts": [
+                {
+                    "name": "link",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/atoms/link/link.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/atoms/link/link.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<LinkComponent>",
+                    "defaultValue": "(args: LinkComponent) => ({\r\n  props: args\r\n})"
                 }
             ],
             "stories/Header.stories.ts": [
@@ -3922,7 +4225,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 3,
+        "count": 4,
         "status": "low",
         "files": [
             {
@@ -4196,6 +4499,35 @@
                 "status": "low"
             },
             {
+                "filePath": "libs/ui/src/lib/components/atoms/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "button",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/atoms/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/atoms/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -4223,6 +4555,35 @@
                 "coveragePercent": 57,
                 "coverageCount": "4/7",
                 "status": "good"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/atoms/link/link.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "link",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/atoms/link/link.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/atoms/link/link.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LinkComponent",
+                "coveragePercent": 50,
+                "coverageCount": "3/6",
+                "status": "medium"
             },
             {
                 "filePath": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumb.ts",
@@ -4287,8 +4648,8 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "FooterComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
+                "coveragePercent": 20,
+                "coverageCount": "1/5",
                 "status": "low"
             },
             {

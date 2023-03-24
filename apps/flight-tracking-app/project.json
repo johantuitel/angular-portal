@@ -12,7 +12,7 @@
         "outputPath": "dist/apps/flight-tracking-app",
         "index": "apps/flight-tracking-app/src/index.html",
         "main": "apps/flight-tracking-app/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": "apps/flight-tracking-app/src/polyfills.ts",
         "tsConfig": "apps/flight-tracking-app/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [

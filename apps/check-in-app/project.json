@@ -12,7 +12,7 @@
         "outputPath": "dist/apps/check-in-app",
         "index": "apps/check-in-app/src/index.html",
         "main": "apps/check-in-app/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": "apps/check-in-app/src/polyfills.ts",
         "tsConfig": "apps/check-in-app/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [

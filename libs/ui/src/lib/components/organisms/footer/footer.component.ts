@@ -9,12 +9,12 @@ import { ColorType } from '../../particles/color.type';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooterComponent  implements OnInit {
-  @HostBinding('class') hostClass: string;
+  @HostBinding('class') hostClass = 'white';
 
   /**
    * Define the background-color for the header @see ColorType
    */
-  @Input() backgroundColor: ColorType;
+  @Input() backgroundColor: ColorType = 'black'
 
   ngOnInit(): void {
     this.hostClass = this.backgroundColor.toString();

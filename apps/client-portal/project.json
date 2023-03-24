@@ -12,7 +12,7 @@
         "outputPath": "dist/apps/client-portal",
         "index": "apps/client-portal/src/index.html",
         "main": "apps/client-portal/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": "apps/client-portal/src/polyfills.ts",
         "tsConfig": "apps/client-portal/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [

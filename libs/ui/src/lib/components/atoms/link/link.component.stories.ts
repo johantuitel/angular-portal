@@ -20,3 +20,8 @@ const Template: Story<LinkComponent> = (args: LinkComponent) => ({
 })
 
 export const link = Template.bind({});
+link.args = {
+  color: 'light-coral',
+  label: 'Link',
+  value: 'abc123'
+}

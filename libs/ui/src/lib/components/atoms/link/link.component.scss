@@ -1,0 +1,95 @@
+@import '../../../scss/src/ui.styles.scss';
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.ui-link {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  margin: 0 $size-2 0 0;
+  border-radius: $size-1;
+  box-shadow: none;
+  color: $color-blush;
+  cursor: pointer;
+  font-family: $font-default-bold;
+  font-size: $font-size-regular;
+  font-style: normal;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  outline: 0;
+  outline-offset: 0;
+  text-decoration: none;
+  transition: color .15s $ease-in-quad, box-shadow .15s $ease-in-quad;
+  user-select: auto;
+  vertical-align: baseline;
+  white-space: nowrap;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+
+  &.moonstone {
+    color: $color-moonstone;
+  }
+  &.tan {
+    color: $color-tan;
+  }
+  &.sage {
+    color: $color-sage;
+  }
+  &.light-coral {
+    color: $color-light-coral;
+
+    &:hover {
+      color: $color-blush;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &:focus {
+      box-shadow: $ring-focus;
+      color: $color-blush;
+
+      &::after {
+        transform: scaleX(0);
+      }
+    }
+
+    &:active {
+      color: $color-blush;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+  &.blush {
+    color: $color-blush;
+  }
+  &.white {
+    color: $color-white;
+  }
+  &.black {
+    color: $color-black;
+  }
+
+  &::after {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: -0.25rem;
+    left: 0;
+    width: 100%;
+    height: $size-1px;
+    background-color: $color-blush;
+    content: '';
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transform-style: preserve-3d;
+    transition: transform .15s $ease-in-quad;
+  }
+}

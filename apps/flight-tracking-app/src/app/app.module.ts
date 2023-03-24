@@ -4,10 +4,11 @@ import { FlightTrackingLayoutComponent } from './flight-tracking-layout/flight-t
 import { NgModule } from '@angular/core';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
+import { UiModule } from './../../../../libs/ui/src/lib/ui.module';
 
 @NgModule({
   declarations: [AppComponent, FlightTrackingLayoutComponent, NxWelcomeComponent],
-  imports: [BrowserModule,
+  imports: [BrowserModule, UiModule,
     RouterModule.forRoot(
       [
           {

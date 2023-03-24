@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
+import { UiModule } from './../../../../libs/ui/src/lib/ui.module';
 
 @NgModule({
   declarations: [AppComponent,BookingLayoutComponent, NxWelcomeComponent],
-  imports: [BrowserModule,
+  imports: [BrowserModule, UiModule,
     RouterModule.forRoot(
       [
           {

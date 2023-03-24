@@ -14,7 +14,7 @@ export class BreadcrumbsComponent {
   /**
    * Define the fillcolor for the icon @see ColorType
    */
-  @Input() color: ColorType;
+  @Input() color: ColorType = 'black';
   @Input() breadcrumbs: Breadcrumb[] = [];
   @Output() navigateClicked: EventEmitter<string> = new EventEmitter<string>();
 

@@ -4,6 +4,8 @@
   display: block;
   height: $size-16;
   width: $size-full;
+  bottom: 0;
+  position: absolute;
 
   &.moonstone {
     background-color: $color-moonstone;

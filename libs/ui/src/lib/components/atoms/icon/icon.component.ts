@@ -15,7 +15,7 @@ export class IconComponent implements OnChanges {
   /**
    * Define the fillcolor for the icon @see ColorType
    */
-  @Input() color: ColorType;
+  @Input() color: ColorType = 'black';
 
   /**
    * Add custom css styling
@@ -30,7 +30,7 @@ export class IconComponent implements OnChanges {
   /**
    * The name of the icon to be displayed
    */
-  @Input() type: IconNames;
+  @Input() type: IconNames = 'oceanic-airlines';
 
   constructor(private readonly element: ElementRef,
               private readonly iconsRegistry: IconsRegistryService) { }

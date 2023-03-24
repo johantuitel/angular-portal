@@ -16,25 +16,25 @@ import { IconNames } from './../../../assets/src/libs/icons/icon';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
-  @HostBinding('class') hostClass: string;
+  @HostBinding('class') hostClass = 'white';
 
   /**
    * Define the background-color for the header @see ColorType
    */
-  @Input() backgroundColor: ColorType;
+  @Input() backgroundColor: ColorType = 'black'
 
   /**
    * Which logo to use in the header @see IconNames
    */
-  @Input() logo: IconNames;
+  @Input() logo: IconNames = 'oceanic-airlines'
 
   /**
    * Define the logo-color @see ColorType
    */
-  @Input() logoColor: ColorType;
+  @Input() logoColor: ColorType = 'black'
 
   /**
-   * Which logo to use in the header @see IconNames
+   * The Title in the header
    */
   @Input() title = '';
 

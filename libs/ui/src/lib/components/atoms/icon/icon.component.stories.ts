@@ -11,8 +11,8 @@ const Template: Story<IconComponent> = (args: IconComponent) => ({
   props: args
 })
 
-export const logo = Template.bind({});
-logo.args = {
+export const icon = Template.bind({});
+icon.args = {
   color: 'blush',
   type: 'oceanic-airlines'
 }

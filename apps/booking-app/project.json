@@ -12,7 +12,7 @@
         "outputPath": "dist/apps/booking-app",
         "index": "apps/booking-app/src/index.html",
         "main": "apps/booking-app/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": "apps/booking-app/src/polyfills.ts",
         "tsConfig": "apps/booking-app/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
