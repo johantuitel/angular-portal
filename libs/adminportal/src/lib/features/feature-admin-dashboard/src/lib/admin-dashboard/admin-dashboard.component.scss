@@ -1,0 +1,9 @@
+@import '../../../../../../../../ui/src/lib/scss/src/ui.styles.scss';
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: $size-full;
+}

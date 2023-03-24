@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@oceanic-airlines/adminportal": ["libs/adminportal/src/index.ts"],
+      "@oceanic-airlines/adminportal/src/lib/features/feature-admin-dashboard": [
+        "libs/adminportal/src/lib/features/feature-admin-dashboard/src/index.ts"
+      ],
       "@oceanic-airlines/adminportal/src/lib/shells/shell-admin": [
         "libs/adminportal/src/lib/shells/shell-admin/src/index.ts"
       ],

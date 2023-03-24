@@ -1,1 +1,1 @@
-<nav role="navigation" class="navigation"><ui-link *ngFor="let link of links; trackBy: trackByIndex" [label]="link.label" [value]="link.value" [color]="navigationColor" (clickEmitter)="navigateTo($event)"></ui-link></nav>
+<nav role="navigation" class="navigation {{direction}}"><ui-link *ngFor="let link of links; trackBy: trackByIndex" [label]="link.label" [value]="link.value" [color]="navigationColor" (clickEmitter)="navigateTo($event)"></ui-link></nav>

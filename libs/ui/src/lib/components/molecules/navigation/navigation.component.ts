@@ -21,6 +21,14 @@ export class NavigationComponent {
    */
   @Input() backgroundColor: ColorType = 'black';
 
+  /**
+   * Define the direction of the navigation, by default it will be horizontal.
+   */
+  @Input() direction: 'horizontal' | 'vertical' = 'horizontal';
+
+  /**
+   * List of the links @see ILink
+   */
   @Input() links: Immutable<Array<ILink>> = [];
 
   @Output() readonly navigate: EventEmitter<string> = new EventEmitter<string>();
