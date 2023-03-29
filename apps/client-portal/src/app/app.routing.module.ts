@@ -1,4 +1,4 @@
-import { FlightTrackingLayoutComponent } from './flight-tracking-layout/flight-tracking-layout.component';
+import { ClientPortalLayoutComponent } from './client-portal-layout/client-portal-layout.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -6,20 +6,20 @@ import { RouterModule } from '@angular/router';
     imports: [
       RouterModule.forRoot(
         [
-            {
-                path: '',
-                pathMatch: 'full',
-                redirectTo: 'flight-tracking',
-            },
-            {
-                path: 'flight-tracking',
-                component: FlightTrackingLayoutComponent,
-                loadChildren: () =>
-                    import('@oceanic-airlines/flight-tracking/src/lib/shells/shell-flight-tracking').then(
-                        module => module.ShellFlightTrackingModule,
-                    ),
-            },
-        ],
+          {
+              path: '',
+              pathMatch: 'full',
+              redirectTo: 'client-portal',
+          },
+          {
+              path: 'client-portal',
+              component: ClientPortalLayoutComponent,
+              loadChildren: () =>
+                  import('@oceanic-airlines/clientportal/src/lib/shells/shell-client').then(
+                      module => module.ShellClientModule,
+                  ),
+          },
+      ],
         {
             paramsInheritanceStrategy: 'always',
             scrollPositionRestoration: 'enabled',

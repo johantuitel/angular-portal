@@ -1,4 +1,4 @@
-import { AdminCheckinLayoutComponent } from './admin-checkin-layout/admin-checkin-layout-component';
+import { ClientCheckinLayoutComponent } from './client-checkin-layout/client-checkin-layout-component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -14,20 +14,20 @@ import { UiModule } from '@oceanic-airlines/ui';
         },
         {
           path: 'check-in-info',
-          component: AdminCheckinLayoutComponent,
+          component: ClientCheckinLayoutComponent,
           loadChildren: () =>
             import('@oceanic-airlines/check-in/src/lib/features/feature-check-in-info').then((module) => module.FeatureCheckInInfoModule),
         },
         {
           path: 'ticket-finder',
-          component: AdminCheckinLayoutComponent,
+          component: ClientCheckinLayoutComponent,
           loadChildren: () =>
             import('@oceanic-airlines/check-in/src/lib/features/feature-ticket-finder').then((module) => module.FeatureTicketFinderModule),
         },
     ]),
   ],
   declarations: [
-    AdminCheckinLayoutComponent
+    ClientCheckinLayoutComponent
   ],
 })
-export class ShellAdminCheckinModule {}
+export class ShellClientCheckinModule {}

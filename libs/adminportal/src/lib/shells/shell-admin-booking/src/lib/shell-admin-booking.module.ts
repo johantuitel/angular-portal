@@ -2,7 +2,7 @@ import { AdminBookingLayoutComponent } from './admin-booking-layout/admin-bookin
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { UiModule } from './../../../../../../../ui/src/lib/ui.module';
+import { UiModule } from '@oceanic-airlines/ui';
 
 @NgModule({
   imports: [CommonModule, UiModule,
