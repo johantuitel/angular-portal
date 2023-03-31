@@ -1,7 +1,7 @@
 import { AdminPortalLayoutComponent } from './admin-portal-layout/admin-portal-layout.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { UiModule } from './../../../../libs/ui/src/lib/ui.module';
+import { UiModule } from '@oceanic-airlines/ui';
 
 @NgModule({
     declarations: [AdminPortalLayoutComponent],

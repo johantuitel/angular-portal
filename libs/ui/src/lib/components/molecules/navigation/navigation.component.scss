@@ -16,6 +16,8 @@
   width: $size-full;
   justify-content: flex-start;
   align-items: center;
+  padding-left: $size-4;
+  height: $size-12;
 
   &.vertical {
     flex-direction: column;

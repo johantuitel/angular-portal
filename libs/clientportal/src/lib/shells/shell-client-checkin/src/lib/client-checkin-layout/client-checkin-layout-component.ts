@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-import { ILink } from '../../../../../../../../ui/src/lib/components/atoms/link/link';
+import { ILink } from '@oceanic-airlines/ui';
 import { Immutable } from '@oceanic-airlines/shared';
 import { Router } from '@angular/router';
 

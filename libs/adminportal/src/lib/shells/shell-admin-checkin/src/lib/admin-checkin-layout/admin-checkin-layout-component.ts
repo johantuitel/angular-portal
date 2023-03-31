@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-import { ILink } from '../../../../../../../../ui/src/lib/components/atoms/link/link';
+import { ILink } from '@oceanic-airlines/ui';
 import { Immutable } from '@oceanic-airlines/shared';
 import { Router } from '@angular/router';
 
@@ -14,8 +13,8 @@ import { Router } from '@angular/router';
 export class AdminCheckinLayoutComponent {
 
   bookingPages: Immutable<Array<ILink>> = [
-    {label: 'Check-in Info', value: 'admin-portal/checkin/check-in-info'},
-    {label: 'Ticket Finder', value: 'admin-portal/checkin/ticket-finder'}
+    {label: 'Check-in Info', value: 'admin-portal/check-in/check-in-info'},
+    {label: 'Ticket Finder', value: 'admin-portal/check-in/ticket-finder'}
   ]
   constructor(private router: Router) {}
 

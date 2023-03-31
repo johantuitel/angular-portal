@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { ILink } from '../../../../../libs/ui/src/lib/components/atoms/link/link';
+import { ILink } from '@oceanic-airlines/ui';
 import { Immutable } from '@oceanic-airlines/shared';
 import { Router } from '@angular/router';
 

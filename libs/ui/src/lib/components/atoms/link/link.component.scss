@@ -14,7 +14,7 @@
   color: $color-blush;
   cursor: pointer;
   font-family: $font-default-bold;
-  font-size: $font-size-regular;
+  font-size: $font-size-large;
   font-style: normal;
   font-weight: $font-weight-bold;
   line-height: 1;
@@ -68,6 +68,31 @@
   }
   &.blush {
     color: $color-blush;
+
+    &:hover {
+      color: $color-deep-red;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &:focus {
+      box-shadow: $ring-focus;
+      color: $color-deep-red;
+
+      &::after {
+        transform: scaleX(0);
+      }
+    }
+
+    &:active {
+      color: $color-deep-red;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
   }
   &.white {
     color: $color-white;

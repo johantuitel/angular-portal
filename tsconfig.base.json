@@ -64,6 +64,9 @@
         "libs/check-in/src/lib/shells/shell-ticket-finder/src/index.ts"
       ],
       "@oceanic-airlines/clientportal": ["libs/clientportal/src/index.ts"],
+      "@oceanic-airlines/clientportal/src/lib/features/feature-client-dashboard": [
+        "libs/clientportal/src/lib/features/feature-client-dashboard/src/index.ts"
+      ],
       "@oceanic-airlines/clientportal/src/lib/shells/shell-client": [
         "libs/clientportal/src/lib/shells/shell-client/src/index.ts"
       ],

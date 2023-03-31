@@ -1,9 +1,11 @@
 import { ClientPortalLayoutComponent } from './client-portal-layout/client-portal-layout.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { UiModule } from '@oceanic-airlines/ui';
 
 @NgModule({
-    imports: [
+  declarations: [ClientPortalLayoutComponent],
+  imports: [ UiModule,
       RouterModule.forRoot(
         [
           {
