@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+import { AlignmentType } from '../../particles/alignment.type';
 import { ColorType } from '../../particles/color.type';
+import { DirectionType } from './../../particles/direction.type';
 import { ILink } from './../../atoms/link/link';
 import { Immutable } from '@oceanic-airlines/shared'
 ;
@@ -22,9 +24,14 @@ export class NavigationComponent {
   @Input() backgroundColor: ColorType = 'black';
 
   /**
-   * Define the direction of the navigation, by default it will be horizontal.
+   * Define the direction of the navigation, by default it will be horizontal @see DirectionType.
    */
-  @Input() direction: 'horizontal' | 'vertical' = 'horizontal';
+  @Input() direction: DirectionType = 'horizontal';
+
+  /**
+   * Define the alignement of the navigation items, by default it will be left @see AlignmentType.
+   */
+  @Input() align: AlignmentType = 'left';
 
   /**
    * List of the links @see ILink

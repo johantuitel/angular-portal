@@ -517,6 +517,368 @@
     "directives": [],
     "components": [
         {
+            "name": "AdminBookingLayoutComponent",
+            "id": "component-AdminBookingLayoutComponent-d047ebd239cc0eb3c929996c79124eb2920fdc84227bb2cf8be924d1bfbc154a4e761455a90924680e678e88c740c391ad92233a2b016418f245c690c4397b7a",
+            "file": "libs/adminportal/src/lib/shells/shell-admin-booking/src/lib/admin-booking-layout/admin-booking-layout-component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "oceanic-airlines-admin-booking-layout",
+            "styleUrls": [
+                "./admin-booking-layout-component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./admin-booking-layout-component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "bookingPages",
+                    "defaultValue": "[\n    {label: 'Passenger Info', value: 'admin-portal/booking/passenger-info'},\n    {label: 'Seat Listing', value: 'admin-portal/booking/seat-listing'}\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Immutable<Array<ILink>>",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "navigateTo",
+                    "args": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\nimport { ILink } from '@oceanic-airlines/ui';\nimport { Immutable } from '@oceanic-airlines/shared';\nimport { Router } from '@angular/router';\n\n@Component({\n  selector: 'oceanic-airlines-admin-booking-layout',\n  templateUrl: './admin-booking-layout-component.html',\n  styleUrls: ['./admin-booking-layout-component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class AdminBookingLayoutComponent {\n\n  bookingPages: Immutable<Array<ILink>> = [\n    {label: 'Passenger Info', value: 'admin-portal/booking/passenger-info'},\n    {label: 'Seat Listing', value: 'admin-portal/booking/seat-listing'}\n  ]\n  constructor(private router: Router) {}\n\n  navigateTo(url: string): void {\n    this.router.navigateByUrl(url);\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".admin-booking-layout {\r\n  display       : flex;\r\n  flex-direction: row;\r\n  padding-left  : 1rem;\r\n}\r\n",
+                    "styleUrl": "./admin-booking-layout-component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 18,
+                "jsdoctags": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<main class=\"admin-booking-layout\">\n  <ui-navigation direction=\"vertical\" [links]=\"bookingPages\" navigationColor=\"light-coral\" (navigate)=\"navigateTo($event)\"></ui-navigation>\n  <section>\n      <router-outlet></router-outlet>\n  </section>\n</main>\n"
+        },
+        {
+            "name": "AdminCheckinLayoutComponent",
+            "id": "component-AdminCheckinLayoutComponent-3bbf7c8a6bab467f71c101e0bd8b98fd8f409fffbe482aef27e33172eda64a398410f957aa09a2c0883439fcd6bbe932767e051e346aab83062a896eb1163784",
+            "file": "libs/adminportal/src/lib/shells/shell-admin-checkin/src/lib/admin-checkin-layout/admin-checkin-layout-component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "oceanic-airlines-admin-checkin-layout",
+            "styleUrls": [
+                "./admin-checkin-layout-component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./admin-checkin-layout-component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "bookingPages",
+                    "defaultValue": "[\n    {label: 'Check-in Info', value: 'admin-portal/check-in/check-in-info'},\n    {label: 'Ticket Finder', value: 'admin-portal/check-in/ticket-finder'}\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Immutable<Array<ILink>>",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "navigateTo",
+                    "args": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\nimport { ILink } from '@oceanic-airlines/ui';\nimport { Immutable } from '@oceanic-airlines/shared';\nimport { Router } from '@angular/router';\n\n@Component({\n  selector: 'oceanic-airlines-admin-checkin-layout',\n  templateUrl: './admin-checkin-layout-component.html',\n  styleUrls: ['./admin-checkin-layout-component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class AdminCheckinLayoutComponent {\n\n  bookingPages: Immutable<Array<ILink>> = [\n    {label: 'Check-in Info', value: 'admin-portal/check-in/check-in-info'},\n    {label: 'Ticket Finder', value: 'admin-portal/check-in/ticket-finder'}\n  ]\n  constructor(private router: Router) {}\n\n  navigateTo(url: string): void {\n    this.router.navigateByUrl(url);\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".admin-booking-layout {\r\n  display       : flex;\r\n  flex-direction: row;\r\n  padding-left  : 1rem;\r\n}\r\n",
+                    "styleUrl": "./admin-checkin-layout-component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 18,
+                "jsdoctags": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<main class=\"admin-booking-layout\">\n  <ui-navigation direction=\"vertical\" [links]=\"bookingPages\" navigationColor=\"light-coral\" (navigate)=\"navigateTo($event)\"></ui-navigation>\n  <section>\n      <router-outlet></router-outlet>\n  </section>\n</main>\n"
+        },
+        {
+            "name": "AdminDashboardComponent",
+            "id": "component-AdminDashboardComponent-e5f760add0948f876bea9ea611754a3b1928095dc3831c9c49f4791a5569e9ba09ee5430bc32c75f32c3404b983a3a6b6904a04cb734584b1b29d3042f8b9e05",
+            "file": "libs/adminportal/src/lib/features/feature-admin-dashboard/src/lib/admin-dashboard/admin-dashboard.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "oceanic-airlines-admin-dashboard",
+            "styleUrls": [
+                "./admin-dashboard.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./admin-dashboard.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'oceanic-airlines-admin-dashboard',\n  templateUrl: './admin-dashboard.component.html',\n  styleUrls: ['./admin-dashboard.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class AdminDashboardComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../../../../../../../../ui/src/lib/scss/src/ui.styles.scss';\r\n\r\n.dashboard {\r\n  display: flex;\r\n  flex-direction: row;\r\n  justify-content: center;\r\n  align-items: center;\r\n  width: $size-full;\r\n}\r\n",
+                    "styleUrl": "./admin-dashboard.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div id=\"dashboard\" class=\"dashboard\">\n  <img src=\"./assets/dashboard.png\"/>\n</div>\n"
+        },
+        {
+            "name": "AdminPortalLayoutComponent",
+            "id": "component-AdminPortalLayoutComponent-36b9527347b2aec6fbdc47db43a9dc3a2b14e7f4689488d7b45cff7f46e899e9d729012d91ce85005e2d2ea3467705ec879c27193e2cfdb4221c02d072610354",
+            "file": "apps/admin-portal/src/app/admin-portal-layout/admin-portal-layout.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "oceanic-airlines-admin-portal-layout",
+            "styleUrls": [
+                "./admin-portal-layout.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./admin-portal-layout.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "adminPages",
+                    "defaultValue": "[\r\n    {label: 'Dashboard', value: 'admin-portal/dashboard'},\r\n    {label: 'Booking', value: 'admin-portal/booking'},\r\n    {label: 'Check-in', value: 'admin-portal/check-in'},\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Immutable<Array<ILink>>",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "navigateTo",
+                    "args": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\r\n\r\nimport { ILink } from '@oceanic-airlines/ui';\r\nimport { Immutable } from '@oceanic-airlines/shared';\r\nimport { Router } from '@angular/router';\r\n\r\n@Component({\r\n  selector: 'oceanic-airlines-admin-portal-layout',\r\n  templateUrl: './admin-portal-layout.component.html',\r\n  styleUrls: ['./admin-portal-layout.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush\r\n})\r\nexport class AdminPortalLayoutComponent {\r\n\r\n  adminPages: Immutable<Array<ILink>> = [\r\n    {label: 'Dashboard', value: 'admin-portal/dashboard'},\r\n    {label: 'Booking', value: 'admin-portal/booking'},\r\n    {label: 'Check-in', value: 'admin-portal/check-in'},\r\n  ]\r\n\r\n  constructor(private router: Router) {}\r\n\r\n  navigateTo(url: string): void {\r\n    this.router.navigateByUrl(url);\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../../../../../libs/ui/src/lib/scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: absolute;\r\n  display: block;\r\n  height: 100%;\r\n  width: 100%;\r\n  background-color: white;\r\n}\r\n\r\n.oceanic-main-layout {\r\n  section {\r\n    padding: 1rem;\r\n  }\r\n}\r\n",
+                    "styleUrl": "./admin-portal-layout.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 19,
+                "jsdoctags": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<main class=\"oceanic-main-layout\">\r\n    <ui-header logo=\"oceanic-airlines\" title=\"oceanic-airlines admin\" backgroundColor=\"light-coral\"></ui-header>\r\n    <ui-navigation [links]=\"adminPages\" navigationColor=\"blush\" backgroundColor=\"light-coral\" (navigate)=\"navigateTo($event)\"></ui-navigation>\r\n    <section>\r\n        <router-outlet></router-outlet>\r\n    </section>\r\n</main>\r\n"
+        },
+        {
             "name": "AppComponent",
             "id": "component-AppComponent-bd3c61957f2d5d0a93007dd4efb4f5936ecf338434c92e7c9afe3735eebfd3280ae91562e06689f143db8064fb11e1e7448dd46ef732bc74538d5150feb9497b",
             "file": "apps/admin-portal/src/app/app.component.ts",
@@ -565,7 +927,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<oceanic-airlines-nx-welcome></oceanic-airlines-nx-welcome>\n<router-outlet></router-outlet>\n"
+            "templateData": "<!-- <oceanic-airlines-nx-welcome></oceanic-airlines-nx-welcome> -->\n<router-outlet></router-outlet>\n"
         },
         {
             "name": "AppComponent",
@@ -727,7 +1089,7 @@
             "isDuplicate": true,
             "duplicateId": 3,
             "duplicateName": "AppComponent-3",
-            "templateData": "<oceanic-airlines-nx-welcome></oceanic-airlines-nx-welcome>\n"
+            "templateData": "<!-- <oceanic-airlines-nx-welcome></oceanic-airlines-nx-welcome> -->\n<router-outlet></router-outlet>\n"
         },
         {
             "name": "AppComponent",
@@ -785,7 +1147,7 @@
         },
         {
             "name": "BookingLayoutComponent",
-            "id": "component-BookingLayoutComponent-bf3e0df91ed8f60d94e673b416598745aff578a956d45e965cd5590f05fa4e62c4b069592562c80bfb29c007795d8ab6b1aba3ea9221c6d804e5450a95eef3f4",
+            "id": "component-BookingLayoutComponent-0655acd61ccbf39b5f8b80885dd1f5735d1fa8644b2036a7f1a34fd169920e1d230ab999c13cc1813506cf87254878145cd5fa1f32f0c1891bb2a4ff6572a910",
             "file": "apps/booking-app/src/app/booking-layout/booking-layout.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -853,11 +1215,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\r\n\r\nimport { ILink } from '../../../../../libs/ui/src/lib/components/atoms/link/link';\r\nimport { Immutable } from '@oceanic-airlines/shared';\r\nimport { Router } from '@angular/router';\r\n\r\n@Component({\r\n  selector: 'oceanic-airlines-booking-layout',\r\n  templateUrl: './booking-layout.component.html',\r\n  styleUrls: ['./booking-layout.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush\r\n})\r\nexport class BookingLayoutComponent {\r\n\r\n  bookingPages: Immutable<Array<ILink>> = [\r\n    {label: 'Passenger Info', value: 'booking/passenger-info'},\r\n    {label: 'Seat Listing', value: 'booking/seat-listing'}\r\n  ]\r\n  constructor(private router: Router) {}\r\n\r\n  navigateTo(url: string): void {\r\n    this.router.navigateByUrl(url);\r\n  }\r\n}\r\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\r\n\r\nimport { ILink } from '@oceanic-airlines/ui';\r\nimport { Immutable } from '@oceanic-airlines/shared';\r\nimport { Router } from '@angular/router';\r\n\r\n@Component({\r\n  selector: 'oceanic-airlines-booking-layout',\r\n  templateUrl: './booking-layout.component.html',\r\n  styleUrls: ['./booking-layout.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush\r\n})\r\nexport class BookingLayoutComponent {\r\n\r\n  bookingPages: Immutable<Array<ILink>> = [\r\n    {label: 'Passenger Info', value: 'booking/passenger-info'},\r\n    {label: 'Seat Listing', value: 'booking/seat-listing'}\r\n  ]\r\n  constructor(private router: Router) {}\r\n\r\n  navigateTo(url: string): void {\r\n    this.router.navigateByUrl(url);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../../../../libs/ui/src/lib/scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: absolute;\r\n  display: block;\r\n  height: 100%;\r\n  width: 100%;\r\n  background-color: white;\r\n}\r\n",
+                    "data": "@import '../../../../../libs/ui/src/lib/scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: absolute;\r\n  display: block;\r\n  height: 100%;\r\n  width: 100%;\r\n  background-color: white;\r\n}\r\n\r\n.oceanic-main-layout {\r\n  section {\r\n    padding: 1rem;\r\n  }\r\n}\r\n",
                     "styleUrl": "./booking-layout.component.scss"
                 }
             ],
@@ -888,7 +1250,7 @@
                     }
                 ]
             },
-            "templateData": "<main class=\"oceanic-main-layout\">\r\n    <ui-header logo=\"oceanic-airlines\" title=\"oceanic-airlines\" backgroundColor=\"light-coral\"></ui-header>\r\n    <ui-navigation [links]=\"bookingPages\" navigationColor=\"blush\" backgroundColor=\"light-coral\" (navigate)=\"navigateTo($event)\"></ui-navigation>\r\n    <section>\r\n        <router-outlet></router-outlet>\r\n    </section>\r\n    <ui-footer></ui-footer>\r\n</main>\r\n"
+            "templateData": "<main class=\"oceanic-main-layout\">\r\n    <ui-header logo=\"oceanic-airlines\" title=\"oceanic-airlines - booking\" backgroundColor=\"sage\"></ui-header>\r\n    <ui-navigation [links]=\"bookingPages\" navigationColor=\"blush\" backgroundColor=\"sage\" align=\"center\" (navigate)=\"navigateTo($event)\"></ui-navigation>\r\n    <section>\r\n        <router-outlet></router-outlet>\r\n    </section>\r\n    <ui-footer backgroundColor=\"sage\"></ui-footer>\r\n</main>\r\n"
         },
         {
             "name": "BreadcrumbsComponent",
@@ -1186,8 +1548,49 @@
             "templateData": "<p>button works!</p>\n"
         },
         {
+            "name": "CheckInInfoComponent",
+            "id": "component-CheckInInfoComponent-084a2e21987b023e773b35af462f839e710adf13d5d7253878e7fac0cdb10d85acc3c61571086142a234ddfc1e546dc657421c0f264c8fa854d68be8f58adc00",
+            "file": "libs/check-in/src/lib/features/feature-check-in-info/src/lib/check-in-info/check-in-info.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "oceanic-airlines-check-in-info",
+            "styleUrls": [
+                "./check-in-info.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./check-in-info.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'oceanic-airlines-check-in-info',\n  templateUrl: './check-in-info.component.html',\n  styleUrls: ['./check-in-info.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class CheckInInfoComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./check-in-info.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<ui-text color=\"tan\" text=\"Check-in Info\" size=\"medium\"></ui-text>\n"
+        },
+        {
             "name": "CheckInLayoutComponent",
-            "id": "component-CheckInLayoutComponent-ffd2643fa24affd8f1f668f0336ccd8f7e6651aab75cc82763bc797917f471f0fdf11ed309a553d6dcaeb89793491a851be6d76d32558d336bd5cb000a8e3e81",
+            "id": "component-CheckInLayoutComponent-db49cbcb1a987c21e6c0c6c11c11f7ba3753ce94de481f375ab4f922aae1c739be1d2dcb976787450a238721829b62451e1ca35ace2dd0cdda6f5bafad1fde07",
             "file": "apps/check-in-app/src/app/check-in-layout/check-in-layout.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -1206,6 +1609,327 @@
             "viewProviders": [],
             "inputsClass": [],
             "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "checkinPages",
+                    "defaultValue": "[\r\n    {label: 'Check-in Info', value: 'check-in/check-in-info'},\r\n    {label: 'Ticket Finder', value: 'check-in/ticket-finder'}\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Immutable<Array<ILink>>",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "navigateTo",
+                    "args": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\r\n\r\nimport { ILink } from '@oceanic-airlines/ui';\r\nimport { Immutable } from '@oceanic-airlines/shared';\r\nimport { Router } from '@angular/router';\r\n\r\n@Component({\r\n  selector: 'oceanic-airlines-check-in-layout',\r\n  templateUrl: './check-in-layout.component.html',\r\n  styleUrls: ['./check-in-layout.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush\r\n})\r\nexport class CheckInLayoutComponent {\r\n\r\n  checkinPages: Immutable<Array<ILink>> = [\r\n    {label: 'Check-in Info', value: 'check-in/check-in-info'},\r\n    {label: 'Ticket Finder', value: 'check-in/ticket-finder'}\r\n  ]\r\n  constructor(private router: Router) {}\r\n\r\n  navigateTo(url: string): void {\r\n    this.router.navigateByUrl(url);\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../../../../../libs/ui/src/lib/scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: absolute;\r\n  display: block;\r\n  height: 100%;\r\n  width: 100%;\r\n  background-color: white;\r\n}\r\n\r\n.oceanic-main-layout {\r\n  section {\r\n    padding: 1rem;\r\n  }\r\n}\r\n",
+                    "styleUrl": "./check-in-layout.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 18,
+                "jsdoctags": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<main class=\"oceanic-main-layout\">\r\n  <ui-header logo=\"oceanic-airlines\" title=\"oceanic-airlines - check-in\" backgroundColor=\"tan\"></ui-header>\r\n  <ui-navigation [links]=\"checkinPages\" navigationColor=\"moonstone\" backgroundColor=\"tan\" align=\"right\" (navigate)=\"navigateTo($event)\"></ui-navigation>\r\n  <section>\r\n      <router-outlet></router-outlet>\r\n  </section>\r\n  <ui-footer backgroundColor=\"tan\"></ui-footer>\r\n</main>\r\n"
+        },
+        {
+            "name": "ClientCheckinLayoutComponent",
+            "id": "component-ClientCheckinLayoutComponent-f4d5b7566e1722a768326ef0a335c9aa7de3e5c02360a3f5a7dbbb8347f44c64a4d9e85287eac79d38cdfb2c0240eaaf945665c15a604c17186b88aabc2c7d09",
+            "file": "libs/clientportal/src/lib/shells/shell-client-checkin/src/lib/client-checkin-layout/client-checkin-layout-component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "oceanic-airlines-client-checkin-layout",
+            "styleUrls": [
+                "./client-checkin-layout-component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./client-checkin-layout-component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "bookingPages",
+                    "defaultValue": "[\n    {label: 'Check-in Info', value: 'client-portal/checkin/check-in-info'},\n    {label: 'Ticket Finder', value: 'client-portal/checkin/ticket-finder'}\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Immutable<Array<ILink>>",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "navigateTo",
+                    "args": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\nimport { ILink } from '@oceanic-airlines/ui';\nimport { Immutable } from '@oceanic-airlines/shared';\nimport { Router } from '@angular/router';\n\n@Component({\n  selector: 'oceanic-airlines-client-checkin-layout',\n  templateUrl: './client-checkin-layout-component.html',\n  styleUrls: ['./client-checkin-layout-component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class ClientCheckinLayoutComponent {\n\n  bookingPages: Immutable<Array<ILink>> = [\n    {label: 'Check-in Info', value: 'client-portal/checkin/check-in-info'},\n    {label: 'Ticket Finder', value: 'client-portal/checkin/ticket-finder'}\n  ]\n  constructor(private router: Router) {}\n\n  navigateTo(url: string): void {\n    this.router.navigateByUrl(url);\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".admin-booking-layout {\r\n  display       : flex;\r\n  flex-direction: row;\r\n  padding-left  : 1rem;\r\n}\r\n",
+                    "styleUrl": "./client-checkin-layout-component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 18,
+                "jsdoctags": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<main class=\"admin-booking-layout\">\n  <ui-navigation direction=\"vertical\" [links]=\"bookingPages\" navigationColor=\"black\" (navigate)=\"navigateTo($event)\"></ui-navigation>\n  <section>\n      <router-outlet></router-outlet>\n  </section>\n</main>\n"
+        },
+        {
+            "name": "ClientPortalLayoutComponent",
+            "id": "component-ClientPortalLayoutComponent-b1cf1251a2874dfd510d250e73dc275d8f772e91a0a8e8483e73943edca951119bc65187abd4f52bbf0c06cb85bdc176623e1cb82d8ba4d0b3ddb98ee450eedf",
+            "file": "apps/client-portal/src/app/client-portal-layout/client-portal-layout.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "oceanic-airlines-client-portal-layout",
+            "styleUrls": [
+                "./client-portal-layout.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./client-portal-layout.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "adminPages",
+                    "defaultValue": "[\r\n    {label: 'Dashboard', value: 'client-portal/dashboard'},\r\n    {label: 'Flight-tracking', value: 'client-portal/flight-tracking'},\r\n    {label: 'Check-in', value: 'client-portal/check-in'},\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Immutable<Array<ILink>>",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "navigateTo",
+                    "args": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\r\n\r\nimport { ILink } from '@oceanic-airlines/ui';\r\nimport { Immutable } from '@oceanic-airlines/shared';\r\nimport { Router } from '@angular/router';\r\n\r\n@Component({\r\n  selector: 'oceanic-airlines-client-portal-layout',\r\n  templateUrl: './client-portal-layout.component.html',\r\n  styleUrls: ['./client-portal-layout.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush\r\n})\r\nexport class ClientPortalLayoutComponent {\r\n\r\n  adminPages: Immutable<Array<ILink>> = [\r\n    {label: 'Dashboard', value: 'client-portal/dashboard'},\r\n    {label: 'Flight-tracking', value: 'client-portal/flight-tracking'},\r\n    {label: 'Check-in', value: 'client-portal/check-in'},\r\n  ]\r\n\r\n  constructor(private router: Router) {}\r\n\r\n  navigateTo(url: string): void {\r\n    this.router.navigateByUrl(url);\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../../../../../libs/ui/src/lib/scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: absolute;\r\n  display: block;\r\n  height: 100%;\r\n  width: 100%;\r\n  background-color: white;\r\n}\r\n\r\n.oceanic-main-layout {\r\n  section {\r\n    padding: 1rem;\r\n  }\r\n}\r\n",
+                    "styleUrl": "./client-portal-layout.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 19,
+                "jsdoctags": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<main class=\"oceanic-main-layout\">\r\n    <ui-header logo=\"oceanic-airlines\" title=\"oceanic-airlines admin\" backgroundColor=\"light-coral\"></ui-header>\r\n    <ui-navigation [links]=\"adminPages\" navigationColor=\"blush\" backgroundColor=\"light-coral\" (navigate)=\"navigateTo($event)\"></ui-navigation>\r\n    <section>\r\n        <router-outlet></router-outlet>\r\n    </section>\r\n</main>\r\n"
+        },
+        {
+            "name": "FlightDetailsComponent",
+            "id": "component-FlightDetailsComponent-703b9e82bda2d4cbd3fc25219f67502192a947c1e5639495448be3137a2c47aff569f4fe8735aea8dd4857dcf4eec13ff516436c46f1c7bc3d5642fac7239ee9",
+            "file": "libs/flight-tracking/src/lib/features/feature-flight-details/src/lib/flight-details/flight-details.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "oceanic-airlines-flight-details",
+            "styleUrls": [
+                "./flight-details.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./flight-details.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
             "deprecated": false,
@@ -1215,20 +1939,61 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'oceanic-airlines-check-in-layout',\r\n  templateUrl: './check-in-layout.component.html',\r\n  styleUrls: ['./check-in-layout.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush\r\n})\r\nexport class CheckInLayoutComponent {}\r\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'oceanic-airlines-flight-details',\n  templateUrl: './flight-details.component.html',\n  styleUrls: ['./flight-details.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class FlightDetailsComponent {\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../../../../libs/ui/src/lib/scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: absolute;\r\n  display: block;\r\n  height: 100%;\r\n  width: 100%;\r\n  background-color: white;\r\n}\r\n",
-                    "styleUrl": "./check-in-layout.component.scss"
+                    "data": "",
+                    "styleUrl": "./flight-details.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<main class=\"oceanic-main-layout\">\r\n  <ui-header logo=\"oceanic-airlines\" title=\"oceanic-airlines\" backgroundColor=\"light-coral\"></ui-header>\r\n  <section>\r\n      <router-outlet></router-outlet>\r\n  </section>\r\n  <ui-footer></ui-footer>\r\n</main>\r\n"
+            "templateData": "<ui-text color=\"tan\" text=\"Flight details\" size=\"medium\"></ui-text>\n"
+        },
+        {
+            "name": "FlightSearchComponent",
+            "id": "component-FlightSearchComponent-420b0900375b71d1368342c50eac65acbe046620882bf7145e581dfff5057e73df340246001329bc77e881c96bd700faa38f9dedd19f5d98d7b6c8949ce5d911",
+            "file": "libs/flight-tracking/src/lib/features/feature-flight-search/src/lib/flight-search/flight-search.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "oceanic-airlines-flight-search",
+            "styleUrls": [
+                "./flight-search.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./flight-search.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'oceanic-airlines-flight-search',\n  templateUrl: './flight-search.component.html',\n  styleUrls: ['./flight-search.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class FlightSearchComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./flight-search.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<ui-text color=\"tan\" text=\"Flight search\" size=\"medium\"></ui-text>\n"
         },
         {
             "name": "FlightTrackingLayoutComponent",
-            "id": "component-FlightTrackingLayoutComponent-81ee1370e3ba27c25be3e7b64482bd5024974d24a72600cc3b1b1c6b3714400654064b98cb31dc1ed997116380c3a313e766472ea71523b8174045fca5b170a8",
+            "id": "component-FlightTrackingLayoutComponent-c0042520e9450776a8e152d06140260cbbf97fd6aa0a04345e2dc5f80abfa8967c49f330a9a2c0fd3930f19d5ef43df49d19a32ca33b7842c176fb99de462317",
             "file": "apps/flight-tracking-app/src/app/flight-tracking-layout/flight-tracking-layout.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -1247,8 +2012,48 @@
             "viewProviders": [],
             "inputsClass": [],
             "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "flightTrackingPages",
+                    "defaultValue": "[\r\n    {label: 'Flight Details', value: 'flight-tracking/flight-details'},\r\n    {label: 'Flight Search', value: 'flight-tracking/flight-search'}\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Immutable<Array<ILink>>",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "navigateTo",
+                    "args": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -1256,20 +2061,46 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'oceanic-airlines-flight-tracking-layout',\r\n  templateUrl: './flight-tracking-layout.component.html',\r\n  styleUrls: ['./flight-tracking-layout.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush\r\n})\r\nexport class FlightTrackingLayoutComponent {}\r\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\r\n\r\nimport { ILink } from '@oceanic-airlines/ui';\r\nimport { Immutable } from '@oceanic-airlines/shared';\r\nimport { Router } from '@angular/router';\r\n\r\n@Component({\r\n  selector: 'oceanic-airlines-flight-tracking-layout',\r\n  templateUrl: './flight-tracking-layout.component.html',\r\n  styleUrls: ['./flight-tracking-layout.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush\r\n})\r\nexport class FlightTrackingLayoutComponent {\r\n  flightTrackingPages: Immutable<Array<ILink>> = [\r\n    {label: 'Flight Details', value: 'flight-tracking/flight-details'},\r\n    {label: 'Flight Search', value: 'flight-tracking/flight-search'}\r\n  ]\r\n  constructor(private router: Router) {}\r\n\r\n  navigateTo(url: string): void {\r\n    this.router.navigateByUrl(url);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../../../../libs/ui/src/lib/scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: absolute;\r\n  display: block;\r\n  height: 100%;\r\n  width: 100%;\r\n  background-color: white;\r\n}\r\n",
+                    "data": "@import '../../../../../libs/ui/src/lib/scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: absolute;\r\n  display: block;\r\n  height: 100%;\r\n  width: 100%;\r\n  background-color: $color-moonstone-lighten;\r\n}\r\n\r\n.oceanic-main-layout {\r\n  section {\r\n    padding: 1rem;\r\n  }\r\n}\r\n",
                     "styleUrl": "./flight-tracking-layout.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<main class=\"oceanic-main-layout\">\r\n  <ui-header logo=\"oceanic-airlines\" title=\"oceanic-airlines\" backgroundColor=\"light-coral\"></ui-header>\r\n  <section>\r\n      <router-outlet></router-outlet>\r\n  </section>\r\n  <ui-footer></ui-footer>\r\n</main>\r\n"
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 17,
+                "jsdoctags": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<main class=\"oceanic-main-layout\">\r\n  <ui-header logo=\"oceanic-airlines\" title=\"oceanic-airlines - flight-tracking\" backgroundColor=\"moonstone\" logoColor=\"white\" titleColor=\"white\"></ui-header>\r\n  <ui-navigation [links]=\"flightTrackingPages\" navigationColor=\"blush\" backgroundColor=\"moonstone\" (navigate)=\"navigateTo($event)\"></ui-navigation>\r\n  <section>\r\n      <router-outlet></router-outlet>\r\n  </section>\r\n  <ui-footer backgroundColor=\"moonstone\" fontColor=\"white\"></ui-footer>\r\n</main>\r\n"
         },
         {
             "name": "FooterComponent",
-            "id": "component-FooterComponent-8ac3c73c971347f947f8b2806dee41998531193fa88acf31ca4fee2c0a5dc47610344ca6e7fa0a4d166391a9f63af37c7d157abc16b96103a7514d929fffb047",
+            "id": "component-FooterComponent-65734047e3c9935440dfdcf057c1d999df7a24a5b7d7a7796f206b046c90069ca2dadf3184ef02c6e33e00c620df7d4bf57ff457f65063b0984f8de7f7cf553d",
             "file": "libs/ui/src/lib/components/organisms/footer/footer.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -1292,9 +2123,20 @@
                     "defaultValue": "'black'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "\n\nDefine the background-color for the header @see ColorType\n",
-                    "description": "<p>Define the background-color for the header @see ColorType</p>\n",
+                    "rawdescription": "\n\nDefine the background-color for the footer @see ColorType\n",
+                    "description": "<p>Define the background-color for the footer @see ColorType</p>\n",
                     "line": 17,
+                    "type": "ColorType",
+                    "decorators": []
+                },
+                {
+                    "name": "fontColor",
+                    "defaultValue": "'black'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine the font-color for the footer @see ColorType\n",
+                    "description": "<p>Define the font-color for the footer @see ColorType</p>\n",
+                    "line": 22,
                     "type": "ColorType",
                     "decorators": []
                 }
@@ -1325,7 +2167,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 19,
+                    "line": 24,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1347,7 +2189,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component, HostBinding, Input, OnInit } from '@angular/core';\n\nimport { ColorType } from '../../particles/color.type';\n\n@Component({\n  selector: 'ui-footer',\n  templateUrl: './footer.component.html',\n  styleUrls: ['./footer.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class FooterComponent  implements OnInit {\n  @HostBinding('class') hostClass = 'white';\n\n  /**\n   * Define the background-color for the header @see ColorType\n   */\n  @Input() backgroundColor: ColorType = 'black'\n\n  ngOnInit(): void {\n    this.hostClass = this.backgroundColor.toString();\n  }\n}\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, HostBinding, Input, OnInit } from '@angular/core';\n\nimport { ColorType } from '../../particles/color.type';\n\n@Component({\n  selector: 'ui-footer',\n  templateUrl: './footer.component.html',\n  styleUrls: ['./footer.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class FooterComponent  implements OnInit {\n  @HostBinding('class') hostClass = 'white';\n\n  /**\n   * Define the background-color for the footer @see ColorType\n   */\n  @Input() backgroundColor: ColorType = 'black';\n\n    /**\n   * Define the font-color for the footer @see ColorType\n   */\n    @Input() fontColor: ColorType = 'black';\n\n  ngOnInit(): void {\n    this.hostClass = this.backgroundColor.toString();\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1359,7 +2201,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div id=\"footer\" class=\"footer\">\n<div>logos</div>\n  <ui-text text=\"Copyright. All rights reserved\" color=\"sage\" size=\"extra-small\"></ui-text>\n</div>\n"
+            "templateData": "<div id=\"footer\" class=\"footer\">\n<div>logos</div>\n  <ui-text text=\"Copyright. All rights reserved\" [color]=\"fontColor\" size=\"extra-small\"></ui-text>\n</div>\n"
         },
         {
             "name": "HeaderComponent",
@@ -1436,7 +2278,7 @@
         },
         {
             "name": "HeaderComponent",
-            "id": "component-HeaderComponent-bd76681b146242a9b22e453df1334ba1ed90b98aa5fac973a3da2b1678ef1294bd8c74cb20530671b4903fc2b8b6c0aae9b92daa79213b359ef3d133c9b2ffe2-1",
+            "id": "component-HeaderComponent-1a33060a64221a10f5afea364c53dfcd956f3edd89b86a3fb545922709584a6079f3d70f8c6f1cc3aa30f7302eb398a320087c22cb469133a9096bc2f124c4ff-1",
             "file": "libs/ui/src/lib/components/organisms/header/header.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -1494,8 +2336,19 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe Title in the header\n",
                     "description": "<p>The Title in the header</p>\n",
-                    "line": 39,
+                    "line": 44,
                     "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "titleColor",
+                    "defaultValue": "'black'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine the title-color @see ColorType\n",
+                    "description": "<p>Define the title-color @see ColorType</p>\n",
+                    "line": 39,
+                    "type": "ColorType",
                     "decorators": []
                 }
             ],
@@ -1525,7 +2378,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 41,
+                    "line": 46,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1547,7 +2400,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\n  ChangeDetectionStrategy,\n  Component,\n  HostBinding,\n  Input,\n  OnInit,\n} from '@angular/core';\n\nimport { ColorType } from '../../particles/color.type';\nimport { IconNames } from './../../../assets/src/libs/icons/icon';\n\n@Component({\n  selector: 'ui-header',\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class HeaderComponent implements OnInit {\n  @HostBinding('class') hostClass = 'white';\n\n  /**\n   * Define the background-color for the header @see ColorType\n   */\n  @Input() backgroundColor: ColorType = 'black'\n\n  /**\n   * Which logo to use in the header @see IconNames\n   */\n  @Input() logo: IconNames = 'oceanic-airlines'\n\n  /**\n   * Define the logo-color @see ColorType\n   */\n  @Input() logoColor: ColorType = 'black'\n\n  /**\n   * The Title in the header\n   */\n  @Input() title = '';\n\n  ngOnInit(): void {\n    this.hostClass = this.backgroundColor.toString();\n  }\n}\n",
+            "sourceCode": "import {\n  ChangeDetectionStrategy,\n  Component,\n  HostBinding,\n  Input,\n  OnInit,\n} from '@angular/core';\n\nimport { ColorType } from '../../particles/color.type';\nimport { IconNames } from './../../../assets/src/libs/icons/icon';\n\n@Component({\n  selector: 'ui-header',\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class HeaderComponent implements OnInit {\n  @HostBinding('class') hostClass = 'white';\n\n  /**\n   * Define the background-color for the header @see ColorType\n   */\n  @Input() backgroundColor: ColorType = 'black'\n\n  /**\n   * Which logo to use in the header @see IconNames\n   */\n  @Input() logo: IconNames = 'oceanic-airlines'\n\n  /**\n   * Define the logo-color @see ColorType\n   */\n  @Input() logoColor: ColorType = 'black'\n\n    /**\n   * Define the title-color @see ColorType\n   */\n    @Input() titleColor: ColorType = 'black'\n\n  /**\n   * The Title in the header\n   */\n  @Input() title = '';\n\n  ngOnInit(): void {\n    this.hostClass = this.backgroundColor.toString();\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1562,7 +2415,7 @@
             "isDuplicate": true,
             "duplicateId": 1,
             "duplicateName": "HeaderComponent-1",
-            "templateData": "<div id=\"header\" class=\"header\">\n  <ui-icon\n  [type]=\"logo\"\n  [color]=\"logoColor\"\n  size=\"large\"\n  style=\"padding-left: 1rem; padding-right: 1rem;\">\n</ui-icon>\n  <ui-text *ngIf=\"title\" [text]=\"title\" color=\"sage\" size=\"extra-large\"></ui-text>\n</div>\n"
+            "templateData": "<div id=\"header\" class=\"header\">\n  <ui-icon\n  [type]=\"logo\"\n  [color]=\"logoColor\"\n  size=\"large\"\n  style=\"padding-left: 1rem; padding-right: 1rem;\">\n</ui-icon>\n  <ui-text *ngIf=\"title\" [text]=\"title\" [color]=\"titleColor\" size=\"extra-large\"></ui-text>\n</div>\n"
         },
         {
             "name": "IconComponent",
@@ -1826,7 +2679,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  display: block;\r\n}\r\n\r\n.ui-link {\r\n  position: relative;\r\n  display: inline-block;\r\n  padding: 0;\r\n  margin: 0 $size-2 0 0;\r\n  border-radius: $size-1;\r\n  box-shadow: none;\r\n  color: $color-blush;\r\n  cursor: pointer;\r\n  font-family: $font-default-bold;\r\n  font-size: $font-size-regular;\r\n  font-style: normal;\r\n  font-weight: $font-weight-bold;\r\n  line-height: 1;\r\n  outline: 0;\r\n  outline-offset: 0;\r\n  text-decoration: none;\r\n  transition: color .15s $ease-in-quad, box-shadow .15s $ease-in-quad;\r\n  user-select: auto;\r\n  vertical-align: baseline;\r\n  white-space: nowrap;\r\n  word-break: normal;\r\n  word-spacing: normal;\r\n  word-wrap: normal;\r\n\r\n  &.moonstone {\r\n    color: $color-moonstone;\r\n  }\r\n  &.tan {\r\n    color: $color-tan;\r\n  }\r\n  &.sage {\r\n    color: $color-sage;\r\n  }\r\n  &.light-coral {\r\n    color: $color-light-coral;\r\n\r\n    &:hover {\r\n      color: $color-blush;\r\n\r\n      &::after {\r\n        transform: scaleX(1);\r\n      }\r\n    }\r\n\r\n    &:focus {\r\n      box-shadow: $ring-focus;\r\n      color: $color-blush;\r\n\r\n      &::after {\r\n        transform: scaleX(0);\r\n      }\r\n    }\r\n\r\n    &:active {\r\n      color: $color-blush;\r\n\r\n      &::after {\r\n        transform: scaleX(1);\r\n      }\r\n    }\r\n  }\r\n  &.blush {\r\n    color: $color-blush;\r\n  }\r\n  &.white {\r\n    color: $color-white;\r\n  }\r\n  &.black {\r\n    color: $color-black;\r\n  }\r\n\r\n  &::after {\r\n    position: absolute;\r\n    top: auto;\r\n    right: auto;\r\n    bottom: -0.25rem;\r\n    left: 0;\r\n    width: 100%;\r\n    height: $size-1px;\r\n    background-color: $color-blush;\r\n    content: '';\r\n    transform: scaleX(0);\r\n    transform-origin: bottom left;\r\n    transform-style: preserve-3d;\r\n    transition: transform .15s $ease-in-quad;\r\n  }\r\n}\r\n",
+                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  display: block;\r\n}\r\n\r\n.ui-link {\r\n  position: relative;\r\n  display: inline-block;\r\n  padding: 0;\r\n  margin: 0 $size-2 0 0;\r\n  border-radius: $size-1;\r\n  box-shadow: none;\r\n  color: $color-blush;\r\n  cursor: pointer;\r\n  font-family: $font-default-bold;\r\n  font-size: $font-size-large;\r\n  font-style: normal;\r\n  font-weight: $font-weight-bold;\r\n  line-height: 1;\r\n  outline: 0;\r\n  outline-offset: 0;\r\n  text-decoration: none;\r\n  transition: color .15s $ease-in-quad, box-shadow .15s $ease-in-quad;\r\n  user-select: auto;\r\n  vertical-align: baseline;\r\n  white-space: nowrap;\r\n  word-break: normal;\r\n  word-spacing: normal;\r\n  word-wrap: normal;\r\n\r\n  &.moonstone {\r\n    color: $color-moonstone;\r\n  }\r\n  &.tan {\r\n    color: $color-tan;\r\n  }\r\n  &.sage {\r\n    color: $color-sage;\r\n  }\r\n  &.light-coral {\r\n    color: $color-light-coral;\r\n\r\n    &:hover {\r\n      color: $color-blush;\r\n\r\n      &::after {\r\n        transform: scaleX(1);\r\n      }\r\n    }\r\n\r\n    &:focus {\r\n      box-shadow: $ring-focus;\r\n      color: $color-blush;\r\n\r\n      &::after {\r\n        transform: scaleX(0);\r\n      }\r\n    }\r\n\r\n    &:active {\r\n      color: $color-blush;\r\n\r\n      &::after {\r\n        transform: scaleX(1);\r\n      }\r\n    }\r\n  }\r\n  &.blush {\r\n    color: $color-blush;\r\n\r\n    &:hover {\r\n      color: $color-deep-red;\r\n\r\n      &::after {\r\n        transform: scaleX(1);\r\n      }\r\n    }\r\n\r\n    &:focus {\r\n      box-shadow: $ring-focus;\r\n      color: $color-deep-red;\r\n\r\n      &::after {\r\n        transform: scaleX(0);\r\n      }\r\n    }\r\n\r\n    &:active {\r\n      color: $color-deep-red;\r\n\r\n      &::after {\r\n        transform: scaleX(1);\r\n      }\r\n    }\r\n  }\r\n  &.white {\r\n    color: $color-white;\r\n  }\r\n  &.black {\r\n    color: $color-black;\r\n  }\r\n\r\n  &::after {\r\n    position: absolute;\r\n    top: auto;\r\n    right: auto;\r\n    bottom: -0.25rem;\r\n    left: 0;\r\n    width: 100%;\r\n    height: $size-1px;\r\n    background-color: $color-blush;\r\n    content: '';\r\n    transform: scaleX(0);\r\n    transform-origin: bottom left;\r\n    transform-style: preserve-3d;\r\n    transition: transform .15s $ease-in-quad;\r\n  }\r\n}\r\n",
                     "styleUrl": "./link.component.scss"
                 }
             ],
@@ -1835,7 +2688,7 @@
         },
         {
             "name": "NavigationComponent",
-            "id": "component-NavigationComponent-87ec45a408a55a16bcdba99a345bb7207cd6dcdb03faa66fb1b751ba35c96f5a80bf1eb540ccfe1ce333841607494747f6248095ba461dfe0eabbcb6dd261a05",
+            "id": "component-NavigationComponent-c40a8c7085d93ed9c5e8a3f8f76f8ee4581177f206ba5f7549c25fb065d1b0594c439741273099fabfda1ff68e369d86b9b36286c8769b1cd1a9a9ce93c95abe",
             "file": "libs/ui/src/lib/components/molecules/navigation/navigation.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1853,14 +2706,36 @@
             "viewProviders": [],
             "inputsClass": [
                 {
+                    "name": "align",
+                    "defaultValue": "'left'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine the alignement of the navigation items, by default it will be left @see AlignmentType.\n",
+                    "description": "<p>Define the alignement of the navigation items, by default it will be left @see AlignmentType.</p>\n",
+                    "line": 34,
+                    "type": "AlignmentType",
+                    "decorators": []
+                },
+                {
                     "name": "backgroundColor",
                     "defaultValue": "'black'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nDefine the background color of the navigation @see ColorType\n",
                     "description": "<p>Define the background color of the navigation @see ColorType</p>\n",
-                    "line": 22,
+                    "line": 24,
                     "type": "ColorType",
+                    "decorators": []
+                },
+                {
+                    "name": "direction",
+                    "defaultValue": "'horizontal'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine the direction of the navigation, by default it will be horizontal @see DirectionType.\n",
+                    "description": "<p>Define the direction of the navigation, by default it will be horizontal @see DirectionType.</p>\n",
+                    "line": 29,
+                    "type": "DirectionType",
                     "decorators": []
                 },
                 {
@@ -1868,7 +2743,9 @@
                     "defaultValue": "[]",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 24,
+                    "rawdescription": "\n\nList of the links @see ILink\n",
+                    "description": "<p>List of the links @see ILink</p>\n",
+                    "line": 39,
                     "type": "Immutable<Array<ILink>>",
                     "decorators": []
                 },
@@ -1879,7 +2756,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nDefine the color for the links @see ColorType\n",
                     "description": "<p>Define the color for the links @see ColorType</p>\n",
-                    "line": 17,
+                    "line": 19,
                     "type": "ColorType",
                     "decorators": []
                 }
@@ -1890,7 +2767,7 @@
                     "defaultValue": "new EventEmitter<string>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 26,
+                    "line": 41,
                     "type": "EventEmitter<string>"
                 }
             ],
@@ -1909,7 +2786,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 32,
+                    "line": 47,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1937,7 +2814,7 @@
                     "optional": false,
                     "returnType": "number",
                     "typeParameters": [],
-                    "line": 28,
+                    "line": 43,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1960,16 +2837,16 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\nimport { ColorType } from '../../particles/color.type';\nimport { ILink } from './../../atoms/link/link';\nimport { Immutable } from '@oceanic-airlines/shared'\n;\n\n@Component({\n  selector: 'ui-navigation',\n  templateUrl: './navigation.component.html',\n  styleUrls: ['./navigation.component.scss'],\n})\nexport class NavigationComponent {\n  /**\n   * Define the color for the links @see ColorType\n   */\n  @Input() navigationColor: ColorType = 'white';\n\n  /**\n   * Define the background color of the navigation @see ColorType\n   */\n  @Input() backgroundColor: ColorType = 'black';\n\n  @Input() links: Immutable<Array<ILink>> = [];\n\n  @Output() readonly navigate: EventEmitter<string> = new EventEmitter<string>();\n\n  trackByIndex(index: number): number {\n    return index;\n  }\n\n  navigateTo(event: string): void {\n    this.navigate.emit(event);\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\nimport { AlignmentType } from '../../particles/alignment.type';\nimport { ColorType } from '../../particles/color.type';\nimport { DirectionType } from './../../particles/direction.type';\nimport { ILink } from './../../atoms/link/link';\nimport { Immutable } from '@oceanic-airlines/shared'\n;\n\n@Component({\n  selector: 'ui-navigation',\n  templateUrl: './navigation.component.html',\n  styleUrls: ['./navigation.component.scss'],\n})\nexport class NavigationComponent {\n  /**\n   * Define the color for the links @see ColorType\n   */\n  @Input() navigationColor: ColorType = 'white';\n\n  /**\n   * Define the background color of the navigation @see ColorType\n   */\n  @Input() backgroundColor: ColorType = 'black';\n\n  /**\n   * Define the direction of the navigation, by default it will be horizontal @see DirectionType.\n   */\n  @Input() direction: DirectionType = 'horizontal';\n\n  /**\n   * Define the alignement of the navigation items, by default it will be left @see AlignmentType.\n   */\n  @Input() align: AlignmentType = 'left';\n\n  /**\n   * List of the links @see ILink\n   */\n  @Input() links: Immutable<Array<ILink>> = [];\n\n  @Output() readonly navigate: EventEmitter<string> = new EventEmitter<string>();\n\n  trackByIndex(index: number): number {\n    return index;\n  }\n\n  navigateTo(event: string): void {\n    this.navigate.emit(event);\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: relative;\r\n  height: 0;\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 0;\r\n  line-height: 0;\r\n  vertical-align: middle;\r\n}\r\n\r\n.navigation {\r\n  display: flex;\r\n  flex-direction: row;\r\n  width: $size-full;\r\n  justify-content: flex-start;\r\n  align-items: center;\r\n}\r\n",
+                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: relative;\r\n  height: 0;\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 0;\r\n  line-height: 0;\r\n  vertical-align: middle;\r\n}\r\n\r\n.navigation {\r\n  display: flex;\r\n  flex-direction: row;\r\n  width: $size-full;\r\n  justify-content: flex-start;\r\n  align-items: center;\r\n  padding-left: $size-4;\r\n  height: $size-12;\r\n\r\n  &.vertical {\r\n    flex-direction: column;\r\n  }\r\n\r\n  &.center {\r\n    justify-content: center;\r\n  }\r\n\r\n  &.right {\r\n    justify-content: flex-end;\r\n  }\r\n}\r\n",
                     "styleUrl": "./navigation.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<nav role=\"navigation\" class=\"navigation\"><ui-link *ngFor=\"let link of links; trackBy: trackByIndex\" [label]=\"link.label\" [value]=\"link.value\" [color]=\"navigationColor\" (clickEmitter)=\"navigateTo($event)\"></ui-link></nav>\n"
+            "templateData": "<nav role=\"navigation\" class=\"navigation {{direction}} {{align}}\"><ui-link *ngFor=\"let link of links; trackBy: trackByIndex\" [label]=\"link.label\" [value]=\"link.value\" [color]=\"navigationColor\" (clickEmitter)=\"navigateTo($event)\"></ui-link></nav>\n"
         },
         {
             "name": "NxWelcomeComponent",
@@ -2267,7 +3144,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<p>passenger-info works!</p>\n"
+            "templateData": "<ui-text color=\"tan\" text=\"Passenger Info\" size=\"medium\"></ui-text>\n<div id=\"dashboard\" class=\"dashboard\">\n  <img src=\"./assets/passenger-info.png\"/>\n</div>\n"
         },
         {
             "name": "SeatListingComponent",
@@ -2308,7 +3185,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<p>seat-listing works!</p>\n"
+            "templateData": "<ui-text color=\"tan\" text=\"Seat Listing\" size=\"medium\"></ui-text>\n<div id=\"dashboard\" class=\"dashboard\">\n  <img src=\"./assets/seat-listing.png\"/>\n</div>\n"
         },
         {
             "name": "TextComponent",
@@ -2378,24 +3255,186 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: relative;\r\n  display: inline-block;\r\n  height: 0;\r\n  padding: 0;\r\n  margin: 0;\r\n  font-size: 0;\r\n  line-height: 0;\r\n  vertical-align: middle;\r\n}\r\n\r\n.ui-text {\r\n  font-family: $font-default;\r\n\r\n  &.moonstone {\r\n    color: $color-moonstone;\r\n  }\r\n  &.tan {\r\n    color: $color-tan;\r\n  }\r\n  &.sage {\r\n    color: $color-sage;\r\n  }\r\n  &.light-coral {\r\n    color: $color-light-coral;\r\n  }\r\n  &.blush {\r\n    color: $color-blush;\r\n  }\r\n  &.white {\r\n    color: $color-white;\r\n  }\r\n  &.black {\r\n    color: $color-black;\r\n  }\r\n\r\n  &.extra-small {\r\n    font-size: $size-4;\r\n  }\r\n\r\n  &.small {\r\n    font-size: $size-5;\r\n  }\r\n\r\n  &.regular {\r\n    font-size: $size-6;\r\n  }\r\n\r\n  &.medium {\r\n    font-size: $size-7;\r\n  }\r\n\r\n  &.large {\r\n    font-size: $size-8;\r\n  }\r\n\r\n  &.extra-large {\r\n    font-size: $size-9;\r\n  }\r\n}\r\n",
+                    "data": "@import '../../../scss/src/ui.styles.scss';\r\n\r\n:host {\r\n  position: relative;\r\n  display: inline-block;\r\n  vertical-align: middle;\r\n}\r\n\r\n.ui-text {\r\n  font-family: $font-default;\r\n\r\n  &.moonstone {\r\n    color: $color-moonstone;\r\n  }\r\n  &.tan {\r\n    color: $color-tan;\r\n  }\r\n  &.sage {\r\n    color: $color-sage;\r\n  }\r\n  &.light-coral {\r\n    color: $color-light-coral;\r\n  }\r\n  &.blush {\r\n    color: $color-blush;\r\n  }\r\n  &.white {\r\n    color: $color-white;\r\n  }\r\n  &.black {\r\n    color: $color-black;\r\n  }\r\n\r\n  &.extra-small {\r\n    font-size: $size-4;\r\n  }\r\n\r\n  &.small {\r\n    font-size: $size-5;\r\n  }\r\n\r\n  &.regular {\r\n    font-size: $size-6;\r\n  }\r\n\r\n  &.medium {\r\n    font-size: $size-7;\r\n  }\r\n\r\n  &.large {\r\n    font-size: $size-8;\r\n  }\r\n\r\n  &.extra-large {\r\n    font-size: $size-9;\r\n  }\r\n}\r\n",
                     "styleUrl": "./text.component.scss"
                 }
             ],
             "stylesData": "",
             "templateData": "<label class=\"ui-text {{color}} {{size}}\">{{text}}</label>\n"
+        },
+        {
+            "name": "TicketFinderComponent",
+            "id": "component-TicketFinderComponent-bc9e205bc1b16c98738e9a121ec11c3ed9196ffbb8c09b31a1243bd3a99875764cd0242c0906e106d92330a07e37885ce8029b0af12224a9aeba3aec7b09d859",
+            "file": "libs/check-in/src/lib/features/feature-ticket-finder/src/lib/ticket-finder/ticket-finder.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "oceanic-airlines-ticket-finder",
+            "styleUrls": [
+                "./ticket-finder.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./ticket-finder.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'oceanic-airlines-ticket-finder',\n  templateUrl: './ticket-finder.component.html',\n  styleUrls: ['./ticket-finder.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class TicketFinderComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./ticket-finder.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<ui-text color=\"tan\" text=\"Ticket finder\" size=\"medium\"></ui-text>\n"
+        },
+        {
+            "name": "TreeViewComponent",
+            "id": "component-TreeViewComponent-63f9be1940d6aae89352cd257101912c6f63153c3d6fa12e1c792b0877fe4487f008674a74f8e7294160bec3c0bb161c422f6e95c32a7fbe88cf51e3d97d6c85",
+            "file": "libs/ui/src/lib/components/organisms/tree-view/tree-view.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ui-tree-view",
+            "styleUrls": [
+                "./tree-view.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./tree-view.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'ui-tree-view',\n  templateUrl: './tree-view.component.html',\n  styleUrls: ['./tree-view.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class TreeViewComponent {}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./tree-view.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<p>tree-view works!</p>\n"
         }
     ],
     "modules": [
         {
+            "name": "AdminportalModule",
+            "id": "module-AdminportalModule-7829a279a9e4d2794ecebd732f2ce6fa5176dbfdf91affc1f10ee9ccb5ec126e87eeed589c203358699f86874228a588204390f75f0c21adfba278e94dd61743",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "libs/adminportal/src/lib/adminportal.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@NgModule({\n  imports: [CommonModule],\n})\nexport class AdminportalModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AdminPortalRoutingModule",
+            "id": "module-AdminPortalRoutingModule-455f08d8d0347784f4145274b62e930b5d9cee48cc1297df8640ee27a3efc5f4fe7a1af24e72445835431fa69ed2d794f557fc67e9c50dbe2f024ab06d993714",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "apps/admin-portal/src/app/app.routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { AdminPortalLayoutComponent } from './admin-portal-layout/admin-portal-layout.component';\r\nimport { NgModule } from '@angular/core';\r\nimport { RouterModule } from '@angular/router';\r\nimport { UiModule } from '@oceanic-airlines/ui';\r\n\r\n@NgModule({\r\n    declarations: [AdminPortalLayoutComponent],\r\n    imports: [ UiModule,\r\n      RouterModule.forRoot(\r\n        [\r\n            {\r\n                path: '',\r\n                pathMatch: 'full',\r\n                redirectTo: 'admin-portal',\r\n            },\r\n            {\r\n                path: 'admin-portal',\r\n                component: AdminPortalLayoutComponent,\r\n                loadChildren: () =>\r\n                    import('@oceanic-airlines/adminportal/src/lib/shells/shell-admin').then(\r\n                        module => module.ShellAdminModule,\r\n                    ),\r\n            },\r\n        ],\r\n        {\r\n            paramsInheritanceStrategy: 'always',\r\n            scrollPositionRestoration: 'enabled',\r\n            scrollOffset: [0, 0],\r\n            anchorScrolling: 'enabled',\r\n        },\r\n    ),\r\n    ],\r\n    exports: [RouterModule],\r\n})\r\nexport class AdminPortalRoutingModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AdminPortalLayoutComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
             "name": "AppModule",
-            "id": "module-AppModule-b463409b025bf04a1244473f65d25ddf3d80038d8c3731cb13fbdf6333da2fcc3cde01fb14362b90f2b283cf7829f6754e7cda014c7917df6be50938f5d57426",
+            "id": "module-AppModule-3eafdea648cea1ac2595163f9fa04240a04f9a436f3674a2a92148cb3ce660c452c540b1767d2c54159f6e84981c4369116d20c4ba3219f749105bac033eb992",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "apps/admin-portal/src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { NxWelcomeComponent } from './nx-welcome.component';\nimport { RouterModule } from '@angular/router';\nimport { appRoutes } from './app.routes';\n\n@NgModule({\n  declarations: [AppComponent, NxWelcomeComponent],\n  imports: [\n    BrowserModule,\n    RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),\n  ],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "sourceCode": "import { AdminPortalRoutingModule } from './app.routing.module';\nimport { AppComponent } from './app.component';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule, AdminPortalRoutingModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -2406,15 +3445,16 @@
                     "elements": [
                         {
                             "name": "AppComponent"
-                        },
-                        {
-                            "name": "NxWelcomeComponent"
                         }
                     ]
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "AdminPortalRoutingModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -2436,13 +3476,13 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-65a38925aeed757f40986c1543bd3371311de6a1a519077aa2a920d420a76fa236311a41fa1fbd6dedf0b60d9ea1e7b41ee59f78f0d600178b4b9a3021790429-1",
+            "id": "module-AppModule-8da009261df630ef13b24515a60504c1c8b76ccdcf02313632fc43f0d1ab3f0e9ab4488d4f025aef3e8e119a03d3af5f3c8e0cda7d77ae091a40386f4233625a-1",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "apps/booking-app/src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { AppComponent } from './app.component';\nimport { BookingLayoutComponent } from './booking-layout/booking-layout.component';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { NgModule } from '@angular/core';\nimport { NxWelcomeComponent } from './nx-welcome.component';\nimport { RouterModule } from '@angular/router';\nimport { UiModule } from './../../../../libs/ui/src/lib/ui.module';\n\n@NgModule({\n  declarations: [AppComponent,BookingLayoutComponent, NxWelcomeComponent],\n  imports: [BrowserModule, UiModule,\n    RouterModule.forRoot(\n      [\n          {\n              path: '',\n              pathMatch: 'full',\n              redirectTo: 'booking',\n          },\n          {\n              path: 'booking',\n              component: BookingLayoutComponent,\n              loadChildren: () =>\n                  import('@oceanic-airlines/booking/src/lib/shells/shell-booking').then(\n                      module => module.ShellBookingModule,\n                  ),\n          },\n      ],\n      {\n          paramsInheritanceStrategy: 'always',\n          scrollPositionRestoration: 'enabled',\n          scrollOffset: [0, 0],\n          anchorScrolling: 'enabled',\n      },\n  ),\n],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "sourceCode": "import { AppComponent } from './app.component';\nimport { BookingRoutingModule } from './app.routing.module';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  declarations: [AppComponent ],\n  imports: [BrowserModule, BookingRoutingModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -2453,12 +3493,6 @@
                     "elements": [
                         {
                             "name": "AppComponent"
-                        },
-                        {
-                            "name": "BookingLayoutComponent"
-                        },
-                        {
-                            "name": "NxWelcomeComponent"
                         }
                     ]
                 },
@@ -2466,7 +3500,7 @@
                     "type": "imports",
                     "elements": [
                         {
-                            "name": "UiModule"
+                            "name": "BookingRoutingModule"
                         }
                     ]
                 },
@@ -2490,13 +3524,13 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-2f0334247c8a1c88232653ddca26ecb739499a1bded9d8155a8c53317d8c94d72bde15c84fd9c523f2593eb3bba4aa7e46e4c91ce246abb9c37dc2da8a6a94d2-2",
+            "id": "module-AppModule-28c2d0fbf509ef6e9b7717b954ec5695d4905a175cc95da931df39832eb573805de8b3ce0e885b8d60b30fd6e6111e69895765180708af7d8fadd80556a31690-2",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "apps/check-in-app/src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { AppComponent } from './app.component';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { CheckInLayoutComponent } from './check-in-layout/check-in-layout.component';\nimport { NgModule } from '@angular/core';\nimport { NxWelcomeComponent } from './nx-welcome.component';\nimport { RouterModule } from '@angular/router';\nimport { UiModule } from './../../../../libs/ui/src/lib/ui.module';\n\n@NgModule({\n  declarations: [AppComponent, NxWelcomeComponent, CheckInLayoutComponent],\n  imports: [BrowserModule, UiModule,\n          RouterModule.forRoot(\n            [\n                {\n                    path: '',\n                    pathMatch: 'full',\n                    redirectTo: 'check-in',\n                },\n                {\n                    path: 'check-in',\n                    component: CheckInLayoutComponent,\n                    loadChildren: () =>\n                        import('@oceanic-airlines/booking/src/lib/shells/shell-booking').then(\n                            module => module.ShellBookingModule,\n                        ),\n                },\n            ],\n            {\n                paramsInheritanceStrategy: 'always',\n                scrollPositionRestoration: 'enabled',\n                scrollOffset: [0, 0],\n                anchorScrolling: 'enabled',\n            },\n        ),\n],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "sourceCode": "import { AppComponent } from './app.component';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { CheckinRoutingModule } from './app.routing.module';\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule, CheckinRoutingModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -2507,12 +3541,6 @@
                     "elements": [
                         {
                             "name": "AppComponent"
-                        },
-                        {
-                            "name": "CheckInLayoutComponent"
-                        },
-                        {
-                            "name": "NxWelcomeComponent"
                         }
                     ]
                 },
@@ -2520,7 +3548,7 @@
                     "type": "imports",
                     "elements": [
                         {
-                            "name": "UiModule"
+                            "name": "CheckinRoutingModule"
                         }
                     ]
                 },
@@ -2544,13 +3572,13 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-de8dd7b1d460eb8e0054213d770e8d2f485838f1e1d22331e692d5b4088165ff2bea455ae35eb87e13570d017dfdf42b1828764d4b37f599b9ec99e936896861-3",
+            "id": "module-AppModule-dbcc8dfcba20e8a9b223b03837142067e9cc82e7bf8822de9776d5e2506c306b5c789d8e93c363188728a2518b2a86d9d2a611e5b9bba497ae3b52908c9f1583-3",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "apps/client-portal/src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { NxWelcomeComponent } from './nx-welcome.component';\n\n@NgModule({\n  declarations: [AppComponent, NxWelcomeComponent],\n  imports: [BrowserModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "sourceCode": "import { AppComponent } from './app.component';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { ClientPortalRoutingModule } from './app.routing.module';\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule, ClientPortalRoutingModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -2561,15 +3589,16 @@
                     "elements": [
                         {
                             "name": "AppComponent"
-                        },
-                        {
-                            "name": "NxWelcomeComponent"
                         }
                     ]
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "ClientPortalRoutingModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -2591,13 +3620,13 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-a277feabb98786e0c26f9cda9bc3b2e4afc9a68fdaf9ff80c1da666773dd96329f23a9296f9c76036ab611e468dc2b152184e3685599d609a9bb46fa42435bb5-4",
+            "id": "module-AppModule-35b250653a42b1bdd22c9e7fec361d47a4ca48774ff1a09fbae2c86cbb315b58067a21d99e613114cdc2f87c14fab41092379db4503f29b20c7c48510f46cf7a-4",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "apps/flight-tracking-app/src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { AppComponent } from './app.component';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { FlightTrackingLayoutComponent } from './flight-tracking-layout/flight-tracking-layout.component';\nimport { NgModule } from '@angular/core';\nimport { NxWelcomeComponent } from './nx-welcome.component';\nimport { RouterModule } from '@angular/router';\nimport { UiModule } from './../../../../libs/ui/src/lib/ui.module';\n\n@NgModule({\n  declarations: [AppComponent, FlightTrackingLayoutComponent, NxWelcomeComponent],\n  imports: [BrowserModule, UiModule,\n    RouterModule.forRoot(\n      [\n          {\n              path: '',\n              pathMatch: 'full',\n              redirectTo: 'flight-tracking',\n          },\n          {\n              path: 'flight-tracking',\n              component: FlightTrackingLayoutComponent,\n              loadChildren: () =>\n                  import('@oceanic-airlines/flight-tracking/src/lib/shells/shell-flight-tracking').then(\n                      module => module.ShellFlightTrackingModule,\n                  ),\n          },\n      ],\n      {\n          paramsInheritanceStrategy: 'always',\n          scrollPositionRestoration: 'enabled',\n          scrollOffset: [0, 0],\n          anchorScrolling: 'enabled',\n      },\n  ),\n],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "sourceCode": "import { AppComponent } from './app.component';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { FlightTrackingRoutingModule } from './app.routing.module';\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule, FlightTrackingRoutingModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -2608,12 +3637,6 @@
                     "elements": [
                         {
                             "name": "AppComponent"
-                        },
-                        {
-                            "name": "FlightTrackingLayoutComponent"
-                        },
-                        {
-                            "name": "NxWelcomeComponent"
                         }
                     ]
                 },
@@ -2621,7 +3644,7 @@
                     "type": "imports",
                     "elements": [
                         {
-                            "name": "UiModule"
+                            "name": "FlightTrackingRoutingModule"
                         }
                     ]
                 },
@@ -2739,6 +3762,50 @@
             ]
         },
         {
+            "name": "BookingRoutingModule",
+            "id": "module-BookingRoutingModule-a27b881a2736a4972de321e02023a05e62b98c1621f6505d95f88f230b39f45252ef889e6581343365c5aa37aac18cd6416664b2fd0171bc26c54ad2aba90833",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "apps/booking-app/src/app/app.routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { BookingLayoutComponent } from './booking-layout/booking-layout.component';\r\nimport { NgModule } from '@angular/core';\r\nimport { RouterModule } from '@angular/router';\r\nimport { UiModule } from '@oceanic-airlines/ui';\r\n\r\n@NgModule({\r\n  declarations: [BookingLayoutComponent],\r\n    imports: [ UiModule,\r\n      RouterModule.forRoot(\r\n        [\r\n            {\r\n                path: '',\r\n                pathMatch: 'full',\r\n                redirectTo: 'booking',\r\n            },\r\n            {\r\n                path: 'booking',\r\n                component: BookingLayoutComponent,\r\n                loadChildren: () =>\r\n                    import('@oceanic-airlines/booking/src/lib/shells/shell-booking').then(\r\n                        module => module.ShellBookingModule,\r\n                    ),\r\n            },\r\n        ],\r\n        {\r\n            paramsInheritanceStrategy: 'always',\r\n            scrollPositionRestoration: 'enabled',\r\n            scrollOffset: [0, 0],\r\n            anchorScrolling: 'enabled',\r\n        },\r\n    ),\r\n    ],\r\n    exports: [RouterModule],\r\n})\r\nexport class BookingRoutingModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "BookingLayoutComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
             "name": "CheckInModule",
             "id": "module-CheckInModule-844f9a9d8ee4da3210b16a1e6d07a4e71c6f61998d73e0c4a02f3c8feb4a3089df39f336e63612a82ba6e40f05919a446647a399b1f4b714fb5cfa7f4bd4b501",
             "description": "",
@@ -2775,14 +3842,58 @@
             ]
         },
         {
-            "name": "CheckInSrcLibShellsShellCheckInModule",
-            "id": "module-CheckInSrcLibShellsShellCheckInModule-148020882adbe60218f0fbf655188de4d7cefa4f98c7fbc4cc24032601bc614e7609ddcab680350dec906589914b6c3af350fe69e036da2f93c57fec1aec74b1",
+            "name": "CheckinRoutingModule",
+            "id": "module-CheckinRoutingModule-4bb708005279956af9c96e121283f6f0d56b7551225848ddc17bdeca4d056561dee0583519b44446263e2215cea27b726de292d34e7cb0516f6b491cbc828f75",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "libs/check-in/src/lib/shells/shell-check-in/src/lib/shell-check-in.module.ts",
+            "file": "apps/check-in-app/src/app/app.routing.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n        RouterModule.forChild([\n        {\n          path: '',\n          pathMatch: 'full',\n          redirectTo: 'check-in-info',\n        },\n        {\n          path: 'check-in-info',\n          loadChildren: () =>\n            import('@oceanic-airlines/check-in/src/lib/shells/shell-check-in-info').then((module) => module.ShellCheckInInfoModule),\n        },\n        {\n          path: 'ticket-finder',\n          loadChildren: () =>\n            import('@oceanic-airlines/check-in/src/lib/shells/shell-ticket-finder').then((module) => module.ShellTicketFinderModule),\n        },\n      ])\n    ],\n})\nexport class CheckInSrcLibShellsShellCheckInModule {}\n",
+            "sourceCode": "import { CheckInLayoutComponent } from './check-in-layout/check-in-layout.component';\r\nimport { NgModule } from '@angular/core';\r\nimport { RouterModule } from '@angular/router';\r\nimport { UiModule } from '@oceanic-airlines/ui';\r\n\r\n@NgModule({\r\n  declarations: [CheckInLayoutComponent],\r\n    imports: [ UiModule,\r\n      RouterModule.forRoot(\r\n        [\r\n            {\r\n                path: '',\r\n                pathMatch: 'full',\r\n                redirectTo: 'check-in',\r\n            },\r\n            {\r\n                path: 'check-in',\r\n                component: CheckInLayoutComponent,\r\n                loadChildren: () =>\r\n                    import('@oceanic-airlines/check-in/src/lib/shells/shell-check-in').then(\r\n                        module => module.ShellCheckInModule,\r\n                    ),\r\n            },\r\n        ],\r\n        {\r\n            paramsInheritanceStrategy: 'always',\r\n            scrollPositionRestoration: 'enabled',\r\n            scrollOffset: [0, 0],\r\n            anchorScrolling: 'enabled',\r\n        },\r\n    ),\r\n    ],\r\n    exports: [RouterModule],\r\n})\r\nexport class CheckinRoutingModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "CheckInLayoutComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ClientportalModule",
+            "id": "module-ClientportalModule-f2e88b3a46bed18fb7a1dfe9b8116661f9a6ae57bc514746dc5749db0ad94e10cb2d19e0c26f7e8d54a5bad90a5a3f75e4edac42595e8b21bae8fc1ac55a09b1",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "libs/clientportal/src/lib/clientportal.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@NgModule({\n  imports: [CommonModule],\n})\nexport class ClientportalModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -2795,6 +3906,50 @@
                 {
                     "type": "imports",
                     "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ClientPortalRoutingModule",
+            "id": "module-ClientPortalRoutingModule-b8456b2ec95dfdf2ec98e10debf51ccd6e03ea8244d41087f2b9c55ef04600acd8e2ed1f646cd152f9403d6b34ec33c634b9653c0b8d04a4061a41a0e44a9364",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "apps/client-portal/src/app/app.routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { ClientPortalLayoutComponent } from './client-portal-layout/client-portal-layout.component';\r\nimport { NgModule } from '@angular/core';\r\nimport { RouterModule } from '@angular/router';\r\nimport { UiModule } from '@oceanic-airlines/ui';\r\n\r\n@NgModule({\r\n  declarations: [ClientPortalLayoutComponent],\r\n  imports: [ UiModule,\r\n      RouterModule.forRoot(\r\n        [\r\n          {\r\n              path: '',\r\n              pathMatch: 'full',\r\n              redirectTo: 'client-portal',\r\n          },\r\n          {\r\n              path: 'client-portal',\r\n              component: ClientPortalLayoutComponent,\r\n              loadChildren: () =>\r\n                  import('@oceanic-airlines/clientportal/src/lib/shells/shell-client').then(\r\n                      module => module.ShellClientModule,\r\n                  ),\r\n          },\r\n      ],\r\n        {\r\n            paramsInheritanceStrategy: 'always',\r\n            scrollPositionRestoration: 'enabled',\r\n            scrollOffset: [0, 0],\r\n            anchorScrolling: 'enabled',\r\n        },\r\n    ),\r\n    ],\r\n    exports: [RouterModule],\r\n})\r\nexport class ClientPortalRoutingModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ClientPortalLayoutComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -2885,14 +4040,108 @@
             ]
         },
         {
+            "name": "FeatureAdminDashboardModule",
+            "id": "module-FeatureAdminDashboardModule-94dff0dba4237638bad15be2bfb608fa0d56f70835ea7b0366da338c962cd9b042992c44bcafc288563b067aaefe7953d913b7f660ab6cd937e426b4d318a246",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "libs/adminportal/src/lib/features/feature-admin-dashboard/src/lib/feature-admin-dashboard.module.ts",
+            "methods": [],
+            "sourceCode": "import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';\nimport { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\nimport { SharedModule } from '@oceanic-airlines/shared';\nimport { UiModule } from '@oceanic-airlines/ui';\n\n@NgModule({\n  imports: [CommonModule, UiModule, SharedModule,\n    RouterModule.forChild([\n    {\n        path: '',\n        pathMatch: 'full',\n        component: AdminDashboardComponent,\n    },\n  ]),\n  ],\n  declarations: [\n    AdminDashboardComponent\n  ],\n})\nexport class FeatureAdminDashboardModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AdminDashboardComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "SharedModule"
+                        },
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
             "name": "FeatureCheckInInfoModule",
-            "id": "module-FeatureCheckInInfoModule-88e3dc36845cb3705a49ef0040e31d2bf5f71e3be2feefd1d477b0029cf814297b5b903998136e80ada2bdefff3ef1582d7429de6cf4ce8f17e5f83fe99c79f4",
+            "id": "module-FeatureCheckInInfoModule-d7032eaa600fd3dbce0cda9df103f7174e412c6b13998e4333e7282399b6d4dfbf303be246665c25b822def47bff404ad19ba0fd208ef5152529f46e1f1e9342",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/check-in/src/lib/features/feature-check-in-info/src/lib/feature-check-in-info.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  imports: [CommonModule],\n})\nexport class FeatureCheckInInfoModule {}\n",
+            "sourceCode": "import { CheckInInfoComponent } from './check-in-info/check-in-info.component';\nimport { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\nimport { SharedModule } from '@oceanic-airlines/shared';\nimport { UiModule } from '@oceanic-airlines/ui';\n\n@NgModule({\n  imports: [CommonModule, UiModule, SharedModule,\n    RouterModule.forChild([\n    {\n        path: '',\n        pathMatch: 'full',\n        component: CheckInInfoComponent,\n    },\n  ]),\n  ],\n  declarations: [\n    CheckInInfoComponent\n  ],\n})\nexport class FeatureCheckInInfoModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "CheckInInfoComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "SharedModule"
+                        },
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "FeatureClientDashboardModule",
+            "id": "module-FeatureClientDashboardModule-83b1a1426164c8fbd4991d67503246d81df06a495212a37a22d70302658448d98cad685339e813795c52bd6d5b8fa9121d3ecf1132049a60894a57bdb63442cd",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "libs/clientportal/src/lib/features/feature-client-dashboard/src/lib/feature-client-dashboard.module.ts",
+            "methods": [],
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  imports: [CommonModule],\n})\nexport class FeatureClientDashboardModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -2922,13 +4171,13 @@
         },
         {
             "name": "FeatureFlightDetailsModule",
-            "id": "module-FeatureFlightDetailsModule-35fc1cc065791648d49089f58cfe2c940a609943b16ea3c067dc6e7ebcd78e97b50594957422ef5c6ff042432b560d9359a4fedb3d2dc22ba622eb8a6266f735",
+            "id": "module-FeatureFlightDetailsModule-00c63e05921aeca7c79e85d690996ffa0cb5f3204e384a72eb48af0b14ae9e4a20153708c64451c70f215b7d9887e11f1cab103e81f4e83374ab5c508db34972",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/flight-tracking/src/lib/features/feature-flight-details/src/lib/feature-flight-details.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  imports: [CommonModule],\n})\nexport class FeatureFlightDetailsModule {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { FlightDetailsComponent } from './flight-details/flight-details.component';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\nimport { SharedModule } from '@oceanic-airlines/shared';\nimport { UiModule } from '@oceanic-airlines/ui';\n\n@NgModule({\n  imports: [CommonModule, UiModule, SharedModule,\n    RouterModule.forChild([\n    {\n        path: '',\n        pathMatch: 'full',\n        component: FlightDetailsComponent,\n    },\n  ]),\n  ],\n  declarations: [\n    FlightDetailsComponent\n  ],\n})\nexport class FeatureFlightDetailsModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -2936,11 +4185,22 @@
                 },
                 {
                     "type": "declarations",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "FlightDetailsComponent"
+                        }
+                    ]
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "SharedModule"
+                        },
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -2958,13 +4218,13 @@
         },
         {
             "name": "FeatureFlightSearchModule",
-            "id": "module-FeatureFlightSearchModule-22aedfc36db61f9326ca696a967a323e239fb9a48f878b3fd9db06c5c286988e6ed55a1ad519a1dd46f720492902f4a7d8b49c3df24b1d83020e73564620bd6b",
+            "id": "module-FeatureFlightSearchModule-189ab450ba5185cd2a7100e97a0b5a0b068a4c53b0a8624a65952f75d86132dda439b1054191f8a2257021c581d729576ac54cadd1c476bb382d9ce3a5de98e8",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/flight-tracking/src/lib/features/feature-flight-search/src/lib/feature-flight-search.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  imports: [CommonModule],\n})\nexport class FeatureFlightSearchModule {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { FlightSearchComponent } from './flight-search/flight-search.component';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\nimport { SharedModule } from '@oceanic-airlines/shared';\nimport { UiModule } from '@oceanic-airlines/ui';\n\n@NgModule({\n  imports: [CommonModule, UiModule, SharedModule,\n    RouterModule.forChild([\n    {\n        path: '',\n        pathMatch: 'full',\n        component: FlightSearchComponent,\n    },\n  ]),\n  ],\n  declarations: [\n    FlightSearchComponent\n  ],\n})\nexport class FeatureFlightSearchModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -2972,11 +4232,22 @@
                 },
                 {
                     "type": "declarations",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "FlightSearchComponent"
+                        }
+                    ]
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "SharedModule"
+                        },
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -3088,13 +4359,13 @@
         },
         {
             "name": "FeatureTicketFinderModule",
-            "id": "module-FeatureTicketFinderModule-1a6f3df27d61d103cc62dd3fcb955e29f0fcab81759f16d7acebb437c09aa91f96bcb68d004ebc16485afd8ef5421073b5237aed087bd0b63702195f36d1d4fa",
+            "id": "module-FeatureTicketFinderModule-1e025941bf305b0b7b13737fee0a48322dd7a402035661ce9d179048c4c5401b4699292467b78fc7e37ac80d2d1980e7639c55edbd1c1cf4cd233b60bce34284",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/check-in/src/lib/features/feature-ticket-finder/src/lib/feature-ticket-finder.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  imports: [CommonModule],\n})\nexport class FeatureTicketFinderModule {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\nimport { SharedModule } from '@oceanic-airlines/shared';\nimport { TicketFinderComponent } from './ticket-finder/ticket-finder.component';\nimport { UiModule } from '@oceanic-airlines/ui';\n\n@NgModule({\n  imports: [CommonModule, UiModule, SharedModule,\n    RouterModule.forChild([\n    {\n        path: '',\n        pathMatch: 'full',\n        component: TicketFinderComponent,\n    },\n  ]),\n  ],\n  declarations: [\n    TicketFinderComponent\n  ],\n})\nexport class FeatureTicketFinderModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -3102,11 +4373,22 @@
                 },
                 {
                     "type": "declarations",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "TicketFinderComponent"
+                        }
+                    ]
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "SharedModule"
+                        },
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -3143,6 +4425,50 @@
                 {
                     "type": "imports",
                     "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "FlightTrackingRoutingModule",
+            "id": "module-FlightTrackingRoutingModule-a25bfe4761396d6821c6d48522ed0f94671ffb65da4ed3d86169fb267c8e2dffe0ee72067913c5652415976335a3402b12594a9aa52dc03dc54caf7960f3b013",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "apps/flight-tracking-app/src/app/app.routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { FlightTrackingLayoutComponent } from './flight-tracking-layout/flight-tracking-layout.component';\r\nimport { NgModule } from '@angular/core';\r\nimport { RouterModule } from '@angular/router';\r\nimport { UiModule } from '@oceanic-airlines/ui';\r\n\r\n@NgModule({\r\n  declarations: [FlightTrackingLayoutComponent],\r\n    imports: [ UiModule,\r\n      RouterModule.forRoot(\r\n        [\r\n            {\r\n                path: '',\r\n                pathMatch: 'full',\r\n                redirectTo: 'flight-tracking',\r\n            },\r\n            {\r\n                path: 'flight-tracking',\r\n                component: FlightTrackingLayoutComponent,\r\n                loadChildren: () =>\r\n                    import('@oceanic-airlines/flight-tracking/src/lib/shells/shell-flight-tracking').then(\r\n                        module => module.ShellFlightTrackingModule,\r\n                    ),\r\n            },\r\n        ],\r\n        {\r\n            paramsInheritanceStrategy: 'always',\r\n            scrollPositionRestoration: 'enabled',\r\n            scrollOffset: [0, 0],\r\n            anchorScrolling: 'enabled',\r\n        },\r\n    ),\r\n    ],\r\n    exports: [RouterModule],\r\n})\r\nexport class FlightTrackingRoutingModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "FlightTrackingLayoutComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -3250,13 +4576,13 @@
         },
         {
             "name": "OrganismsModule",
-            "id": "module-OrganismsModule-c282604ff324679b7129f360f2cd6fead79e96609f982400f4886445537da6fad2a2ea0b91876168f0efc1ca1acd8ada246a37d9b5d17f33476ac0a6c3cc8b0d",
+            "id": "module-OrganismsModule-74a001ca41cd43a25ceaa8965707b173e476e97951d02916912c8f19a61f65558c07c8f3ab8e3154d8258f1a557f311465094ed2bd66a0da7fe8fbe0f652c0a5",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/ui/src/lib/components/organisms/organisms.module.ts",
             "methods": [],
-            "sourceCode": "import { AtomsModule } from './../atoms/atoms.module';\r\nimport { CommonModule } from '@angular/common';\r\nimport { FooterComponent } from './footer/footer.component';\r\nimport { HeaderComponent } from './header/header.component';\r\nimport { NgModule } from '@angular/core';\r\n\r\n@NgModule({\r\n  declarations: [HeaderComponent, FooterComponent],\r\n  imports: [CommonModule, AtomsModule],\r\n  exports: [HeaderComponent, FooterComponent],\r\n})\r\nexport class OrganismsModule {}\r\n",
+            "sourceCode": "import { AtomsModule } from './../atoms/atoms.module';\nimport { CommonModule } from '@angular/common';\nimport { FooterComponent } from './footer/footer.component';\nimport { HeaderComponent } from './header/header.component';\nimport { NgModule } from '@angular/core';\nimport { TreeViewComponent } from './tree-view/tree-view.component';\n\n@NgModule({\n  declarations: [HeaderComponent, FooterComponent, TreeViewComponent],\n  imports: [CommonModule, AtomsModule],\n  exports: [HeaderComponent, FooterComponent],\n})\nexport class OrganismsModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -3270,6 +4596,9 @@
                         },
                         {
                             "name": "HeaderComponent"
+                        },
+                        {
+                            "name": "TreeViewComponent"
                         }
                     ]
                 },
@@ -3408,6 +4737,166 @@
             ]
         },
         {
+            "name": "ShellAdminBookingModule",
+            "id": "module-ShellAdminBookingModule-1427a772ccaf2880ad547e165697c3583968ca50e656cf5060da182afab3fb8f2a982a18d7c98980332ee90e9a262c2eccf749a774c8d084c7588d25eeb05ead",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "libs/adminportal/src/lib/shells/shell-admin-booking/src/lib/shell-admin-booking.module.ts",
+            "methods": [],
+            "sourceCode": "import { AdminBookingLayoutComponent } from './admin-booking-layout/admin-booking-layout-component';\nimport { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\nimport { UiModule } from '@oceanic-airlines/ui';\n\n@NgModule({\n  imports: [CommonModule, UiModule,\n      RouterModule.forChild([\n        {\n          path: '',\n          pathMatch: 'full',\n          redirectTo: 'passenger-info',\n        },\n        {\n          path: 'passenger-info',\n          component: AdminBookingLayoutComponent,\n          loadChildren: () =>\n            import('@oceanic-airlines/booking/src/lib/features/feature-passenger-info').then((module) => module.FeaturePassengerInfoModule),\n        },\n        {\n          path: 'seat-listing',\n          component: AdminBookingLayoutComponent,\n          loadChildren: () =>\n            import('@oceanic-airlines/booking/src/lib/features/feature-seat-listing').then((module) => module.FeatureSeatListingModule),\n        },\n    ]),\n  ],\n  declarations: [\n    AdminBookingLayoutComponent\n  ],\n})\nexport class ShellAdminBookingModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AdminBookingLayoutComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ShellAdminCheckinModule",
+            "id": "module-ShellAdminCheckinModule-ec418435da681921fb205c5d14ee08f1895a6cb2d1b90ea4588de5cc29df352b92c867874dc2211fcc0ed810c93e02fef153a9d9014110ae9d2c5d5835300aa7",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "libs/adminportal/src/lib/shells/shell-admin-checkin/src/lib/shell-admin-checkin.module.ts",
+            "methods": [],
+            "sourceCode": "import { AdminCheckinLayoutComponent } from './admin-checkin-layout/admin-checkin-layout-component';\nimport { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\nimport { UiModule } from '@oceanic-airlines/ui';\n\n@NgModule({\n  imports: [CommonModule, UiModule,\n      RouterModule.forChild([\n        {\n          path: '',\n          pathMatch: 'full',\n          redirectTo: 'check-in-info',\n        },\n        {\n          path: 'check-in-info',\n          component: AdminCheckinLayoutComponent,\n          loadChildren: () =>\n            import('@oceanic-airlines/check-in/src/lib/features/feature-check-in-info').then((module) => module.FeatureCheckInInfoModule),\n        },\n        {\n          path: 'ticket-finder',\n          component: AdminCheckinLayoutComponent,\n          loadChildren: () =>\n            import('@oceanic-airlines/check-in/src/lib/features/feature-ticket-finder').then((module) => module.FeatureTicketFinderModule),\n        },\n    ]),\n  ],\n  declarations: [\n    AdminCheckinLayoutComponent\n  ],\n})\nexport class ShellAdminCheckinModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AdminCheckinLayoutComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ShellAdminDashboardModule",
+            "id": "module-ShellAdminDashboardModule-9d7042528494d70b63944bedf57a35adef81fc8baaa380d7244e9a417d032ba5c00bd1c023dc0d2e697080ce9de36b0a9cb92f92c1ff6bd4ed88c39ce3e8ed03",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "libs/adminportal/src/lib/shells/shell-admin-dashboard/src/lib/shell-admin-dashboard.module.ts",
+            "methods": [],
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n      RouterModule.forChild([\n      {\n        path: '',\n        pathMatch: 'full',\n        loadChildren: () =>\n          import('@oceanic-airlines/adminportal/src/lib/features/feature-admin-dashboard').then((module) => module.FeatureAdminDashboardModule),\n      }\n    ]),\n  ],\n})\nexport class ShellAdminDashboardModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ShellAdminModule",
+            "id": "module-ShellAdminModule-3d5d85955a3a1d29cee703398ae3450d1b1b3d7ecc27cfa8a5b5c08a6cd778a9d31b5d85ea3cf9b9d535b178ae3a227d30a06250476041e634e1e5ddfa2d9597",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "libs/adminportal/src/lib/shells/shell-admin/src/lib/shell-admin.module.ts",
+            "methods": [],
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n    RouterModule.forChild([\n      {\n        path: '',\n        pathMatch: 'full',\n        redirectTo: 'dashboard',\n      },\n      {\n        path: 'dashboard',\n        loadChildren: () =>\n          import('@oceanic-airlines/adminportal/src/lib/shells/shell-admin-dashboard').then((module) => module.ShellAdminDashboardModule),\n      },\n      {\n        path: 'booking',\n        loadChildren: () =>\n          import('@oceanic-airlines/adminportal/src/lib/shells/shell-admin-booking').then((module) => module.ShellAdminBookingModule),\n      },\n      {\n        path: 'check-in',\n        loadChildren: () =>\n          import('@oceanic-airlines/adminportal/src/lib/shells/shell-admin-checkin').then((module) => module.ShellAdminCheckinModule),\n      },\n    ]),\n  ],\n})\nexport class ShellAdminModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
             "name": "ShellBookingModule",
             "id": "module-ShellBookingModule-cfd16b62b3bcd56feaf86b0b7e6c22a642a7ba5e38058b67d29fcde9533a8cd2086074fb533497e38bbbe07c5d07dcf4f9e5212d5b180b6c36441305163a4cff",
             "description": "",
@@ -3445,13 +4934,201 @@
         },
         {
             "name": "ShellCheckInInfoModule",
-            "id": "module-ShellCheckInInfoModule-719b7a50d261feb34376420f1022efe9b6e5bc12503494ea63d9d9c97e25e66d1251ad9d036cbd8d911d66a6ca9831f1afb33b79116768d83e319708bc387888",
+            "id": "module-ShellCheckInInfoModule-4812697038f18200ce6fa2b972de752a7d807b1e94cfc8daac029a2f42848f91dd0593c9ef0da31b185b2063333c5e9e66e397e54ffd55f9398b9eb3ccd689df",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/check-in/src/lib/shells/shell-check-in-info/src/lib/shell-check-in-info.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n    RouterModule.forChild([\n    {\n      path: '',\n      pathMatch: 'full',\n      redirectTo: 'passenger-info',\n    },\n    {\n      path: 'passenger-info',\n      loadChildren: () =>\n        import('@oceanic-airlines/check-in/src/lib/features/feature-check-in-info').then((module) => module.FeatureCheckInInfoModule),\n    }\n  ]),\n],\n})\nexport class ShellCheckInInfoModule {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n    RouterModule.forChild([\n    {\n      path: '',\n      pathMatch: 'full',\n      loadChildren: () =>\n        import('@oceanic-airlines/check-in/src/lib/features/feature-check-in-info').then((module) => module.FeatureCheckInInfoModule),\n    }\n  ]),\n],\n})\nexport class ShellCheckInInfoModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ShellCheckInModule",
+            "id": "module-ShellCheckInModule-e621087db14c11462b864d2636b66e4444fb08f07c8d1052285dd397c2f51f7a02fdf047c7a5be77bdd3ba5208f1a53966b1399241413902157db46bee322e5b",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "libs/check-in/src/lib/shells/shell-check-in/src/lib/shell-check-in.module.ts",
+            "methods": [],
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n        RouterModule.forChild([\n        {\n          path: '',\n          pathMatch: 'full',\n          redirectTo: 'check-in-info',\n        },\n        {\n          path: 'check-in-info',\n          loadChildren: () =>\n            import('@oceanic-airlines/check-in/src/lib/shells/shell-check-in-info').then((module) => module.ShellCheckInInfoModule),\n        },\n        {\n          path: 'ticket-finder',\n          loadChildren: () =>\n            import('@oceanic-airlines/check-in/src/lib/shells/shell-ticket-finder').then((module) => module.ShellTicketFinderModule),\n        },\n      ])\n    ],\n})\nexport class ShellCheckInModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ShellClientCheckinModule",
+            "id": "module-ShellClientCheckinModule-8b3a53e97cb9c0ec58b969e6177d2b3f8bc7a7baa83d32e823744e9ca026d548648c272244f2b55c1266de5a6431a0378542e0d9d4a4a7fc619d1bb2f9b6e4c9",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "libs/clientportal/src/lib/shells/shell-client-checkin/src/lib/shell-client-checkin.module.ts",
+            "methods": [],
+            "sourceCode": "import { ClientCheckinLayoutComponent } from './client-checkin-layout/client-checkin-layout-component';\nimport { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\nimport { UiModule } from '@oceanic-airlines/ui';\n\n@NgModule({\n  imports: [CommonModule, UiModule,\n      RouterModule.forChild([\n        {\n          path: '',\n          pathMatch: 'full',\n          redirectTo: 'check-in-info',\n        },\n        {\n          path: 'check-in-info',\n          component: ClientCheckinLayoutComponent,\n          loadChildren: () =>\n            import('@oceanic-airlines/check-in/src/lib/features/feature-check-in-info').then((module) => module.FeatureCheckInInfoModule),\n        },\n        {\n          path: 'ticket-finder',\n          component: ClientCheckinLayoutComponent,\n          loadChildren: () =>\n            import('@oceanic-airlines/check-in/src/lib/features/feature-ticket-finder').then((module) => module.FeatureTicketFinderModule),\n        },\n    ]),\n  ],\n  declarations: [\n    ClientCheckinLayoutComponent\n  ],\n})\nexport class ShellClientCheckinModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ClientCheckinLayoutComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "UiModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ShellClientDashboardModule",
+            "id": "module-ShellClientDashboardModule-c7bab65ced046646371676902950dbcf5960f7a32946a677eeb148e6b09edd84e5a1e5279f39e672b81eaaf29d12f362d8906eb39bb275190d028b325291db3a",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "libs/clientportal/src/lib/shells/shell-client-dashboard/src/lib/shell-client-dashboard.module.ts",
+            "methods": [],
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n      RouterModule.forChild([\n      {\n        path: '',\n        pathMatch: 'full',\n        loadChildren: () =>\n          import('@oceanic-airlines/clientportal/src/lib/features/feature-client-dashboard').then((module) => module.FeatureClientDashboardModule),\n      }\n    ]),\n  ],\n})\nexport class ShellClientDashboardModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ShellClientFlightTrackingModule",
+            "id": "module-ShellClientFlightTrackingModule-c75e3b3de03a9cc1b2e5894ccdfafcf7ca5506b80b490d444fc14511faae8c926b0431ea97b12c83b3fbe97b5fb4c733071cffe662d8bcada23c658a52b8bda1",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "libs/clientportal/src/lib/shells/shell-client-flight-tracking/src/lib/shell-client-flight-tracking.module.ts",
+            "methods": [],
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  imports: [\n    CommonModule,\n  ],\n})\nexport class ShellClientFlightTrackingModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ShellClientModule",
+            "id": "module-ShellClientModule-a46ee1480946badd583c3e05e82636b5734a16b2aff2bb1ed65f1dbc89b458c020f0d1d29d9d3aa77dd67927b1e0294cf3bad5c134cf78cebcccd6785bfa4390",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "libs/clientportal/src/lib/shells/shell-client/src/lib/shell-client.module.ts",
+            "methods": [],
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n    RouterModule.forChild([\n      {\n        path: '',\n        pathMatch: 'full',\n        redirectTo: 'dashboard',\n      },\n      {\n        path: 'dashboard',\n        loadChildren: () =>\n          import('@oceanic-airlines/clientportal/src/lib/shells/shell-client-dashboard').then((module) => module.ShellClientDashboardModule),\n      },\n      {\n        path: 'flight-tracking',\n        loadChildren: () =>\n          import('@oceanic-airlines/clientportal/src/lib/shells/shell-client-flight-tracking').then((module) => module.ShellClientFlightTrackingModule),\n      },\n      {\n        path: 'check-in',\n        loadChildren: () =>\n          import('@oceanic-airlines/clientportal/src/lib/shells/shell-client-checkin').then((module) => module.ShellClientCheckinModule),\n      },\n    ]),\n  ],\n})\nexport class ShellClientModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -3481,13 +5158,13 @@
         },
         {
             "name": "ShellFlightDetailsModule",
-            "id": "module-ShellFlightDetailsModule-ccfc58bc9d31148ae06912ad9addd6ad86125fb04a5375d08fc6b3853785ccf4fb35b2987aebc75dc35659072953f8c0ddbec7cc3c7e5f87f4fbaebb45040130",
+            "id": "module-ShellFlightDetailsModule-10c278ba22294eb114e17e90ce1e8b7b310defd473c18f6f924c76a649f3a5381e168ca459b190ad2d2a5e144d9750bf4b6cc55537669dce7fd5cdd7720ca5ae",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/flight-tracking/src/lib/shells/shell-flight-details/src/lib/shell-flight-details.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n    RouterModule.forChild([\n    {\n      path: '',\n      pathMatch: 'full',\n      redirectTo: 'passenger-info',\n    },\n    {\n      path: 'passenger-info',\n      loadChildren: () =>\n        import('@oceanic-airlines/flight-tracking/src/lib/features/feature-flight-details').then((module) => module.FeatureFlightDetailsModule),\n    }\n  ]),\n],\n})\nexport class ShellFlightDetailsModule {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n    RouterModule.forChild([\n    {\n      path: '',\n      pathMatch: 'full',\n      loadChildren: () =>\n        import('@oceanic-airlines/flight-tracking/src/lib/features/feature-flight-details').then((module) => module.FeatureFlightDetailsModule),\n    }\n  ]),\n],\n})\nexport class ShellFlightDetailsModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -3517,13 +5194,13 @@
         },
         {
             "name": "ShellFlightSearchModule",
-            "id": "module-ShellFlightSearchModule-03dca3c76e5e1e3d4296fbe3aa0f51999a5e0707389b14ce02b7f260a7641134983364a24f42344f904a80fbded373bef76789cbc5f85997247ddd62f1221489",
+            "id": "module-ShellFlightSearchModule-bf40282c921151708cb1969d4d2542f45de045b42fb42235ac1dd0c9b2779df744c595724e1643c381c025d3283c122c64f7cc091ac3bebb63895f8b4a2cc9e7",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/flight-tracking/src/lib/shells/shell-flight-search/src/lib/shell-flight-search.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n    RouterModule.forChild([\n    {\n      path: '',\n      pathMatch: 'full',\n      redirectTo: 'passenger-info',\n    },\n    {\n      path: 'passenger-info',\n      loadChildren: () =>\n        import('@oceanic-airlines/flight-tracking/src/lib/features/feature-flight-search').then((module) => module.FeatureFlightSearchModule),\n    }\n  ]),\n],\n})\nexport class ShellFlightSearchModule {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n    RouterModule.forChild([\n    {\n      path: '',\n      pathMatch: 'full',\n      loadChildren: () =>\n        import('@oceanic-airlines/flight-tracking/src/lib/features/feature-flight-search').then((module) => module.FeatureFlightSearchModule),\n    }\n  ]),\n],\n})\nexport class ShellFlightSearchModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -3553,13 +5230,13 @@
         },
         {
             "name": "ShellFlightTrackingModule",
-            "id": "module-ShellFlightTrackingModule-55134d0b1873483019756e9b66ce1c08d3cd0589de1566a1dd162b2f417ed23771ba98db3bef52db9d58e8edd1636525d36a49393d38ccda8d3a4411de398bb9",
+            "id": "module-ShellFlightTrackingModule-409a5d1edec2d8e6fb9aa7c41cdacfef256b53d65e9ecc98690a9e846eb7208c95d3f78ef3a57799560fde50313b9242154e46348467aad9134783e7fbcb761b",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/flight-tracking/src/lib/shells/shell-flight-tracking/src/lib/shell-flight-tracking.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n        RouterModule.forChild([\n        {\n          path: '',\n          pathMatch: 'full',\n          redirectTo: 'flight-search',\n        },\n        {\n          path: 'flight-search',\n          loadChildren: () =>\n            import('@oceanic-airlines/flight-tracking/src/lib/shells/shell-flight-search').then((module) => module.ShellFlightSearchModule),\n        },\n        {\n          path: 'seat-listing',\n          loadChildren: () =>\n            import('@oceanic-airlines/flight-tracking/src/lib/shells/shell-flight-details').then((module) => module.ShellFlightDetailsModule),\n        },\n      ])\n    ],\n})\nexport class ShellFlightTrackingModule {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n        RouterModule.forChild([\n        {\n          path: '',\n          pathMatch: 'full',\n          redirectTo: 'flight-search',\n        },\n        {\n          path: 'flight-search',\n          loadChildren: () =>\n            import('@oceanic-airlines/flight-tracking/src/lib/shells/shell-flight-search').then((module) => module.ShellFlightSearchModule),\n        },\n        {\n          path: 'flight-details',\n          loadChildren: () =>\n            import('@oceanic-airlines/flight-tracking/src/lib/shells/shell-flight-details').then((module) => module.ShellFlightDetailsModule),\n        },\n      ])\n    ],\n})\nexport class ShellFlightTrackingModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -3661,13 +5338,13 @@
         },
         {
             "name": "ShellTicketFinderModule",
-            "id": "module-ShellTicketFinderModule-47eab7d3796eb1625adf1fa3182dbfe67945bfa825458e8838be4351ded0a8c742c26c83d25e91a244f71dd29108b0b65e8ef6d56b3309c96a4ed37eb4bf9836",
+            "id": "module-ShellTicketFinderModule-81f4493cbacb1c298081ee663c35b31b4f23e4becc605c388b5849351222789e8661a5d6ea9519bc191038e681b4cc511ec2de5b2b5e570a7eced2049c214704",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "libs/check-in/src/lib/shells/shell-ticket-finder/src/lib/shell-ticket-finder.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n    RouterModule.forChild([\n    {\n      path: '',\n      pathMatch: 'full',\n      redirectTo: 'passenger-info',\n    },\n    {\n      path: 'passenger-info',\n      loadChildren: () =>\n        import('@oceanic-airlines/check-in/src/lib/features/feature-ticket-finder').then((module) => module.FeatureTicketFinderModule),\n    }\n  ]),\n],\n})\nexport class ShellTicketFinderModule {}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule } from '@angular/router';\n\n@NgModule({\n  imports: [CommonModule,\n    RouterModule.forChild([\n    {\n      path: '',\n      pathMatch: 'full',\n      loadChildren: () =>\n        import('@oceanic-airlines/check-in/src/lib/features/feature-ticket-finder').then((module) => module.FeatureTicketFinderModule),\n    }\n  ]),\n],\n})\nexport class ShellTicketFinderModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -3888,7 +5565,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "`\r\n<h6 class=\"storybook-color-header\">Default colors</h6>\r\n<div class=\"storybook-color-example bg-color-white\" color=\"$color-white\"></div>\r\n<div class=\"storybook-color-example bg-color-black\" color=\"$color-black\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Blue</h6>\r\n<div class=\"storybook-color-example bg-color-deep-blue\" color=\"$color-deep-blue\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-active\" color=\"$color-deep-blue-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-hover\" color=\"$color-deep-blue-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-focus\" color=\"$color-deep-blue-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Fresh Blue</h6>\r\n<div class=\"storybook-color-example bg-color-fresh-blue\" color=\"$color-fresh-blue\"></div>\r\n<div class=\"storybook-color-example bg-color-fresh-blue-active\" color=\"$color-fresh-blue-active\"></div>\r\n<div class=\"storybook-color-example bg-color-fresh-blue-hover\" color=\"$color-fresh-blue-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-fresh-blue-focus\" color=\"$color-fresh-blue-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Warm Coral</h6>\r\n<div class=\"storybook-color-example bg-color-warm-coral\" color=\"$color-warm-coral\"></div>\r\n<div class=\"storybook-color-example bg-color-warm-coral-active\" color=\"$color-warm-coral-active\"></div>\r\n<div class=\"storybook-color-example bg-color-warm-coral-hover\" color=\"$color-warm-coral-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-warm-coral-focus\" color=\"$color-warm-coral-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Light Blue</h6>\r\n<div class=\"storybook-color-example bg-color-light-blue\" color=\"$color-light-blue\"></div>\r\n<div class=\"storybook-color-example bg-color-light-blue-active\" color=\"$color-light-blue-active\"></div>\r\n<div class=\"storybook-color-example bg-color-light-blue-hover\" color=\"$color-light-blue-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-light-blue-focus\" color=\"$color-light-blue-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Yellow</h6>\r\n<div class=\"storybook-color-example bg-color-deep-yellow\" color=\"$color-deep-yellow\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-yellow-active\" color=\"$color-deep-yellow-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-yellow-hover\" color=\"$color-deep-yellow-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-yellow-focus\" color=\"$color-deep-yellow-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Purple</h6>\r\n<div class=\"storybook-color-example bg-color-deep-purple\" color=\"$color-deep-purple\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-purple-active\" color=\"$color-deep-purple-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-purple-hover\" color=\"$color-deep-purple-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-purple-focus\" color=\"$color-deep-purple-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Red</h6>\r\n<div class=\"storybook-color-example bg-color-deep-red\" color=\"$color-deep-red\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-red-active\" color=\"$color-deep-red-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-red-hover\" color=\"$color-deep-red-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-red-focus\" color=\"$color-deep-red-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Error</h6>\r\n<div class=\"storybook-color-example bg-color-error\" color=\"$color-error\"></div>\r\n<div class=\"storybook-color-example bg-color-error-background\" color=\"$color-error-background\"></div>\r\n<h6 class=\"storybook-color-header\">Success</h6>\r\n<div class=\"storybook-color-example bg-color-success\" color=\"$color-success\"></div>\r\n<div class=\"storybook-color-example bg-color-success-background\" color=\"$color-success-background\"></div>\r\n<h6 class=\"storybook-color-header\">Warning</h6>\r\n<div class=\"storybook-color-example bg-color-warning\" color=\"$color-warning\"></div>\r\n<div class=\"storybook-color-example bg-color-warning-background\" color=\"$color-warning-background\"></div>\r\n<h6 class=\"storybook-color-header\">Info</h6>\r\n<div class=\"storybook-color-example bg-color-info\" color=\"$color-info\"></div>\r\n<div class=\"storybook-color-example bg-color-info-background\" color=\"$color-info-background\"></div>\r\n`"
+                "defaultValue": "`\r\n<h6 class=\"storybook-color-header\">Default colors</h6>\r\n<div class=\"storybook-color-example bg-color-white\" color=\"$color-white\"></div>\r\n<div class=\"storybook-color-example bg-color-black\" color=\"$color-black\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Blue</h6>\r\n<div class=\"storybook-color-example bg-color-deep-blue\" color=\"$color-deep-blue\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-active\" color=\"$color-deep-blue-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-hover\" color=\"$color-deep-blue-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-focus\" color=\"$color-deep-blue-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Error</h6>\r\n<div class=\"storybook-color-example bg-color-error\" color=\"$color-error\"></div>\r\n<div class=\"storybook-color-example bg-color-error-background\" color=\"$color-error-background\"></div>\r\n<h6 class=\"storybook-color-header\">Success</h6>\r\n<div class=\"storybook-color-example bg-color-success\" color=\"$color-success\"></div>\r\n<div class=\"storybook-color-example bg-color-success-background\" color=\"$color-success-background\"></div>\r\n<h6 class=\"storybook-color-header\">Warning</h6>\r\n<div class=\"storybook-color-example bg-color-warning\" color=\"$color-warning\"></div>\r\n<div class=\"storybook-color-example bg-color-warning-background\" color=\"$color-warning-background\"></div>\r\n<h6 class=\"storybook-color-header\">Info</h6>\r\n<div class=\"storybook-color-example bg-color-info\" color=\"$color-info\"></div>\r\n<div class=\"storybook-color-example bg-color-info-background\" color=\"$color-info-background\"></div>\r\n`"
             },
             {
                 "name": "icon",
@@ -4021,6 +5698,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "simpleTree",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/organisms/tree-view/tree-view.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Small",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -4074,6 +5761,36 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<IconComponent>",
+                "defaultValue": "(args: IconComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/link/link.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<LinkComponent>",
+                "defaultValue": "(args: LinkComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "libs/ui/src/lib/components/molecules/breadcrumbs/breadcrumbs.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -4089,6 +5806,16 @@
                 "deprecationMessage": "",
                 "type": "Story<NavigationComponent>",
                 "defaultValue": "(args: NavigationComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/ui/src/lib/components/atoms/text/text.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<TextComponent>",
+                "defaultValue": "(args: TextComponent) => ({\r\n  props: args\r\n})"
             },
             {
                 "name": "Template",
@@ -4114,41 +5841,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "libs/ui/src/lib/components/atoms/button/button.component.stories.ts",
+                "file": "libs/ui/src/lib/components/organisms/tree-view/tree-view.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/ui/src/lib/components/atoms/link/link.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<LinkComponent>",
-                "defaultValue": "(args: LinkComponent) => ({\r\n  props: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/ui/src/lib/components/atoms/icon/icon.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<IconComponent>",
-                "defaultValue": "(args: IconComponent) => ({\r\n  props: args\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/ui/src/lib/components/atoms/text/text.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<TextComponent>",
-                "defaultValue": "(args: TextComponent) => ({\r\n  props: args\r\n})"
+                "type": "Story<TreeViewComponent>",
+                "defaultValue": "(args: TreeViewComponent) => ({\n  props: args\n})"
             },
             {
                 "name": "text",
@@ -4223,11 +5920,33 @@
         ],
         "typealiases": [
             {
+                "name": "AlignmentType",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"left\" | \"right\" | \"center\"",
+                "file": "libs/ui/src/lib/components/particles/alignment.type.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 186
+            },
+            {
                 "name": "ColorType",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "\"moonstone\" | \"tan\" | \"sage\" | \"light-coral\" | \"blush\" | \"white\" | \"black\" | \"error\" | \"info\" | \"success\" | \"warning\"",
                 "file": "libs/ui/src/lib/components/particles/color.type.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 186
+            },
+            {
+                "name": "DirectionType",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"horizontal\" | \"vertical\"",
+                "file": "libs/ui/src/lib/components/particles/direction.type.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -4311,7 +6030,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "`\r\n<h6 class=\"storybook-color-header\">Default colors</h6>\r\n<div class=\"storybook-color-example bg-color-white\" color=\"$color-white\"></div>\r\n<div class=\"storybook-color-example bg-color-black\" color=\"$color-black\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Blue</h6>\r\n<div class=\"storybook-color-example bg-color-deep-blue\" color=\"$color-deep-blue\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-active\" color=\"$color-deep-blue-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-hover\" color=\"$color-deep-blue-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-focus\" color=\"$color-deep-blue-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Fresh Blue</h6>\r\n<div class=\"storybook-color-example bg-color-fresh-blue\" color=\"$color-fresh-blue\"></div>\r\n<div class=\"storybook-color-example bg-color-fresh-blue-active\" color=\"$color-fresh-blue-active\"></div>\r\n<div class=\"storybook-color-example bg-color-fresh-blue-hover\" color=\"$color-fresh-blue-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-fresh-blue-focus\" color=\"$color-fresh-blue-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Warm Coral</h6>\r\n<div class=\"storybook-color-example bg-color-warm-coral\" color=\"$color-warm-coral\"></div>\r\n<div class=\"storybook-color-example bg-color-warm-coral-active\" color=\"$color-warm-coral-active\"></div>\r\n<div class=\"storybook-color-example bg-color-warm-coral-hover\" color=\"$color-warm-coral-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-warm-coral-focus\" color=\"$color-warm-coral-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Light Blue</h6>\r\n<div class=\"storybook-color-example bg-color-light-blue\" color=\"$color-light-blue\"></div>\r\n<div class=\"storybook-color-example bg-color-light-blue-active\" color=\"$color-light-blue-active\"></div>\r\n<div class=\"storybook-color-example bg-color-light-blue-hover\" color=\"$color-light-blue-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-light-blue-focus\" color=\"$color-light-blue-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Yellow</h6>\r\n<div class=\"storybook-color-example bg-color-deep-yellow\" color=\"$color-deep-yellow\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-yellow-active\" color=\"$color-deep-yellow-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-yellow-hover\" color=\"$color-deep-yellow-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-yellow-focus\" color=\"$color-deep-yellow-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Purple</h6>\r\n<div class=\"storybook-color-example bg-color-deep-purple\" color=\"$color-deep-purple\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-purple-active\" color=\"$color-deep-purple-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-purple-hover\" color=\"$color-deep-purple-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-purple-focus\" color=\"$color-deep-purple-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Red</h6>\r\n<div class=\"storybook-color-example bg-color-deep-red\" color=\"$color-deep-red\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-red-active\" color=\"$color-deep-red-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-red-hover\" color=\"$color-deep-red-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-red-focus\" color=\"$color-deep-red-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Error</h6>\r\n<div class=\"storybook-color-example bg-color-error\" color=\"$color-error\"></div>\r\n<div class=\"storybook-color-example bg-color-error-background\" color=\"$color-error-background\"></div>\r\n<h6 class=\"storybook-color-header\">Success</h6>\r\n<div class=\"storybook-color-example bg-color-success\" color=\"$color-success\"></div>\r\n<div class=\"storybook-color-example bg-color-success-background\" color=\"$color-success-background\"></div>\r\n<h6 class=\"storybook-color-header\">Warning</h6>\r\n<div class=\"storybook-color-example bg-color-warning\" color=\"$color-warning\"></div>\r\n<div class=\"storybook-color-example bg-color-warning-background\" color=\"$color-warning-background\"></div>\r\n<h6 class=\"storybook-color-header\">Info</h6>\r\n<div class=\"storybook-color-example bg-color-info\" color=\"$color-info\"></div>\r\n<div class=\"storybook-color-example bg-color-info-background\" color=\"$color-info-background\"></div>\r\n`"
+                    "defaultValue": "`\r\n<h6 class=\"storybook-color-header\">Default colors</h6>\r\n<div class=\"storybook-color-example bg-color-white\" color=\"$color-white\"></div>\r\n<div class=\"storybook-color-example bg-color-black\" color=\"$color-black\"></div>\r\n<h6 class=\"storybook-color-header\">Deep Blue</h6>\r\n<div class=\"storybook-color-example bg-color-deep-blue\" color=\"$color-deep-blue\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-active\" color=\"$color-deep-blue-active\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-hover\" color=\"$color-deep-blue-hover\"></div>\r\n<div class=\"storybook-color-example bg-color-deep-blue-focus\" color=\"$color-deep-blue-focus\"></div>\r\n<h6 class=\"storybook-color-header\">Error</h6>\r\n<div class=\"storybook-color-example bg-color-error\" color=\"$color-error\"></div>\r\n<div class=\"storybook-color-example bg-color-error-background\" color=\"$color-error-background\"></div>\r\n<h6 class=\"storybook-color-header\">Success</h6>\r\n<div class=\"storybook-color-example bg-color-success\" color=\"$color-success\"></div>\r\n<div class=\"storybook-color-example bg-color-success-background\" color=\"$color-success-background\"></div>\r\n<h6 class=\"storybook-color-header\">Warning</h6>\r\n<div class=\"storybook-color-example bg-color-warning\" color=\"$color-warning\"></div>\r\n<div class=\"storybook-color-example bg-color-warning-background\" color=\"$color-warning-background\"></div>\r\n<h6 class=\"storybook-color-header\">Info</h6>\r\n<div class=\"storybook-color-example bg-color-info\" color=\"$color-info\"></div>\r\n<div class=\"storybook-color-example bg-color-info-background\" color=\"$color-info-background\"></div>\r\n`"
                 },
                 {
                     "name": "story",
@@ -4686,6 +6405,28 @@
                     "defaultValue": "(args: NavigationComponent) => ({\r\n  props: args\r\n})"
                 }
             ],
+            "libs/ui/src/lib/components/organisms/tree-view/tree-view.component.stories.ts": [
+                {
+                    "name": "simpleTree",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/organisms/tree-view/tree-view.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/ui/src/lib/components/organisms/tree-view/tree-view.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<TreeViewComponent>",
+                    "defaultValue": "(args: TreeViewComponent) => ({\n  props: args\n})"
+                }
+            ],
             "libs/ui/src/lib/components/atoms/text/text.component.stories.ts": [
                 {
                     "name": "Template",
@@ -4775,6 +6516,19 @@
         },
         "groupedEnumerations": {},
         "groupedTypeAliases": {
+            "libs/ui/src/lib/components/particles/alignment.type.ts": [
+                {
+                    "name": "AlignmentType",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"left\" | \"right\" | \"center\"",
+                    "file": "libs/ui/src/lib/components/particles/alignment.type.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 186
+                }
+            ],
             "libs/ui/src/lib/components/particles/color.type.ts": [
                 {
                     "name": "ColorType",
@@ -4782,6 +6536,19 @@
                     "subtype": "typealias",
                     "rawtype": "\"moonstone\" | \"tan\" | \"sage\" | \"light-coral\" | \"blush\" | \"white\" | \"black\" | \"error\" | \"info\" | \"success\" | \"warning\"",
                     "file": "libs/ui/src/lib/components/particles/color.type.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 186
+                }
+            ],
+            "libs/ui/src/lib/components/particles/direction.type.ts": [
+                {
+                    "name": "DirectionType",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"horizontal\" | \"vertical\"",
+                    "file": "libs/ui/src/lib/components/particles/direction.type.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -4864,6 +6631,15 @@
                 "name": "Chainable",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/admin-portal/src/app/admin-portal-layout/admin-portal-layout.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AdminPortalLayoutComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -4974,7 +6750,7 @@
                 "linktype": "component",
                 "name": "CheckInLayoutComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/1",
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -5012,6 +6788,15 @@
                 "name": "AppComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/client-portal/src/app/client-portal-layout/client-portal-layout.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ClientPortalLayoutComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -5057,7 +6842,7 @@
                 "linktype": "component",
                 "name": "FlightTrackingLayoutComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/1",
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -5067,6 +6852,33 @@
                 "name": "NxWelcomeComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/adminportal/src/lib/features/feature-admin-dashboard/src/lib/admin-dashboard/admin-dashboard.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AdminDashboardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/adminportal/src/lib/shells/shell-admin-booking/src/lib/admin-booking-layout/admin-booking-layout-component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AdminBookingLayoutComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/adminportal/src/lib/shells/shell-admin-checkin/src/lib/admin-checkin-layout/admin-checkin-layout-component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AdminCheckinLayoutComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -5083,6 +6895,51 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "SeatListingComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/check-in/src/lib/features/feature-check-in-info/src/lib/check-in-info/check-in-info.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CheckInInfoComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/check-in/src/lib/features/feature-ticket-finder/src/lib/ticket-finder/ticket-finder.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TicketFinderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/clientportal/src/lib/shells/shell-client-checkin/src/lib/client-checkin-layout/client-checkin-layout-component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ClientCheckinLayoutComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/flight-tracking/src/lib/features/feature-flight-details/src/lib/flight-details/flight-details.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FlightDetailsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/flight-tracking/src/lib/features/feature-flight-search/src/lib/flight-search/flight-search.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FlightSearchComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -5323,9 +7180,9 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "NavigationComponent",
-                "coveragePercent": 28,
-                "coverageCount": "2/7",
-                "status": "medium"
+                "coveragePercent": 55,
+                "coverageCount": "5/9",
+                "status": "good"
             },
             {
                 "filePath": "libs/ui/src/lib/components/organisms/footer/footer.component.stories.ts",
@@ -5352,9 +7209,9 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "FooterComponent",
-                "coveragePercent": 20,
-                "coverageCount": "1/5",
-                "status": "low"
+                "coveragePercent": 33,
+                "coverageCount": "2/6",
+                "status": "medium"
             },
             {
                 "filePath": "libs/ui/src/lib/components/organisms/header/header.component.stories.ts",
@@ -5381,9 +7238,38 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "HeaderComponent",
-                "coveragePercent": 50,
-                "coverageCount": "4/8",
-                "status": "medium"
+                "coveragePercent": 55,
+                "coverageCount": "5/9",
+                "status": "good"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/organisms/tree-view/tree-view.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "simpleTree",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/organisms/tree-view/tree-view.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/ui/src/lib/components/organisms/tree-view/tree-view.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TreeViewComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
             },
             {
                 "filePath": "libs/ui/src/lib/storybook/storybook.code-example.ts",

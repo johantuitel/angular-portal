@@ -9,6 +9,15 @@ $color-grey-background: #f0f0f0;
 $color-grey-dark: darken($color-grey, 20);
 
 $color-moonstone: #729EA1;
+$color-moonstone-active: darken($color-moonstone, 5);
+$color-moonstone-hover: darken($color-moonstone, 10);
+$color-moonstone-focus: darken($color-moonstone, 15);
+
+$color-moonstone-lighten: lighten($color-moonstone, 15);
+$color-moonstone-inverted-active: lighten($color-moonstone, 60);
+$color-moonstone-inverted-hover: lighten($color-moonstone, 65);
+$color-moonstone-inverted-focus: lighten($color-moonstone, 70);
+
 $color-sage: #B5BD89;
 $color-tan: #DFBE99;
 $color-light-coral: #EC9192;
@@ -122,29 +131,3 @@ $color-info: $color-deep-blue;
 $color-info-background: lighten($color-deep-blue, 50);
 
 $color-app-background: $color-white;
-
-$color-gradient-solid: linear-gradient(-170deg, rgba($color-fresh-blue, 0) 60%, $color-fresh-blue, 125%),
-                       linear-gradient(170deg, rgba($color-warm-coral, 0) 60%, $color-warm-coral, 125%);
-$color-gradient-transparent: linear-gradient(-170deg, rgba($color-fresh-blue, 0) 60%, rgba($color-fresh-blue, 0.8) 100%),
-                             linear-gradient(170deg, rgba($color-warm-coral, 0) 60%, rgba($color-warm-coral, 0.8) 100%);
-$color-gradient-on-warm-coral-transparent: linear-gradient(-170deg, rgba($color-fresh-blue, 0) 50%, rgba($color-fresh-blue, 0.6) 100%),
-                                           linear-gradient(170deg, rgba($color-deep-blue, 0) 50%, rgba($color-deep-blue, 0.8) 100%);
-$color-gradient-on-deep-blue-transparent: linear-gradient(-170deg, rgba($color-fresh-blue, 0) 50%, rgba($color-fresh-blue, 0.6) 100%),
-                                          linear-gradient(170deg, rgba($color-warm-coral, 0) 50%, rgba($color-warm-coral, 0.8) 100%);
-$color-gradient-on-fresh-blue-transparent: linear-gradient(-170deg, rgba($color-warm-coral, 0) 50%, rgba($color-warm-coral, 0.6) 100%),
-                                           linear-gradient(170deg, rgba($color-deep-blue, 0) 50%, rgba($color-deep-blue, 0.8) 100%);
-$color-gradient-on-light-blue-transparent: linear-gradient(-170deg, rgba($color-light-blue, 0) 50%, rgba($color-light-blue, 0.6) 100%),
-                                            linear-gradient(170deg, rgba($color-deep-blue, 0) 50%, rgba($color-deep-blue, 0.8) 100%);
-$color-gradient-on-deep-yellow-transparent: linear-gradient(-170deg, rgba($color-deep-yellow, 0) 50%, rgba($color-deep-yellow, 0.6) 100%),
-                                            linear-gradient(170deg, rgba($color-deep-blue, 0) 50%, rgba($color-deep-blue, 0.8) 100%);
-$color-gradient-on-light-yellow-transparent: linear-gradient(-170deg, rgba($color-light-yellow, 0) 50%, rgba($color-light-yellow, 0.6) 100%),
-                                             linear-gradient(170deg, rgba($color-warm-coral, 0) 50%, rgba($color-warm-coral, 0.8) 100%);
-$color-gradient-on-deep-purple-transparent: linear-gradient(-170deg, rgba($color-deep-purple, 0) 50%, rgba($color-deep-purple, 0.6) 100%),
-                                             linear-gradient(170deg, rgba($color-warm-coral, 0) 50%, rgba($color-warm-coral, 0.8) 100%);
-$color-gradient-on-light-purple-transparent: linear-gradient(-170deg, rgba($color-light-purple, 0) 50%, rgba($color-light-purple, 0.6) 100%),
-                                             linear-gradient(170deg, rgba($color-light-blue, 0) 50%, rgba($color-light-blue, 0.8) 100%);
-$color-gradient-on-deep-red-transparent: linear-gradient(-170deg, rgba($color-deep-red, 0) 50%, rgba($color-deep-red, 0.6) 100%),
-                                         linear-gradient(170deg, rgba($color-deep-yellow, 0) 50%, rgba($color-deep-yellow, 0.8) 100%);
-$color-gradient-on-light-red-transparent: linear-gradient(-170deg, rgba($color-light-red, 0) 50%, rgba($color-light-red, 0.6) 100%),
-                                          linear-gradient(170deg, rgba($color-light-blue, 0) 50%, rgba($color-light-blue, 0.8) 100%);
-

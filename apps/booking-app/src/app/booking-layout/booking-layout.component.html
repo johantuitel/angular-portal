@@ -1,8 +1,8 @@
 <main class="oceanic-main-layout">
-    <ui-header logo="oceanic-airlines" title="oceanic-airlines" backgroundColor="light-coral"></ui-header>
-    <ui-navigation [links]="bookingPages" navigationColor="blush" backgroundColor="light-coral" (navigate)="navigateTo($event)"></ui-navigation>
+    <ui-header logo="oceanic-airlines" title="oceanic-airlines - booking" backgroundColor="sage"></ui-header>
+    <ui-navigation [links]="bookingPages" navigationColor="blush" backgroundColor="sage" align="center" (navigate)="navigateTo($event)"></ui-navigation>
     <section>
         <router-outlet></router-outlet>
     </section>
-    <ui-footer></ui-footer>
+    <ui-footer backgroundColor="sage"></ui-footer>
 </main>

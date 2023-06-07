@@ -1,0 +1,45 @@
+<!-- <div *ngFor="let treeNode of data; trackBy: trackByValue">
+  {{treeNode.label}}
+  <ng-container *ngIf="treeNode.children">
+    <div *ngFor="let childNode of treeNode.children">
+      {{childNode.label}}
+      <ng-container *ngIf="childNode.children">
+        <div *ngFor="let subChildNode of childNode.children">
+          {{subChildNode.label}}
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</div> -->
+<ul class="tree-view">
+  <li>
+    <details class="parent-tree-node" open>
+      <summary>First Node</summary>
+      <ul>
+        <li>First Node</li>
+        <li>Second Node</li>
+        <li>Third Node</li>
+      </ul>
+    </details>
+  </li>
+  <li>
+    <details class="parent-tree-node" open>
+      <summary>Second Node</summary>
+      <ul>
+        <li>First Node</li>
+        <li>Second Node</li>
+        <li>
+          <details class="parent-tree-node" open>
+            <summary>Third Node</summary>
+            <ul>
+              <li>First Node</li>
+              <li>Second Node</li>
+              <li>Third Node</li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </details>
+  </li>
+  <li>Third Node</li>
+</ul>

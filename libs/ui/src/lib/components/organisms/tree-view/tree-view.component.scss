@@ -1,0 +1,46 @@
+.tree-view, ul, il {
+  list-style: none;
+  line-height: 2em;
+}
+
+.tree-view li {
+  position: relative;
+}
+
+.tree-view li::before {
+  position: absolute;
+  left: -10px;
+  top: 0px;
+  border-left: 1px solid skyblue;
+  border-bottom: 1px solid skyblue;
+  content: "";
+  width: 8px;
+  height: 1em;
+}
+.tree-view li::after {
+  position: absolute;
+  left: -10px;
+  bottom: 0px;
+  border-left: 1px solid skyblue;
+  content: "";
+  width: 20px;
+  height: 100%;
+}
+
+.tree-view li:last-child:after {
+  display: none;
+}
+
+.tree-view > li::after,
+.tree-view > li::before {
+  display: none;
+}
+
+.parent-tree-node {
+  cursor: pointer;
+}
+
+.parent-tree-node summary {
+  list-style: none;
+}
+
