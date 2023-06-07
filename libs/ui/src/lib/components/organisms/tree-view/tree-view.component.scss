@@ -31,16 +31,7 @@
   display: none;
 }
 
-.tree-view > li::after,
-.tree-view > li::before {
+.tree-view > ui-tree-node > li::after,
+.tree-view > ui-tree-node > li::before {
   display: none;
 }
-
-.parent-tree-node {
-  cursor: pointer;
-}
-
-.parent-tree-node summary {
-  list-style: none;
-}
-

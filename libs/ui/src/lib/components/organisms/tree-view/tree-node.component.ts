@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 export interface ITreeNode {
   label: string;
@@ -8,13 +8,12 @@ export interface ITreeNode {
   children?: Array<ITreeNode>;
 }
 @Component({
-  selector: 'ui-tree-view',
-  templateUrl: './tree-view.component.html',
-  styleUrls: ['./tree-view.component.scss'],
+  selector: 'ui-tree-node',
+  templateUrl: './tree-node.component.html',
+  styleUrls: ['./tree-node.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None,
 })
-export class TreeViewComponent {
+export class TreeNodeComponent {
 
   @Input()
   data: Array<ITreeNode> = [];

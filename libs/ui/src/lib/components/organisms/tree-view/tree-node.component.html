@@ -1,0 +1,11 @@
+<li *ngFor="let treeNode of data; trackBy: trackByValue" class="parent-node">
+  <ng-container *ngIf="!treeNode.children">{{treeNode.label}}</ng-container>
+  <ng-container *ngIf="treeNode.children">
+    <details class="parent-tree-node" open>
+      <summary>{{treeNode.label}}</summary>
+      <ul>
+        <ui-tree-node [data]="treeNode.children"></ui-tree-node>
+      </ul>
+    </details>
+  </ng-container>
+</li>

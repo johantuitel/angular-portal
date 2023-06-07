@@ -1,9 +1,16 @@
 import { ITreeNode, TreeViewComponent } from './tree-view.component';
-import { Meta, Story } from '@storybook/angular';
+import { Meta, Story, moduleMetadata } from '@storybook/angular';
+
+import { OrganismsModule } from '../organisms.module';
 
 export default {
   title: 'Organisms/TreeView',
-  component: TreeViewComponent
+  component: TreeViewComponent,
+  decorators: [
+    moduleMetadata({
+      imports: [OrganismsModule]
+    })
+  ]
 } as Meta<TreeViewComponent>;
 
 const tree: Array<ITreeNode> = [
