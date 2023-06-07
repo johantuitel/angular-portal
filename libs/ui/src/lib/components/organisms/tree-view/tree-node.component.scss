@@ -1,11 +1,27 @@
 .parent-tree-node {
   cursor: pointer;
 }
+.child-tree-node {
+  &.is-selected {
+    background-color: skyblue;
+  }
+}
+.child-tree-node:hover {
+  background-color: skyblue;
+}
 
+.parent-tree-node {
+  list-style: none;
+}
 .parent-tree-node summary {
   list-style: none;
 }
+.parent-tree-node summary:hover {
+  background-color: skyblue;
+}
 
-ul > li {
-  background-color: coral;
+summary {
+  &.is-selected {
+    background-color: skyblue;
+  }
 }

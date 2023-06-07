@@ -16,7 +16,7 @@ export default {
 const tree: Array<ITreeNode> = [
   {label: 'Value A'},
   {label: 'Value B', children: [{label: 'Value B.1'}, {label: 'Value B.2'}]},
-  {label: 'Value C', children: [{label: 'Value C.1', children: [{label: 'Value C.1.A'}, {label: 'Value C.1.B'}]}, {label: 'Value C.2'}]},
+  {label: 'Value C', selected: true, children: [{label: 'Value C.1', children: [{label: 'Value C.1.A'}, {label: 'Value C.1.B'}]}, {label: 'Value C.2'}]},
 ]
 const Template: Story<TreeViewComponent> = (args: TreeViewComponent) => ({
   props: args

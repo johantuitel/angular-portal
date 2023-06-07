@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
 export interface ITreeNode {
   label: string;
   value?: string;
+  type: 'object' | 'node'
   selected?: boolean;
   icon?: string;
   children?: Array<ITreeNode>;

@@ -1,4 +1,4 @@
-<li *ngFor="let treeNode of data; trackBy: trackByValue" class="parent-node">
+<!-- <li *ngFor="let treeNode of data; trackBy: trackByValue">
   <ng-container *ngIf="!treeNode.children">{{treeNode.label}}</ng-container>
   <ng-container *ngIf="treeNode.children">
     <details class="parent-tree-node" open>
@@ -8,4 +8,20 @@
       </ul>
     </details>
   </ng-container>
-</li>
+</li> -->
+
+<ng-container *ngFor="let treeNode of data; trackBy: trackByValue">
+  <ng-container *ngIf="!treeNode.children">
+    <li class="child-tree-node" [ngClass]="{'is-selected': treeNode.selected}">{{treeNode.label}}</li>
+  </ng-container>
+  <ng-container *ngIf="treeNode.children">
+    <li>
+      <details class="parent-tree-node" open>
+        <summary [ngClass]="{'is-selected': treeNode.selected}">{{treeNode.label}}</summary>
+        <ul>
+          <ui-tree-node [data]="treeNode.children"></ui-tree-node>
+        </ul>
+      </details>
+    </li>
+  </ng-container>
+</ng-container>
